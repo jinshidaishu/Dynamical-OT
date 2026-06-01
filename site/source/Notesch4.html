@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>4 Unbalanced Static Optimal Transport</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='Notes.css' rel='stylesheet' type='text/css' /> 
+<meta content='Notes.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+    <!-- l. 1238 --><div class='crosslinks'><p class='noindent'>[<a href='Notesch5.html'>next</a>] [<a href='Notesch3.html'>prev</a>] [<a href='Notesch3.html#tailNotesch3.html'>prev-tail</a>] [<a href='#tailNotesch4.html'>tail</a>] [<a href='Notes.html#Notesch4.html'>up</a>] </p></div>
+    <h2 class='chapterHead' id='unbalanced-static-ot'><span class='titlemark'>Chapter 4</span><br /><a id='x15-160004'></a>Unbalanced Static Optimal Transport</h2>
+<!-- l. 1240 --><p class='noindent'>The traditional Optimal Transport (OT) framework encounters limitations when applied to problems where
+the marginal densities are unbalanced, prompting the development of several variants and extensions to
+address these challenges. For instance, unbalanced OT (UOT) allows the coupling of non-probability
+measures and minimizes noise in the transport plan by softening the original marginal constraints <span class='cite'>[<a href='Notesli2.html#Xchizat2018unbalanced'>12</a>, <a href='Notesli2.html#Xchizat2018scaling'>11</a>]</span>.
+Similarly, partial OT (POT) optimizes the transport plan under conditions where only a fraction of the mass
+needs to be transported <span class='cite'>[<a href='Notesli2.html#Xbenamou2015augmented'>3</a>, <a href='Notesli2.html#Xbonneel2019spot'>4</a>, <a href='Notesli2.html#Xchapel2020partial'>8</a>]</span>. From a dynamics model perspective, unnormalized OT facilitates the
+derivation of transport dynamics between two marginals of differing total mass, potentially including an
+external spatial-dependent or spatiotemporal-dependent mass source <span class='cite'>[<a href='Notesli2.html#Xgangbo2019unnormalized'>14</a>, <a href='Notesli2.html#Xlee2021generalized'>15</a>]</span>. These variants, which
+include others such as generalized OT <span class='cite'>[<a href='Notesli2.html#Xpiccoli2014generalized'>20</a>]</span> and supervised OT (sOT) <span class='cite'>[<a href='Notesli2.html#Xcang2022supervised'>6</a>]</span>, relax the marginal mass
+conservation constraint of the original OT to accommodate discrepancies in total mass between
+marginals.
+</p><!-- l. 1242 --><p class='indent'>    In this chapter, we will discuss several classic extension of the standard OT, including UOT, POT, and
+sOT.
+</p><!-- l. 1244 --><p class='indent'>    In this chapter, the discussion will primarily focus on extensions applicable to discrete measures, noting
+that the methods discussed can also be extended to continuous measures where relevant. This approach
+simplifies the exposition and underscores the adaptability of OT frameworks to diverse and complex
+transport scenarios.
+</p>
+    <div class='sectionTOCS'>
+    <span class='sectionToc'>4.1 <a href='Notesse10.html#unbalanced-ot'>Unbalanced OT</a></span>
+<br />    <span class='subsectionToc'>4.1.1 <a href='Notesse10.html#dykstras-algorithm'>Dykstra’s Algorithm</a></span>
+<br />    <span class='subsectionToc'>4.1.2 <a href='Notesse10.html#alternative-derivations-of-dykstra'>Alternative Derivations of Dykstra</a></span>
+<br />    <span class='sectionToc'>4.2 <a href='Notesse11.html#partial-ot'>Partial OT</a></span>
+<br />    <span class='sectionToc'>4.3 <a href='Notesse12.html#supervised-ot'>Supervised OT</a></span>
+<br />    <span class='subsectionToc'>4.3.1 <a href='Notesse12.html#sot-formulation'>sOT: Formulation</a></span>
+<br />    <span class='subsectionToc'>4.3.2 <a href='Notesse12.html#entropic-sot'>Entropic sOT</a></span>
+<br />    <span class='subsectionToc'>4.3.3 <a href='Notesse12.html#general-sinkhorn-for-sot'>General Sinkhorn for sOT</a></span>
+<br />    <span class='sectionToc'>4.4 <a href='Notesse13.html#wassertein-barycenter'>Wassertein Barycenter</a></span>
+    </div>
+
+
+
+                                                                                            
+                                                                                            
+    <!-- l. 2093 --><div class='crosslinks'><p class='noindent'>[<a href='Notesch5.html'>next</a>] [<a href='Notesch3.html'>prev</a>] [<a href='Notesch3.html#tailNotesch3.html'>prev-tail</a>] [<a href='Notesch4.html'>front</a>] [<a href='Notes.html#Notesch4.html'>up</a>] </p></div>
+<!-- l. 2093 --><p class='indent'>    <a id='tailNotesch4.html'></a> </p> 
+</body> 
+</html>

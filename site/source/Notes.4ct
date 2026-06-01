@@ -1,0 +1,62 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{2}{x2-1000}{QQ2-2-1}{Contents}}{4}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{3}{x3-20001}{QQ2-3-2}{Preliminaries}}{3}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{4}{x4-30001.1}{QQ2-4-3}{Push-forward}}{3}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{5}{x5-40001.2}{QQ2-5-4}{Transport}}{9}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{6}{x6-50001.3}{QQ2-6-5}{Jacobian}}{12}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{7}{x7-60002}{QQ2-7-6}{Static OT}}{15}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{8}{x8-70002.1}{QQ2-8-7}{Monge v.s. Kantorovich}}{15}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{9}{x9-80002.2}{QQ2-9-8}{Discrete OT}}{19}\relax 
+\doTocEntry\tocsubsection{2.2.1}{\csname a:TocLink\endcsname{9}{x9-90002.2.1}{QQ2-9-9}{Discrete Monge}}{20}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{9}{x9-9002r1}{}{\ignorespaces Schematic of discrete Monge OT. Let one define an optimal transport $T$ naturally as there is only one feasible transport map (Monge map). Right one does not have a compatible Monge map.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2.2}{\csname a:TocLink\endcsname{9}{x9-100002.2.2}{QQ2-9-11}{Discrete Kantorovich}}{23}\relax 
+\doTocEntry\toclof{2.2}{\csname a:TocLink\endcsname{9}{x9-10001r2}{}{\ignorespaces Schematic of the coupling matrix $P$. \(P_{ij}\) describes the amount of mass flowing from bin \(i\) to bin \(j\), or from the mass found at \(x_i\) toward \(y_j\)}}{figure}\relax 
+\doTocEntry\toclof{2.3}{\csname a:TocLink\endcsname{9}{x9-10005r3}{}{\ignorespaces Schematic of optimal solutions of linear programming. Left: optimal solutions are not unique; Right: optimal solution is unique.}}{figure}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{10}{x10-110002.3}{QQ2-10-14}{Wasserstein Distance}}{31}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{11}{x11-120003}{QQ2-11-15}{Entropic Regularization}}{35}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{12}{x12-130003.1}{QQ2-12-16}{Entropic Regularization}}{35}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{13}{x13-140003.2}{QQ2-13-17}{Sinkhorn}}{38}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{14}{x14-150003.3}{QQ2-14-18}{Sinkhorn in Log-Domain}}{41}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{15}{x15-160004}{QQ2-15-19}{Unbalanced Static OT}}{47}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{16}{x16-170004.1}{QQ2-16-20}{Unbalanced OT}}{47}\relax 
+\doTocEntry\tocsubsection{4.1.1}{\csname a:TocLink\endcsname{16}{x16-180004.1.1}{QQ2-16-21}{Dykstra's Algorithm}}{49}\relax 
+\doTocEntry\tocsubsection{4.1.2}{\csname a:TocLink\endcsname{16}{x16-190004.1.2}{QQ2-16-22}{Alternative Derivations of Dykstra}}{55}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{17}{x17-200004.2}{QQ2-17-23}{Partial OT}}{58}\relax 
+\doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{18}{x18-210004.3}{QQ2-18-24}{Supervised OT}}{59}\relax 
+\doTocEntry\tocsubsection{4.3.1}{\csname a:TocLink\endcsname{18}{x18-220004.3.1}{QQ2-18-25}{sOT: Formulation}}{59}\relax 
+\doTocEntry\tocsubsection{4.3.2}{\csname a:TocLink\endcsname{18}{x18-230004.3.2}{QQ2-18-26}{Entropic sOT}}{60}\relax 
+\doTocEntry\tocsubsection{4.3.3}{\csname a:TocLink\endcsname{18}{x18-240004.3.3}{QQ2-18-27}{General Sinkhorn for sOT}}{61}\relax 
+\doTocEntry\toclof{4.1}{\csname a:TocLink\endcsname{18}{x18-24001r1}{}{\ignorespaces \small  {Schematic of minimization of Lemma \o:ref {lemma:OT_min} for scalar case and Lemma \o:ref {lemma:OT_min} for vector case. }}}{figure}\relax 
+\doTocEntry\tocsection{4.4}{\csname a:TocLink\endcsname{19}{x19-250004.4}{QQ2-19-29}{Wassertein Barycenter}}{67}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{20}{x20-260005}{QQ2-20-30}{Dynamical OT}}{71}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{21}{x21-270005.1}{QQ2-21-31}{Benamou-Brenier}}{72}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{22}{x22-280005.2}{QQ2-22-32}{Straight Trajectories}}{75}\relax 
+\doTocEntry\tocsection{5.3}{\csname a:TocLink\endcsname{23}{x23-290005.3}{QQ2-23-33}{Lagrangian Form}}{78}\relax 
+\doTocEntry\tocsubsection{5.3.1}{\csname a:TocLink\endcsname{23}{x23-300005.3.1}{QQ2-23-34}{Continuous Normalizing Flows}}{78}\relax 
+\doTocEntry\tocsection{5.4}{\csname a:TocLink\endcsname{24}{x24-310005.4}{QQ2-24-35}{Otto Calculus}}{81}\relax 
+\doTocEntry\tocsubsection{5.4.1}{\csname a:TocLink\endcsname{24}{x24-320005.4.1}{QQ2-24-36}{Wasserstein Geometry: Wasserstein norm and Wasserstein Scalar Product}}{81}\relax 
+\doTocEntry\tocsubsection{5.4.2}{\csname a:TocLink\endcsname{24}{x24-330005.4.2}{QQ2-24-37}{Review: Gradient Flow Dynamics}}{82}\relax 
+\doTocEntry\tocsubsection{5.4.3}{\csname a:TocLink\endcsname{24}{x24-340005.4.3}{QQ2-24-38}{Wasserstein Gradient Flow Dynamics}}{84}\relax 
+\doTocEntry\tocsection{5.5}{\csname a:TocLink\endcsname{25}{x25-350005.5}{QQ2-25-39}{JKO Scheme}}{90}\relax 
+\doTocEntry\tocsubsection{5.5.1}{\csname a:TocLink\endcsname{25}{x25-360005.5.1}{QQ2-25-40}{JKO Flow: Implict Euler Scheme in Wasserstein Metric}}{90}\relax 
+\doTocEntry\tocsubsection{5.5.2}{\csname a:TocLink\endcsname{25}{x25-370005.5.2}{QQ2-25-41}{JKO Scheme in Dynamical Form}}{92}\relax 
+\doTocEntry\tocsubsection{5.5.3}{\csname a:TocLink\endcsname{25}{x25-380005.5.3}{QQ2-25-42}{JKO Scheme in Finite Dimensional Case}}{92}\relax 
+\doTocEntry\tocchapter{6}{\csname a:TocLink\endcsname{26}{x26-390006}{QQ2-26-43}{Unbalanced Dynamical OT}}{97}\relax 
+\doTocEntry\tocsection{6.1}{\csname a:TocLink\endcsname{27}{x27-400006.1}{QQ2-27-44}{Fish-Rao Problem}}{97}\relax 
+\doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{28}{x28-410007}{QQ2-28-45}{Deep Learning Approaches}}{101}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{29}{x29-420008}{QQ2-29-46}{Ext. Dynamical OT}}{103}\relax 
+\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{30}{x30-430008.1}{QQ2-30-47}{Wasserstein Gradient Flow}}{103}\relax 
+\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{31}{x31-440008.2}{QQ2-31-48}{Transport Hessian Metric}}{105}\relax 
+\doTocEntry\tocsubsection{8.2.1}{\csname a:TocLink\endcsname{31}{x31-450008.2.1}{QQ2-31-49}{Transport Hessian Distance}}{107}\relax 
+\doTocEntry\tocsubsection{8.2.2}{\csname a:TocLink\endcsname{31}{x31-460008.2.2}{QQ2-31-50}{Transport Hessian Gradient Flow}}{107}\relax 
+\doTocEntry\tocsubsection{8.2.3}{\csname a:TocLink\endcsname{31}{x31-470008.2.3}{QQ2-31-51}{Transport Newton Flow}}{108}\relax 
+\doTocEntry\tocsubsection{8.2.4}{\csname a:TocLink\endcsname{31}{x31-480008.2.4}{QQ2-31-52}{Transport Hessian Gradient Flow v.s. Stein Gradient Flow}}{108}\relax 
+\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{32}{x32-490008.3}{QQ2-32-53}{Nonlocal OT and BB}}{109}\relax 
+\doTocEntry\tocappendix{A}{\csname a:TocLink\endcsname{33}{x33-50000A}{QQ2-33-54}{Proximal Operator}}{113}\relax 
+\doTocEntry\tocsection{A.1}{\csname a:TocLink\endcsname{34}{x34-51000A.1}{QQ2-34-55}{Proximal Operator}}{113}\relax 
+\doTocEntry\tocsection{A.2}{\csname a:TocLink\endcsname{35}{x35-52000A.2}{QQ2-35-56}{Proximal Gradient Descent}}{114}\relax 
+\doTocEntry\tocsection{A.3}{\csname a:TocLink\endcsname{36}{x36-53000A.3}{QQ2-36-57}{Primal-dual Algorithm}}{115}\relax 
+\doTocEntry\tocappendix{B}{\csname a:TocLink\endcsname{37}{x37-54000B}{QQ2-37-58}{Exercises}}{119}\relax 
+\doTocEntry\tocappendix{C}{\csname a:TocLink\endcsname{38}{x38-55000C}{QQ2-38-59}{Answers to Exercises}}{121}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{39}{x39-56000}{QQ2-39-60}{Bibliography}}{123}\relax 
+\par 

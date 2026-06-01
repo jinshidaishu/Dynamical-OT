@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Proximal Gradient Descent</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='Notes.css' rel='stylesheet' type='text/css' /> 
+<meta content='Notes.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+    <!-- l. 3912 --><div class='crosslinks'><p class='noindent'>[<a href='Notesse25.html'>next</a>] [<a href='Notesse23.html'>prev</a>] [<a href='Notesse23.html#tailNotesse23.html'>prev-tail</a>] [<a href='#tailNotesse24.html'>tail</a>] [<a href='Notesap1.html#Notesse24.html'>up</a>] </p></div>
+    <h3 class='sectionHead' id='proximal-gradient-descent'><span class='titlemark'>A.2   </span> <a id='x35-52000A.2'></a>Proximal Gradient Descent</h3>
+<!-- l. 3914 --><p class='noindent'>The proximal gradient descent for the problem \begin {align}  \min _x f(x) + g(x)  \end {align}
+</p><!-- l. 3918 --><p class='indent'>    reads \begin {align} \label {eqn:ProximalGradientDescent} x^{n+1} = \text {prox}_{\tau g} (x^n - \tau \nabla f(x^n)).  \end {align}
+</p><!-- l. 3922 --><p class='indent'>    We can derive the proximal gradient descent from the following point of view. The minimization is
+equivalent to \begin {align*}  &amp; 0 \in \nabla f(x^*) + \partial g(x^*) \\ \Leftrightarrow \ &amp; 0 \in \nabla f(x^*) + \partial g(x^*) + \frac {x^* - x^*}{\tau } \\ \Leftrightarrow \ &amp; 0 \in \tau \nabla f(x^*) -x^* + \tau \partial g(x^*) + x^* \\ \Leftrightarrow \ &amp; 0 \in \tau \nabla f(x^*) -x^* + \tau \partial g(x^*) + x^* \\ \Leftrightarrow \ &amp; (I + \tau \partial g)x^* \in (I - \tau \nabla f)x^* \\ \Leftrightarrow \ &amp; x^* \in (I + \tau \partial g)^{-1} (I - \tau \nabla f)x^* \\ \Leftrightarrow \ &amp; x^* \in \text {prox}_{\tau g} \Big ( (I - \tau \nabla f)x^* \Big )\\  \end {align*}
+</p><!-- l. 3932 --><p class='indent'>    Applying the fixed point iteration, we get the proximal gradient descent iteration (<span class='cmbx-10x-x-109'>??</span>). Assuming \(g\) is
+smooth, then the proximal gradient descent is equivalent to the following gradient flow dynamics:
+\begin {align} \label {eqn:gradient_explicit_implicit} \frac {x^{n+1}-x^n}{\tau } = - \left (\nabla f(x^n) + \partial g(x^{n+1})\right ).  \end {align}
+</p><!-- l. 3936 --><p class='indent'>    In other words, \(f\)-update is explicit, but \(g\)-update is implicit.
+</p><!-- l. 3938 --><p class='indent'>    When \(f = 0\), the proximal gradient descent becomes proximal point method. By the iteration (<span class='cmbx-10x-x-109'>??</span>), it is
+equivalent to the implicit Euler scheme: \begin {align} \label {eqn:gradient_implicit} \frac {x^{n+1}-x^n}{\tau } = - \partial g(x^{n+1}).  \end {align}
+                                                                                            
+                                                                                            
+</p>
+    <!-- l. 3945 --><div class='crosslinks'><p class='noindent'>[<a href='Notesse25.html'>next</a>] [<a href='Notesse23.html'>prev</a>] [<a href='Notesse23.html#tailNotesse23.html'>prev-tail</a>] [<a href='Notesse24.html'>front</a>] [<a href='Notesap1.html#Notesse24.html'>up</a>] </p></div>
+<!-- l. 3945 --><p class='indent'>    <a id='tailNotesse24.html'></a> </p> 
+</body> 
+</html>

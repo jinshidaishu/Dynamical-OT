@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Otto Calculus: Wasserstein Gradient Flow</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='Notes.css' rel='stylesheet' type='text/css' /> 
+<meta content='Notes.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+    <!-- l. 2427 --><div class='crosslinks'><p class='noindent'>[<a href='Notesse18.html'>next</a>] [<a href='Notesse16.html'>prev</a>] [<a href='Notesse16.html#tailNotesse16.html'>prev-tail</a>] [<a href='#tailNotesse17.html'>tail</a>] [<a href='Notesch5.html#Notesse17.html'>up</a>] </p></div>
+    <h3 class='sectionHead' id='otto-calculus'><span class='titlemark'>5.4   </span> <a id='x24-310005.4'></a>Otto Calculus: Wasserstein Gradient Flow</h3>
+<!-- l. 2432 --><p class='noindent'>
+</p>
+    <h4 class='subsectionHead' id='wasserstein-geometry-wasserstein-norm-and-wasserstein-scalar-product'><span class='titlemark'>5.4.1   </span> <a id='x24-320005.4.1'></a>Wasserstein Geometry: Wasserstein norm and Wasserstein Scalar Product</h4>
+<!-- l. 2434 --><p class='noindent'>In <span class='cite'>[<a href='Notesli2.html#Xotto2001geometry'>17</a>]</span>, Otto generalized classical notions from Riemannian geometry to the Wasserstein space:
+the norm, the scalar product, and the gradient. We will not follow the line of thought of that
+paper precisely. Instead, we will use the Benamou–Brenier formula as a starting point for our
+reasoning.
+</p><!-- l. 2436 --><p class='indent'>    Thanks to the Benamou–Brenier formula in Theorem <a href='Notesse14.html#x21-27003r3'>5.1.3<!-- tex4ht:ref: theorem:BB  --></a>, we can rewrite the single-level optimization
+into a bi-level optimization problem as follows: \begin {align*}  W_2^2(\mu , \nu ) &amp;= \inf _{(\rho , \mathbf {v})} \left \{ \int _0^1 \left ( \int _\Omega \|\mathbf {v}\|_2^2 \rho \, \dx \right ) \dt \,\middle |\, \begin {array}{ll} \partial _t \rho + \nabla \cdot (\rho \mathbf {v}) = 0, \\ \mathbf {v}\cdot \mathbf {n} |_{\partial \Omega } = 0, \\ \rho (0,\mathbf {x}) = \mu , \, \rho (1,\mathbf {x}) = \nu . \end {array} \right \} \\ &amp;= \inf _{\rho } \left \{ \inf _{\mathbf {v}} \int _0^1 \left ( \int _\Omega \|\mathbf {v}\|_2^2 \rho \, \dx \right ) \dt \,\middle |\, \begin {array}{l} \partial _t \rho + \nabla \cdot (\rho \mathbf {v}) = 0, \\ \mathbf {v} \cdot \mathbf {n} |_{\partial \Omega } = 0, \\ \rho (0,\mathbf {x}) = \mu , \, \rho (1,\mathbf {x}) = \nu . \end {array} \right \} \\ &amp;= \inf _{\rho } \bigg \{ \int _0^1 \underbrace {\inf _{\mathbf {v}} \left \{ \int _\Omega \|\mathbf {v}\|_2^2 \rho \, \dx \,\middle |\, \begin {array}{l} \partial _t \rho + \nabla \cdot (\rho \mathbf {v}) = 0, \\ \mathbf {v} \cdot \mathbf {n} |_{\partial \Omega } = 0 \end {array} \right \} }_{:=\|\partial _t\rho \|_{\rho _t}^2} \dt \ \bigg | \ \rho _0 = \mu , \, \rho _1 = \nu \bigg \}  \end {align*}
+</p><!-- l. 2459 --><p class='indent'>    where in the last equality we used that, for each time \( t \), given \( \rho _t \) and \( \partial _t \rho _t \), one can minimize with respect
+to all vector fields \( \mathbf {v}_t \) satisfying the constraint \(\nabla \cdot (\mathbf {v}_t \rho _t) = -\partial _t \rho _t\). In analogy with the formula for the Riemannian
+distance on a manifold, it is natural to define the Wasserstein norm of the derivative \( \partial _t \rho _t \) at \( \rho _t \) as
+\begin {align} \label {eqn:Wasserstein_norm} \| \partial _t \rho _t \|^2_{\rho _t} := \inf _{\mathbf {v}_t} \left \{ \int _\Omega \|\mathbf {v}_t\|^2 \rho _t \, \dx \,\middle |\, \nabla \cdot (\rho _t\mathbf {v}_t) = -\partial _t \rho _t, \, \mathbf {v}_t \cdot \mathbf {n} |_{\partial \Omega } = 0 \right \}.  \end {align}
+</p><!-- l. 2467 --><p class='indent'>    In other words the continuity equation gives, at each time \( t \), a constraint on the divergence of \( \rho _t\mathbf {v}_t \), and we
+get the formula \begin {align}  W_2^2(\mu , \nu ) = \inf _{\rho _t} \left \{ \int _0^1 \| \partial _t \rho _t \|^2_{\rho _t} \, \dt \,\middle |\, \rho _0 = \mu , \, \rho _1 = \nu \right \}.  \end {align}
+</p><!-- l. 2471 --><p class='indent'>    To find a better formula for the Wasserstein norm of \( \partial _t \rho _t \), we want to understand the properties of the
+vector field \( v_t \) that realizes the infimum in (<span class='cmbx-10x-x-109'>??</span>). Hence, given \( \rho _t \) and \( \partial _t \rho _t \), let \( \mathbf {v}_t \) be a minimizer, and let \( \mathbf {w} \) be a vector
+field such that \(\nabla \cdot \mathbf {w} \equiv 0\). Then, for every \( \epsilon &gt; 0 \), we have \begin {align*}  \nabla \cdot \left ( \left (\mathbf {v}_t + \frac {\epsilon \mathbf {w}}{\rho _t} \right ) \rho _t \right ) = -\partial _t \rho _t.  \end {align*}
+</p><!-- l. 2477 --><p class='indent'>    Thus \( \mathbf {v}_t + \frac {\epsilon \mathbf {w}}{\rho _t} \) is an admissible vector field in the minimization problem (<span class='cmbx-10x-x-109'>??</span>), and so by minimality of \( \mathbf {v}_t \) we get
+\begin {align*}  \int _\Omega \|\mathbf {v}_t\|^2 \rho _t \, \dx \leq \int _\Omega \left | \mathbf {v}_t + \frac {\epsilon \mathbf {w}}{\rho _t} \right |^2 \rho _t \, \dx = \int _\Omega \|\mathbf {v}_t\|^2 \rho _t \, \dx + 2 \epsilon \int _\Omega \langle \mathbf {v}_t, \mathbf {w} \rangle \, \dx + \epsilon ^2 \int _\Omega \|\mathbf {w}\|^2 \frac {1}{\rho _t} \, \dx .  \end {align*}
+</p><!-- l. 2482 --><p class='indent'>    Dividing by \( \epsilon \) and letting it go to zero yields \begin {align*}  \int _\Omega \langle \mathbf {v}_t, \mathbf {w} \rangle \, \dx = 0,  \end {align*}
+</p><!-- l. 2486 --><p class='indent'>    for every \( \mathbf {w} \) such that \( \text {div}(\mathbf {w}) = 0 \). By the Helmholtz decomposition, this implies that \begin {align*}  \mathbf {v}_t \in \left \{ \mathbf {w} \, \middle | \, \text {div}(\mathbf {w}) = 0 \right \}^\perp = \left \{ \nabla q \, \middle | \, q: \Omega \to \mathbb {R} \right \}.  \end {align*}
+</p><!-- l. 2490 --><p class='indent'>    Therefore, there exists a function \( \psi _t \) such that \( \mathbf {v}_t = \nabla \psi _t \). Also, since \( \nabla \cdot (\rho _t\mathbf {v}_t) = -\partial _t \rho _t \) and \( \mathbf {v}_t \cdot \mathbf {n} |_{\partial \Omega } = 0 \), then \( \psi _t \), the so-called <span class='cmti-10x-x-109'>Wasserstein potential</span>
+of \(\partial _t\rho _t\), is a solution of \begin {align} \label {eqn:Wasserstein_potential} \begin {cases} -\nabla \cdot (\rho _t \nabla \psi _t) = \partial _t \rho _t &amp; \text {in } \Omega , \\ \frac {\partial \psi _t}{\partial \nu } = 0 &amp; \text {on } \partial \Omega . \end {cases}  \end {align}
+</p><!-- l. 2498 --><p class='indent'>    Note that if \( \rho _t \) is “nice” (say, positive and smooth), then (<span class='cmbx-10x-x-109'>??</span>) is a uniformly elliptic equation with
+Neumann boundary conditions for \( \psi _t \), and the Wasserstein potential \( \psi _t \) is unique up to a constant. So one can
+define \begin {align*}  \| \partial _t \rho _t \|^2_{\rho _t} = \int _\Omega |\nabla \psi _t|^2 \rho _t \, \dx ,  \end {align*}
+                                                                                            
+                                                                                            
+</p><!-- l. 2502 --><p class='indent'>    where \( \psi _t \) solves (<span class='cmbx-10x-x-109'>??</span>). More generally, we have the following definition of the Wasserstein norm:
+</p>
+    <div class='newtheorem'>
+<!-- l. 2503 --><p class='noindent'><span class='head'>
+<a id='x24-32001r1'></a>
+<span class='cmbx-10x-x-109'>Definition 5.4.1 </span>(Wasserstein norm and Wasserstein scalar product)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Given </span>\( \rho \in \mathcal {P}_2(\Omega ) \) <span class='cmti-10x-x-109'>and </span>\( h, h_1, h_2: \Omega \to \mathbb {R} \) <span class='cmti-10x-x-109'>such that </span>\(\int _\Omega h = \int _\Omega h_1 = \int _\Omega h_2 = 0\)<span class='cmti-10x-x-109'>, we can define
+the Wasserstein norm </span>\begin {align}  \| h \|^2_\rho := \int _\Omega |\nabla \psi |^2 \rho \, \dx , \quad \text {where} \quad \begin {cases} -\nabla \cdot (\rho \nabla \psi ) = h &amp; \text {in } \Omega , \\ \frac {\partial \psi }{\partial \nu } = 0 &amp; \text {on } \partial \Omega , \end {cases}  \end {align}
+</p><!-- l. 2513 --><p class='indent'>    <span class='cmti-10x-x-109'>and the Wasserstein scalar product between</span> \(h_1\) <span class='cmti-10x-x-109'>and</span> \(h_2\) <span class='cmti-10x-x-109'>at</span> \(\rho \) <span class='cmti-10x-x-109'>as </span>\begin {align} \label {eqn:Wasserstein_scalarproduct} \langle h_1, h_2 \rangle _\rho := \int _\Omega \nabla \psi _1 \cdot \nabla \psi _2 \, \rho \, \dx , \quad \text {where} \quad \begin {cases} -\nabla \cdot (\rho \nabla \psi _i) = h_i &amp; \text {in } \Omega , \\ \frac {\partial \psi _i}{\partial \nu } = 0 &amp; \text {on } \partial \Omega , \end {cases} \ i = 1,2.  \end {align}
+</p><!-- l. 2523 --><p class='indent'>    <span class='cmti-10x-x-109'>Denote</span> \(-\Delta _{\rho }\psi : = -\nabla \cdot (\rho \nabla \psi )\)<span class='cmti-10x-x-109'>, and</span> \((-\Delta _{\rho })^{-1}h\) <span class='cmti-10x-x-109'>as the Wasserstein potential</span> \(\psi _h\) <span class='cmti-10x-x-109'>associated with</span> \(h\)<span class='cmti-10x-x-109'>, then the Wasserstein scalar product can
+also be rewritten as </span>\begin {align}  \langle h_1,h_2 \rangle _{\rho } &amp;= \left \langle (-\Delta _{\rho })^{-1}h_1, h_2 \right \rangle _{L^2} = \left \langle h_1, (-\Delta _{\rho })^{-1}h_2 \right \rangle _{L^2} = \left \langle (-\Delta _{\rho })^{-1/2}h_1, (-\Delta _{\rho })^{-1/2}h_2 \right \rangle _{L^2} \label {eqn:Wasserstein_scalarproduct02} \\ &amp;= \left \langle \psi _1, -\Delta _{\rho }\psi _2 \right \rangle _{L^2} \hspace {0.29in} = \left \langle -\Delta _{\rho } \psi _1, \psi _2 \right \rangle _{L^2} \hspace {0.29in} = \left \langle \nabla _{\rho }\psi _1,\nabla _{\rho }\psi _2 \right \rangle _{L^2} .  \end {align}
+</p>
+    </div>
+<!-- l. 2535 --><p class='indent'>     Hence, we have obtained a nice expression for the Wasserstein norm of the derivative \(\partial _t\rho (\cdot ,t)\) of a curve \(\rho (\cdot ,t)\). Using
+Riemannian notations, The Wasserstein norm and the Wasserstein scalar product are defined over the
+tangent space \(T_{\rho (\cdot ,t)}\) of \(\rho (\cdot ,t)\), for any \(h, h_1, h_2 \in T_{\rho (\cdot ,t)}\), we denote them by \[ \|h\|_{T_{\rho (\cdot ,t)}}^2, \quad \langle h_1, h_2 \rangle _{T_{\rho (\cdot ,t)}}. \] Hereafter, the two set of notations will be used
+interchangeably.
+</p><!-- l. 2542 --><p class='indent'>    Now that we have a scalar product, we can define the gradient of a functional in the Wasserstein
+space.
+</p><!-- l. 2548 --><p class='noindent'>
+</p>
+    <h4 class='subsectionHead' id='review-gradient-flow-dynamics'><span class='titlemark'>5.4.2   </span> <a id='x24-330005.4.2'></a>Review: Gradient Flow Dynamics</h4>
+<!-- l. 2550 --><p class='noindent'>To define the Wasserstein gradient flow system. We need to recall some elementary concepts in the calculus of
+variations.
+</p><!-- l. 2552 --><p class='indent'>    Let us first of all recall the definition of the standard gradient vector for a multivariable function \(F[\bx ]\). \(F:\mathbb {R}^n\rightarrow \mathbb {R}\) has
+gradient \(\nabla F(\bx )\in \mathbb {R}^n\) since the ambient inner product is \(\langle \mathbf {a}, \mathbf {b} \rangle = \mathbf {a} \cdot \mathbf {b} \), and \begin {align}  \frac {\mathrm {d}}{\mathrm {d}t} \Big |_{t=0} F(\bx + t \bv ) = \langle \nabla F(\bx ), \bv \rangle .  \end {align}
+</p><!-- l. 2556 --><p class='indent'>    This is directly related to the directional derivative \(\nabla _{\bv } F(\bx ) = \nabla F(\bx )\cdot \frac {\bv }{\|\bv \|_2}\).
+</p><!-- l. 2559 --><p class='indent'>    Let \(F: M\rightarrow \mathbb {R}\) be a smooth function defined on a compact \(d\)-dimensional smooth manifold embedded in \(\mathbb {R}^n\). Then we
+can define a tangent space at \(p\in M\) as: \begin {align}  T_pM: = \Big \{ \dot {\gamma }(0) \ \big |\ \gamma : (-1,1) \rightarrow M, \gamma (0) = p \Big \}.  \end {align}
+</p><!-- l. 2563 --><p class='indent'>    Intuitively, the tangent space contains all the directions tangent to \(M\) at \(p\). Now we give the definition of the
+gradient of a function over a manifold.
+</p>
+    <div class='newtheorem'>
+<!-- l. 2565 --><p class='noindent'><span class='head'>
+<a id='x24-33001r2'></a>
+                                                                                            
+                                                                                            
+<span class='cmbx-10x-x-109'>Definition 5.4.2 </span>(Gradient on Manifold)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Let</span> \(F: M\rightarrow \mathbb {R}\) <span class='cmti-10x-x-109'>be a smooth function. Its gradient</span> \(\nabla F: M \rightarrow \mathbb {R}^n\) <span class='cmti-10x-x-109'>is defined as the
+unique tangent vector field on</span> \(M\)<span class='cmti-10x-x-109'>, that is,</span> \(\nabla F(\bx ) \in T_{\bx }M\) <span class='cmti-10x-x-109'>for all</span> \(\bx \in M\)<span class='cmti-10x-x-109'>, such that the following holds: for any curve</span> \(\gamma : (-1,1) \rightarrow M\)<span class='cmti-10x-x-109'>,</span>
+\begin {align}  \frac {\mathrm {d}}{\mathrm {d}t} \Big |_{t=0} F(\gamma (t)) = \langle \nabla F(\gamma (0)), \dot {\gamma }(0) \rangle .  \end {align}
+</p>
+    </div>
+<!-- l. 2570 --><p class='indent'>
+</p><!-- l. 2572 --><p class='indent'>    Now we consider a smooth energy functional \(F[\rho ]\) for \(\rho \in \mathcal {P}_2(\mathbb {R}^n)\), and define the first variation as follows.
+</p>
+    <div class='newtheorem'>
+<!-- l. 2574 --><p class='noindent'><span class='head'>
+<a id='x24-33002r3'></a>
+<span class='cmbx-10x-x-109'>Definition 5.4.3.</span>  </span><span class='cmti-10x-x-109'>The first variation of the energy functional</span> \(F[\phi ]\) <span class='cmti-10x-x-109'>is defined as </span>\begin {align} \label {eq:first-variation} \left .\frac {\dd }{\dd \varepsilon }\right |_{\varepsilon =0} F[\phi +\varepsilon \eta ] = \int _{\R ^n} \frac {\delta F}{\delta \phi }[\phi ]\,\eta (x)\,\dd \bx .  \end {align}
+</p><!-- l. 2580 --><p class='indent'>    <span class='cmti-10x-x-109'>where</span> \(\eta \) <span class='cmti-10x-x-109'>is a scalar perturbation (a tangent direction of</span> \(\phi \)<span class='cmti-10x-x-109'>). Here</span> \(\frac {\delta F}{\delta \phi }\) <span class='cmti-10x-x-109'>is a scalar function, defined only up to an
+additive constant.</span>
+</p>
+    </div>
+<!-- l. 2581 --><p class='indent'>
+</p><!-- l. 2583 --><p class='indent'>    Note that the perturation \(\phi \rightarrow \phi +\epsilon \eta \) is only a linear perturbation, but it suffices to define the first variation.
+Alternatively, we can also consider a general perturbation \(\phi \rightarrow \phi _{\epsilon }:(-\epsilon _0,\epsilon _0)\rightarrow L^2(\mathbb {R}^n)\) with \(\phi _0 = \phi \), and then define the first variation as
+\begin {align} \label {eq:first-variation-2} \left .\frac {\dd }{\dd \varepsilon }\right |_{\varepsilon =0} F[\phi _{\epsilon }] = \int _{\R ^n} \frac {\delta F}{\delta \phi }[\rho ]\, \frac {\partial \phi _\epsilon }{\partial \epsilon } \bigg |_{\epsilon =0}\,\dd \bx = \left \langle \frac {\delta F}{\delta \phi }[\rho ], \dot {\phi }_0\right \rangle .  \end {align}
+</p><!-- l. 2589 --><p class='indent'>    Equations (<span class='cmbx-10x-x-109'>??</span>) and (<span class='cmbx-10x-x-109'>??</span>) gives identical first variation.
+</p>
+    <div class='newtheorem'>
+<!-- l. 2592 --><p class='noindent'><span class='head'>
+<a id='x24-33003r4'></a>
+<span class='cmbx-10x-x-109'>Example 5.4.4 </span>(Ginzburg-Landau energy)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Consider the Ginzburg-Landau energy </span>\begin {align}  E[\phi ] = \int _{\mathbb {R}^n} \frac {\epsilon }{2}|\nabla \phi |^2 + \frac {1}{\epsilon }W(\phi ) \dd \bx .  \end {align}
+</p><!-- l. 2597 --><p class='indent'>    <span class='cmti-10x-x-109'>Introducing a perturbation</span> \(\phi \rightarrow \phi +\epsilon \eta \) <span class='cmti-10x-x-109'>with</span> \(\eta \in C_c^{\infty }(\mathbb {R}^n)\)<span class='cmti-10x-x-109'>, then by integration-by-parts, we have </span>\begin {align*}  \frac {\dd }{\dd \epsilon } \Big |_{\epsilon = 0} E[\phi +\epsilon \eta ] = \Big \langle -\epsilon \Delta \phi + \epsilon ^{-1}W'(\phi ), \ \eta \Big \rangle _{L^2},  \end {align*}
+</p><!-- l. 2601 --><p class='indent'>    <span class='cmti-10x-x-109'>leading to </span>\begin {align*}  \frac {\delta F}{\delta \phi }[\phi ] = -\epsilon \Delta \phi + \epsilon ^{-1}W'(\phi ).  \end {align*}
+</p>
+    </div>
+<!-- l. 2605 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p><!-- l. 2610 --><p class='noindent'>
+</p>
+    <h4 class='subsectionHead' id='wasserstein-gradient-flow-dynamics'><span class='titlemark'>5.4.3   </span> <a id='x24-340005.4.3'></a>Wasserstein Gradient Flow Dynamics</h4>
+<!-- l. 2613 --><p class='noindent'>In the Wasserstein geometry, the perturbation of a given density \(\rho \) is not through \(\rho \rightarrow \rho _{\epsilon } = \rho + \epsilon \eta \). This is because \(\rho _{\epsilon }\) can not be
+guaranteed to have the mass conserved, and to be nonnegative. Indeed, Let \(\rho _t\) be a sufficiently regular curve in \(\Ptwo \)
+with \(\rho _0=\rho \). In Wasserstein geometry, the natural infinitesimal motion of mass is transport. Let \(\bX _t\) be the flow of a
+given vector field \(\bv _t(\bx )\), namely, \begin {align}  \begin {cases} \dot {\mathbf {X}}_t = \bv _t(\mathbf {X}_t), \\ \mathbf {X}_0 = \mathbf {x}. \end {cases}  \end {align}
+</p><!-- l. 2620 --><p class='indent'>    Define a perturbation of \(\rho _0\) by \(\rho _0 \rightarrow \rho _t = (\bX _t)_{\sharp }\rho _0\), then \(\rho _t\) satisfies the continuity equation \begin {align*}  \partial _t \rho _t + \nabla \cdot (\rho _t \bv _t) = 0.  \end {align*}
+</p><!-- l. 2624 --><p class='indent'>    At \(t=0\), it gives \begin {align} \label {eqn:twofaces_identity} \partial _t|_{t=0}\rho _t = \dot {\rho }_0 = - \nabla \cdot (\rho _0\bv _0).  \end {align}
+</p><!-- l. 2628 --><p class='indent'>    This shows that a single tangent direction may be written in two different ways: </p>
+     <ul class='itemize1'>
+     <li class='itemize'><span class='cmbx-10x-x-109'>Eulerian scalar face: </span>the density derivative \(\sigma = \partial _t\rho _t|_{t=0}\), which is a scalar distribution;
+     </li>
+     <li class='itemize'><span class='cmbx-10x-x-109'>Lagrangian velocity face: </span>the velocity field \(\bv _0\), which is a vector field in \(L^2(\rho ;\R ^n)\).</li></ul>
+<!-- l. 2633 --><p class='noindent'>They are not two different tangent vectors, but two coordinate descriptions of the same tangent direction, linked
+by \(\sigma = -\nabla \cdot (\rho _0\bv _0)\).
+</p>
+    <div class='tcolorbox keybox' id='tcolobox-1'>     
+<div class='tcolorbox-title'>
+<!-- l. 2641 --><p class='indent'>    Why the velocity representation is preferred in \(W_2\)</p></div> 
+<div class='tcolorbox-content'><!-- l. 2636 --><p class='noindent'>The \(W_2\) metric is built from kinetic energy. The squared norm of a tangent vector \(\sigma \) is measured
+by \[ \|\sigma \|_{T_{\rho _0}}^2 = \inf _{\sigma = -\nabla \cdot (\rho _0\bv _0)}\int _{\R ^n} \|\bv _0(\bx )\|_2^2\,\rho _0(\bx )\,\dd \bx , \] Thus the geometry naturally pairs with velocity fields, not directly with arbitrary scalar
+perturbations. </p> 
+</div> 
+</div>
+<!-- l. 2643 --><p class='indent'>    On the other hand, the scalar face is still useful. If one insists on describing tangent directions by \(\sigma \), then \(\sigma \)
+is not arbitrary, but must be realizable as in (<span class='cmbx-10x-x-109'>??</span>). Among all such \(v\), the Wasserstein geometry selects the
+minimal \(L^2(\rho )\) representative, which in the smooth setting is a gradient field.
+</p><!-- l. 2646 --><p class='indent'>    Now we consider the Wasserstein gradient for \(F[\rho ]\). The Wasserstein gradient is defined using the \(W_2\) metric, so
+it must live in the tangent space, hence it is represented by a vector field. More precisely, a vector field \(g\in L^2(\rho ;\R ^n)\) is the
+Wasserstein gradient of \(F\) at \(\rho \) if for every admissible flow perturbation \(\bx \rightarrow \bX _t\) (driven by \(\bv _t\) through \(\dot {\bX }_t = \bv _t(\bX _t)\)) one has
+\begin {align} \label {eq:Wgrad-def} \left .\frac {\dd }{\dd t}\right |_{t=0} F[\rho _t] = \int _{\R ^n} g(\bx )\cdot \bv _0(\bx )\,\rho _0(\bx )\,\dd \bx , \qquad \forall \ \partial _t\rho _t|_{t=0}=-\nabla \cdot (\rho _0 \bv _0).  \end {align}
+</p><!-- l. 2652 --><p class='indent'>    We then write \(g = \nabla _W F(\rho _0)\).
+</p><!-- l. 2654 --><p class='indent'>    We can also consider a linear flow perturbation to derive the Wasserstein gradient. Let the perturbation
+be \(\rho \rightarrow \rho _{\epsilon } = (\mathrm {Id} + \epsilon \xi )_{\sharp }\rho \), then one has that \begin {align*}  \frac {\dd }{\dd \epsilon }(\mathrm {Id} + \epsilon \xi )(\bx ) = \bv _{\epsilon }(\bx + \epsilon \xi (\bx )), \quad \partial _{\epsilon } \rho _{\epsilon } = -\nabla \cdot (\rho _{\epsilon }\bv _{\epsilon }).  \end {align*}
+</p><!-- l. 2658 --><p class='indent'>    At \(\epsilon = 0\), we have \(\partial _{\epsilon }|_{\epsilon = 0} \rho _{\epsilon } = -\nabla \cdot (\rho \bv _0) = -\nabla \cdot (\rho \xi )\). In this case, the Wasserstein gradient is defined as: \begin {align} \label {eq:Wgrad-def2} \left .\frac {\dd }{\dd \epsilon }\right |_{\epsilon =0} F[\rho _{\epsilon }] = \int _{\R ^n} \nabla _W F[\rho ]\cdot \xi (\bx )\,\rho (\dd \bx ), \qquad \forall \ \partial _{\epsilon }\rho _\epsilon |_{\epsilon =0}=-\nabla \cdot (\rho \xi ).  \end {align}
+</p><!-- l. 2664 --><p class='indent'>    Similar to the ordinary first variation, nonlinearly perturbed flow (<span class='cmbx-10x-x-109'>??</span>) and linearly perturbed flow (<span class='cmbx-10x-x-109'>??</span>)
+generates the identical Wasserstein gradient.
+</p>
+                                                                                            
+                                                                                            
+    <div class='tcolorbox keybox' id='tcolobox-2'>     
+<div class='tcolorbox-title'>
+<!-- l. 2682 --><p class='indent'>    Density perturbation induced by a velocity field</p></div> 
+<div class='tcolorbox-content'><!-- l. 2669 --><p class='noindent'>Take a smooth vector field \(\xi : \Rn \rightarrow \Rn \) and define perturbation \[ \rho \rightarrow \rho _{\epsilon } = (\mathrm {Id} + \epsilon \xi )_{\sharp }\rho , \] this perturbation automatically preserves
+total mass and nonnegativity. It is the infinitesimal version of the transport. If \(\rho \) has a smooth
+density, we can expand this perturbation to first order and get \[ \frac {\dd }{\dd \epsilon } \Big |_{\epsilon = 0} \rho _{\epsilon } = -\nabla \cdot (\rho \xi ). \] So the density perturbation induced
+by this velocity field \(\xi \) is \[ \rho \rightarrow \rho _{\epsilon } = \rho + \epsilon \eta = \rho - \epsilon \nabla \cdot (\rho \xi ), \] which is exactly the linearization of the continuity equation. </p> 
+</div> 
+</div>
+<!-- l. 2686 --><p class='indent'>    The ordinary first variation \(\frac {\delta F}{\delta \rho }\) and the Wasserstein gradient are closely related. Insert the continuity
+equation variation into the ordinary first variation: \[ \left .\frac {\dd }{\dd t}\right |_{t=0} F[\rho _t] = \int \deldrho {F}\,\frac {\partial \rho _t}{\partial t}\Big |_{t=0}\,\dd \bx = -\int \deldrho {F}\,\nabla \cdot (\rho \xi )\,\dd \bx = \int _{\R ^n} \nabla \!\left (\deldrho {F}\right )\cdot \xi (\bx ) \rho (\mathrm {d}\bx ). \] from which we obtain the fundamental identity
+\begin {equation}  \boxed {\nabla _W F(\rho )=\nabla \!\left (\deldrho {F}\right ).} \label {eq:main-relation}  \end {equation}<a id='x24-34001r1'></a>
+</p><!-- l. 2699 --><p class='indent'>    So the ordinary first variation is a scalar potential, while the Wasserstein gradient is the corresponding
+tangent vector field obtained by taking its spatial gradient.
+</p>
+    <div class='tcolorbox keybox' id='tcolobox-3'>     
+<div class='tcolorbox-title'>
+<!-- l. 2708 --><p class='indent'>    Scalar tangent form of the Wasserstein gradient</p></div> 
+<div class='tcolorbox-content'><!-- l. 2702 --><p class='noindent'>If one wants the steepest ascent direction in the scalar tangent representation, then combine (<a href='#x24-34001r1'>5.1<!-- tex4ht:ref: eq:main-relation  --></a>)
+with (<span class='cmbx-10x-x-109'>??</span>): \[ \grad _W F[\rho ] = -\nabla \cdot \!\left (\rho \,\gradw F(\rho )\right ) = -\nabla \cdot \!\left (\rho \,\nabla \!\left (\deldrho {F}\right )\right ). \] For steepest descent, one takes the negative of this direction. </p> 
+</div> 
+</div>
+<!-- l. 2711 --><p class='indent'>    Alternatively, we can also define the scalar tangent form of the Wasserstein gradient \(\grad _W F[\rho ]\) directly from the
+viewpoint of calculus of variations.
+</p>
+    <div class='newtheorem'>
+<!-- l. 2714 --><p class='noindent'><span class='head'>
+<a id='x24-34002r5'></a>
+<span class='cmbx-10x-x-109'>Definition 5.4.5 </span>(Wasserstein gradient in scalar form)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Given a functional </span>\( F : \mathcal {P}_2(\Omega ) \to \mathbb {R} \)<span class='cmti-10x-x-109'>, its gradient with respect to the
+Wasserstein scalar product at </span>\( \bar {\rho } \in \mathcal {P}_2(\Omega ) \) <span class='cmti-10x-x-109'>is the unique function </span>\( \mathrm {grad}_{W} F[\bar {\rho }] \) <span class='cmti-10x-x-109'>(if it exists) such that </span>\begin {align}  \left \langle \mathrm {grad}_{W} F[\bar {\rho }], \frac {\partial \rho _\epsilon }{\partial \epsilon } \bigg |_{\epsilon =0} \right \rangle _{T_{\bar {\rho }}} = \frac {\mathrm {d}}{\mathrm {d}\epsilon } F[\rho _\epsilon ]:= \left \langle \frac {\delta \mathcal {F}[\bar {\rho }]}{\delta \rho }, \frac {\partial \rho _\epsilon }{\partial \epsilon } \bigg |_{\epsilon =0} \right \rangle _{L^2}  \end {align}
+</p><!-- l. 2724 --><p class='indent'>    <span class='cmti-10x-x-109'>for any smooth curve </span>\( \rho _\epsilon : (-\epsilon _0, \epsilon _0) \to \mathcal {P}(\Omega ) \) <span class='cmti-10x-x-109'>with </span>\( \rho _0 = \bar {\rho } \)<span class='cmti-10x-x-109'>. In other words, for any given tangent (test) vector</span> \(h\in T_{\bar {\rho }}\)<span class='cmti-10x-x-109'>, </span>\( \mathrm {grad}_{W} F[\bar {\rho }] \) <span class='cmti-10x-x-109'>is defined by</span>
+\begin {align}  \left \langle \mathrm {grad}_{W} F[\bar {\rho }], h \right \rangle _{T_{\bar {\rho }}} = \left \langle \frac {\delta \mathcal {F}[\bar {\rho }]}{\delta \rho }, h \right \rangle _{L^2}.  \end {align}
+</p>
+    </div>
+<!-- l. 2729 --><p class='indent'>
+</p>
+    <div class='newtheorem'>
+<!-- l. 2731 --><p class='noindent'><span class='head'>
+<a id='x24-34003r6'></a>
+<span class='cmbx-10x-x-109'>Lemma 5.4.6.</span>  </span><span class='cmti-10x-x-109'>Wasserstein gradient has an explicit expression </span>\[ \mathrm {grad}_W F(\bar {\rho }) = -\nabla \cdot \left ( \bar {\rho } \nabla \frac {\delta F[\bar {\rho }]}{\delta \rho } \right ). \]
+</p>
+    </div>
+<!-- l. 2736 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p>
+    <div class='proof'>
+<!-- l. 2739 --><p class='indent'>    <span class='head'>
+<span class='cmti-10x-x-109'>Proof.</span> </span>Denoting by \( \psi _h \) the Wasserstein potential of \(h\) with respect to \(\bar {\rho }\), namely, the solution of \( \text {div}(\bar {\rho } \nabla \psi ) = -h \) with zero
+Neumann boundary conditions, we have \begin {align*}  \left \langle \text {grad}_{W} F[\bar {\rho }], h \right \rangle _{T_{\bar {\rho }}} = \left \langle \frac {\delta F[\bar {\rho }]}{\delta \rho }, h \right \rangle _{L^2} = -\int _\Omega \frac {\delta F[\bar {\rho }]}{\delta \rho } \nabla \cdot (\bar {\rho } \nabla \psi _h) \dx = \int _\Omega \nabla \left ( \frac {\delta F[\bar {\rho }]}{\delta \rho } \right ) \cdot \nabla \psi _h \, \bar {\rho } \, \dx .  \end {align*}
+</p><!-- l. 2746 --><p class='indent'>    Comparing LHS and RHS of the above equation, and owing to the definition of the Wasserstein scalar
+product (<span class='cmbx-10x-x-109'>??</span>), We obtain that, since \(\psi _h\) is the Wasserstein potential of \(h\), \(\frac {\delta F[\bar {\rho }]}{\delta \rho }\) must be the Wasserstein potential of \(\text {grad}_{W} F[\bar {\rho }]\),
+which implies that \begin {align*}  \text {grad}_{W} F[\bar {\rho }] = -\nabla \cdot \left ( \bar {\rho } \nabla \frac {\delta F[\bar {\rho }]}{\delta \rho } \right ).  \end {align*}
+</p><!-- l. 2751 --><p class='indent'>    Another way to derive the Wasserstein gradient is to using the Wasserstein scalar product notation in
+(<span class='cmbx-10x-x-109'>??</span>), then we have \begin {align*}  &amp;\left \langle \grad _{W} F[\bar {\rho }], h \right \rangle _{T_{\bar {\rho }}} = \left \langle (-\Delta _{\bar {\rho }})^{-1} \grad _{W} F[\bar {\rho }], h \right \rangle _{L^2} = \left \langle \frac {\delta F[\bar {\rho }]}{\delta \rho }, h \right \rangle _{L^2}  \end {align*}
+</p><!-- l. 2757 --><p class='indent'>    which implies that \begin {align*}  (-\Delta _{\bar {\rho }})^{-1} \grad _{W} F[\bar {\rho }] = \frac {\delta F[\bar {\rho }]}{\delta \rho } \Longrightarrow \grad _{W} F[\bar {\rho }] = -\Delta _{\bar {\rho }} \frac {\delta F[\bar {\rho }]}{\delta \rho }.  \end {align*}
+</p><!-- l. 2762 --><p class='indent'>    Proof is completed.                                                                                                    □
+</p>
+    </div>
+    <div class='newtheorem'>
+<!-- l. 2765 --><p class='noindent'><span class='head'>
+<a id='x24-34004r7'></a>
+<span class='cmbx-10x-x-109'>Example 5.4.7.</span>  </span><span class='cmti-10x-x-109'>Take</span> \(F[\rho ] = \int _{\Omega } U(\rho ) \dx \)<span class='cmti-10x-x-109'>, then </span>\[ \mathrm {grad}_{W} F[\bar {\rho }] = -\mathrm {div} \big ( \bar {\rho } \nabla U'(\bar {\rho }) \big ) = -\mathrm {div} \big ( \bar {\rho } U''(\bar {\rho }) \nabla \bar {\rho } \big ). \]
+</p>
+    </div>
+<!-- l. 2771 --><p class='indent'>
+</p>
+    <div class='newtheorem'>
+<!-- l. 2773 --><p class='noindent'><span class='head'>
+<a id='x24-34005r8'></a>
+<span class='cmbx-10x-x-109'>Example 5.4.8.</span>  </span><span class='cmti-10x-x-109'>Take</span> \(F[\rho ]=\int _{\Omega }\rho (x)V(x) \dx \)<span class='cmti-10x-x-109'>, then </span>\begin {align*}  \mathrm {grad}_W F[\bar {\rho }] = - \nabla \cdot (\bar {\rho }\nabla V).  \end {align*}
+</p>
+    </div>
+<!-- l. 2778 --><p class='indent'>
+</p>
+                                                                                            
+                                                                                            
+    <div class='newtheorem'>
+<!-- l. 2780 --><p class='noindent'><span class='head'>
+<a id='x24-34006r9'></a>
+<span class='cmbx-10x-x-109'>Example 5.4.9.</span>  </span><span class='cmti-10x-x-109'>Take </span>\( F[\rho ] = \frac {1}{2} \int \int \rho (x) \rho (y) W(x-y) \, \dx \, \mathrm {d}\mathbf {y} \) <span class='cmti-10x-x-109'>with </span>\( W : \mathbb {R}^d \to \mathbb {R} \) <span class='cmti-10x-x-109'>such that </span>\( W(\mathbf {z}) = W(-\mathbf {z}) \)<span class='cmti-10x-x-109'>, then its first </span>\( L^2 \) <span class='cmti-10x-x-109'>variation at </span>\( \bar {\rho } \) <span class='cmti-10x-x-109'>is </span>\begin {align*}  \frac {\delta F[\bar {\rho }]}{\delta \rho }(\mathbf {x}) = W \ast \bar {\rho }(\mathbf {x}) = \int _\Omega W(\mathbf {x}-\mathbf {y}) \rho (\mathbf {y}) \, \mathrm {d}\mathbf {y},  \end {align*}
+</p><!-- l. 2786 --><p class='indent'>    <span class='cmti-10x-x-109'>where </span>\( \ast \) <span class='cmti-10x-x-109'>denotes the convolution, and therefore the Wasserstein gradient of </span>\( F \) <span class='cmti-10x-x-109'>is </span>\begin {align*}  \mathrm {grad}_{W} F[\bar {\rho }] = -\mathrm {div}\big ((\nabla W \ast \bar {\rho }) \bar {\rho } \big ).  \end {align*}
+</p>
+    </div>
+<!-- l. 2790 --><p class='indent'>
+</p><!-- l. 2793 --><p class='indent'>    In the following example, we consider the Wasserstein gradient for \(\frac 12\,\W ^2(\rho ,\mu )\). Since this result is so important, we
+will list the result as a theorem.
+</p>
+    <div class='newtheorem'>
+<!-- l. 2795 --><p class='noindent'><span class='head'>
+<a id='x24-34007r10'></a>
+<span class='cmbx-10x-x-109'>Theorem 5.4.10.</span>  </span><span class='cmti-10x-x-109'>Let </span>\[ F(\rho ) = \frac 12 W_2^2(\rho ,\sigma ), \] <span class='cmti-10x-x-109'>where</span> \(\sigma \in \mathcal P_2(\R ^n)\) <span class='cmti-10x-x-109'>is fixed. Assume that</span> \(\rho \ll \mathcal L^n\)<span class='cmti-10x-x-109'>, so that the optimal transport from</span> \(\rho \) <span class='cmti-10x-x-109'>to</span> \(\sigma \) <span class='cmti-10x-x-109'>is induced by
+the Brenier map </span>\[ T = T_{\rho \to \sigma },\qquad T_\#\rho = \sigma . \] <span class='cmti-10x-x-109'>Then the Wasserstein gradient of</span> \(F\) <span class='cmti-10x-x-109'>at</span> \(\rho \) <span class='cmti-10x-x-109'>is given by </span>\begin {align}  \gradw F(\rho ) = \id - T_{\rho \to \sigma } \qquad \text {in } L^2(\rho ;\R ^n).  \end {align}
+</p><!-- l. 2809 --><p class='indent'>    <span class='cmti-10x-x-109'>Equivalently, if</span> \(\phi \) <span class='cmti-10x-x-109'>is a Kantorovich potential for the quadratic cost</span> \(c(\bx ,\by )=\frac 12|\bx -\by |^2\)<span class='cmti-10x-x-109'>, then </span>\[ \gradw F(\rho )=\nabla \phi , \qquad T_{\rho \to \sigma }(\bx )=\bx -\nabla \phi (\bx ) \quad \rho \text {-a.e.} \]
+</p>
+    </div>
+<!-- l. 2816 --><p class='indent'>
+</p>
+    <div class='proof'>
+<!-- l. 2819 --><p class='indent'>    <span class='head'>
+<span class='cmti-10x-x-109'>Proof.</span> </span>To prove the formula for the Wasserstein gradient, it suffices to compute the derivative of \(F\)
+along perturbations of the form \[ \rho _t = (\id + t\xi )_\#\rho , \qquad \xi \in C_c^{\infty }(\R ^n;\R ^n), \] and show that \[ \left .\frac {\dd }{\dd t}\right |_{t=0} F(\rho _t) = \int _{\R ^n} (\bx -T(\bx ))\cdot \xi (\bx )\,\dd \rho (\bx ). \] By the definition of the Wasserstein gradient, this
+will imply \[ \gradw F(\rho )=\id -T. \]
+</p><!-- l. 2835 --><p class='indent'>    Set \[ X_t(\bx )=\bx +t\xi (\bx ), \qquad \rho _t=(X_t)_\#\rho . \]
+</p><!-- l. 2842 --><p class='noindent'><span class='cmbx-10x-x-109'>Step I (an upper bound)</span>. Since \(T_\#\rho =\sigma \), the plan \[ \gamma _t := (X_t,T)_\#\rho \] is an admissible transport plan between \(\rho _t\) and \(\sigma \). Therefore, \[ \frac 12 W_2^2(\rho _t,\sigma ) \le \int _{\R ^n\times \R ^n} \frac 12 |\bx -\by |^2\,\dd \gamma _t(\bx ,\by ) = \int _{\R ^n} \frac 12 |X_t(\bx )-T(\bx )|^2\,\dd \rho (\bx ). \]
+Expanding the square gives \[ \frac 12 |X_t(\bx )-T(\bx )|^2 = \frac 12 |\bx -T(\bx )|^2 + t\,(\bx -T(\bx ))\cdot \xi (\bx ) + \frac {t^2}{2}|\xi (\bx )|^2. \] Hence \[ F(\rho _t) \le F(\rho ) + t\int _{\R ^n} (\bx -T(\bx ))\cdot \xi (\bx )\,\dd \rho (\bx ) + \frac {t^2}{2}\int _{\R ^n}|\xi (\bx )|^2\,\dd \rho (\bx ). \] Therefore, \begin {equation} \label {eq:upperbound} \limsup _{t\to 0} \frac {F(\rho _t)-F(\rho )}{t} \le \int _{\R ^n} (\bx -T(\bx ))\cdot \xi (\bx )\,\dd \rho (\bx ).  \end {equation}<a id='x24-34008r2'></a>
+</p><!-- l. 2885 --><p class='noindent'><span class='cmbx-10x-x-109'>Step II (a lower bound from Kantorovich duality)</span>. Let \(\phi \) be a Kantorovich potential for the pair \((\rho ,\sigma )\)
+associated with the cost \[ c(\bx ,\by )=\frac 12|\bx -\by |^2. \] Let \(\phi ^c\) denote the \(c\)-transform. Then \begin {align*}  F(\rho ) &amp;= \sup _{\phi \oplus \psi \le c} \int _{\R ^n} \phi (\bx )\,\dd \rho (\bx ) + \int _{\R ^n} \psi (\by )\,\dd \sigma (\by ) \\ &amp;= \sup _{\phi } \int _{\R ^n} \phi (\bx )\,\dd \rho (\bx ) + \int _{\R ^n} \phi ^c(\by )\,\dd \sigma (\by ),  \end {align*}
+                                                                                            
+                                                                                            
+</p><!-- l. 2896 --><p class='indent'>    and for every \(\eta \in \mathcal P_2(\R ^n)\), \[ F(\eta )=\frac 12 W_2^2(\eta ,\sigma ) \ge \int _{\R ^n}\phi \,\dd \eta + \int _{\R ^n}\phi ^c\,\dd \sigma . \] Applying this with \(\eta =\rho _t\), we obtain \[ F(\rho _t)-F(\rho ) \ge \int _{\R ^n}\phi \,\dd \rho _t - \int _{\R ^n}\phi \,\dd \rho . \] Since \(\rho _t=(X_t)_\#\rho \), \[ \int _{\R ^n}\phi \,\dd \rho _t = \int _{\R ^n} \phi (X_t(\bx ))\,\dd \rho (\bx ). \] Thus, \[ F(\rho _t)-F(\rho ) \ge \int _{\R ^n}\bigl [\phi (\bx +t\xi (\bx )) - \phi (\bx )\bigr ] \,\dd \rho (\bx ). \] Dividing by \(t\) and letting \(t\to 0\), we obtain
+formally, and rigorously under the standard differentiability assumptions on \(\phi \), \begin {equation} \label {eq:lowerbound1} \liminf _{t\to 0} \frac {F(\rho _t)-F(\rho )}{t} \ge \int _{\R ^n} \nabla \phi (\bx )\cdot \xi (\bx )\,\dd \rho (\bx ).  \end {equation}<a id='x24-34009r3'></a>
+</p><!-- l. 2929 --><p class='noindent'><span class='cmbx-10x-x-109'>Step III (identify the gradient)</span>. For the quadratic cost, the Brenier map and the Kantorovich
+potential are related by \[ T(\bx )=\bx -\nabla \phi (\bx ) \qquad \rho \text {-a.e.} \] Hence \[ \nabla \phi (\bx )=\bx -T(\bx ). \] Substituting this into (<a href='#x24-34009r3'>5.3<!-- tex4ht:ref: eq:lowerbound1  --></a>), we find \begin {equation} \label {eq:lowerbound2} \liminf _{t\to 0} \frac {F(\rho _t)-F(\rho )}{t} \ge \int _{\R ^n} (\bx -T(\bx ))\cdot \xi (\bx )\,\dd \rho (\bx ).  \end {equation}<a id='x24-34010r4'></a> Combining (<a href='#x24-34008r2'>5.2<!-- tex4ht:ref: eq:upperbound  --></a>) and (<a href='#x24-34010r4'>5.4<!-- tex4ht:ref: eq:lowerbound2  --></a>), we
+conclude that \[ \left .\frac {\dd }{\dd t}\right |_{t=0}F(\rho _t) = \int _{\R ^n} (\bx -T(\bx ))\cdot \xi (\bx )\,\dd \rho (\bx ). \] By the definition of the Wasserstein gradient, this proves that \[ \gradw F(\rho )=\id -T_{\rho \to \sigma }. \] This completes the
+proof.                                                                                                                           □
+</p>
+    </div>
+    <div class='newtheorem'>
+<!-- l. 2960 --><p class='noindent'><span class='head'>
+<a id='x24-34011r11'></a>
+<span class='cmbx-10x-x-109'>Remark 5.4.11.</span>  </span><span class='cmti-10x-x-109'>The theorem can also be expressed in terms of the scalar first variation. Up to an
+additive constant, </span>\[ \frac {\delta }{\delta \rho }\left (\frac 12 W_2^2(\rho ,\sigma )\right )=\phi , \] <span class='cmti-10x-x-109'>where</span> \(\phi \) <span class='cmti-10x-x-109'>is a Kantorovich potential. Taking the spatial gradient gives </span>\[ \gradw \left (\frac 12 W_2^2(\rho ,\sigma )\right )=\nabla \phi =\id -T_{\rho \to \sigma }. \] <span class='cmti-10x-x-109'>Thus the scalar
+first variation and the Wasserstein gradient encode the same information, but in different forms: the
+first variation is a scalar potential, while the Wasserstein gradient is the corresponding tangent vector
+field.</span>
+</p>
+    </div>
+<!-- l. 2970 --><p class='indent'>
+</p><!-- l. 2973 --><p class='indent'>    This is the standard prototype for understanding JKO. In the velocity picture, the gradient is the
+displacement field \(\bx - T_{\rho \to \mu }(\bx )\). In the scalar picture, the corresponding tangent direction is \[ \sigma = -\nabla \cdot \bigl (\rho \, (\id -T_{\rho \to \mu })\bigr ). \]
+</p><!-- l. 2979 --><p class='indent'>    This example explain the JKO flow. A JKO step for an energy \(F\) is \begin {equation}  \rho ^{k+1}\in \operatorname *{argmin}_{\rho \in \Ptwo } \left \{F[\rho ] + \frac {1}{2\tau }\W ^2(\rho ,\rho ^k)\right \}. \label {eq:JKO}  \end {equation}<a id='x24-34012r5'></a> At the formal Euler-Lagrange level,
+the optimality condition in velocity form is \begin {equation}  \gradw F(\rho ^{k+1}) + \frac {1}{\tau }\bigl (\id - T_{\rho ^{k+1}\to \rho ^k}\bigr )=0. \label {eq:JKO-EL}  \end {equation}<a id='x24-34013r6'></a> Using (<a href='#x24-34001r1'>5.1<!-- tex4ht:ref: eq:main-relation  --></a>), this can be written as \[ \nabla \!\left (\deldrho {F}(\rho ^{k+1})\right ) + \frac {1}{\tau }\bigl (\id - T_{\rho ^{k+1}\to \rho ^k}\bigr )=0. \] This is the Wasserstein
+analogue of the implicit Euler rule in Euclidean space.
+</p><!-- l. 2998 --><p class='indent'>    The definition of gradient flow in the Wasserstein space is (at least on a purely formal level) given
+below.
+</p>
+    <div class='newtheorem'>
+<!-- l. 3000 --><p class='noindent'><span class='head'>
+<a id='x24-34014r12'></a>
+<span class='cmbx-10x-x-109'>Definition 5.4.12 </span>(Wasserstein gradient flow)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Given a functional </span>\( F : \mathcal {P}_2(\Omega ) \to \mathbb {R} \)<span class='cmti-10x-x-109'>, a curve of probability measure </span>\( \rho : [0, T) \to \mathcal {P}_2(\Omega ) \) <span class='cmti-10x-x-109'>is a
+gradient flow of </span>\( \mathcal {F} \) <span class='cmti-10x-x-109'>with respect to </span>\( W_2 \) <span class='cmti-10x-x-109'>and with starting point </span>\( \bar {\rho }_0 \) <span class='cmti-10x-x-109'>if </span>\begin {align} \label {eqn:Wasserstein_gradientflow} \begin {cases} \partial _t \rho _t = -\mathrm {grad}_{W} F[\rho _t], \\ \rho _0 = \bar {\rho }_0. \end {cases}  \end {align}
+</p>
+    </div>
+                                                                                            
+                                                                                            
+<!-- l. 3009 --><p class='indent'>
+</p>
+    <div class='newtheorem'>
+<!-- l. 3011 --><p class='noindent'><span class='head'>
+<a id='x24-34015r13'></a>
+<span class='cmbx-10x-x-109'>Example 5.4.13.</span>  </span><span class='cmti-10x-x-109'>Take</span> \(F[\rho ] = \int _{\Omega } \rho \log \rho \ \dx \)<span class='cmti-10x-x-109'>, the entropy functional, then the corresponding Wasserstein gradient flow is
+the heat equation: </span>\[ \partial _t \rho = -\mathrm {grad}_W F[\rho ] = \Delta \rho . \]
+</p><!-- l. 3017 --><p class='indent'>    <span class='cmti-10x-x-109'>Take</span> \(F[\rho ] = \frac {1}{m-1}\int _{\Omega }\rho ^m \dx \) <span class='cmti-10x-x-109'>for</span> \(1\ne m &gt;0\)<span class='cmti-10x-x-109'>, then the gradient flow is </span>\[ \partial _t \rho -\mathrm {grad}_W F[\rho ] = \Delta (\rho ^m), \] <span class='cmti-10x-x-109'>which is the porous medium equation</span> \((m&gt;1)\)<span class='cmti-10x-x-109'>, or the fast diffusion
+equation</span> \((m&lt;1)\)<span class='cmti-10x-x-109'>.</span>
+</p>
+    </div>
+<!-- l. 3023 --><p class='indent'>
+</p>
+    <div class='tcolorbox summarybox' id='tcolobox-4'>     
+<div class='tcolorbox-title'>
+    </div> 
+<div class='tcolorbox-content'><!-- l. 3028 --><p class='noindent'><span class='cmbx-10x-x-109'>Final dictionary. </span>\begin {align*}  \text {first variation}: &amp;\quad \deldrho {F} &amp;&amp; \text {scalar potential},\\[0.3em] \text {Wasserstein gradient}: &amp;\quad \gradw F(\rho )=\nabla \!\left (\deldrho {F}\right ) &amp;&amp; \text {velocity-field tangent vector},\\[0.3em] \text {scalar tangent form}: &amp;\quad -\nabla \cdot \!\left (\rho \,\gradw F(\rho )\right ) &amp;&amp; \text {density derivative},\\[0.3em] \text {Wassserstein gradient flow}: &amp;\quad \partial _t\rho = \nabla \cdot \!\left (\rho \,\nabla \!\left (\deldrho {F}\right )\right ) &amp;&amp; \text {steepest descent in } W_2.  \end {align*}
+</p><!-- l. 3035 --><p class='noindent'>The three lines above describe the same geometric information in three different but compatible
+languages. </p> 
+</div> 
+</div>
+                                                                                            
+                                                                                            
+    <!-- l. 3042 --><div class='crosslinks'><p class='noindent'>[<a href='Notesse18.html'>next</a>] [<a href='Notesse16.html'>prev</a>] [<a href='Notesse16.html#tailNotesse16.html'>prev-tail</a>] [<a href='Notesse17.html'>front</a>] [<a href='Notesch5.html#Notesse17.html'>up</a>] </p></div>
+<!-- l. 3042 --><p class='indent'>    <a id='tailNotesse17.html'></a>  </p> 
+</body> 
+</html>

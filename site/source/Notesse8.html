@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Sinkhorn’s Algorithm</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='Notes.css' rel='stylesheet' type='text/css' /> 
+<meta content='Notes.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+    <!-- l. 948 --><div class='crosslinks'><p class='noindent'>[<a href='Notesse9.html'>next</a>] [<a href='Notesse7.html'>prev</a>] [<a href='Notesse7.html#tailNotesse7.html'>prev-tail</a>] [<a href='#tailNotesse8.html'>tail</a>] [<a href='Notesch3.html#Notesse8.html'>up</a>] </p></div>
+    <h3 class='sectionHead' id='sinkhorn'><span class='titlemark'>3.2   </span> <a id='x13-140003.2'></a>Sinkhorn’s Algorithm</h3>
+<!-- l. 951 --><p class='noindent'>In this section, we introduce the Sinkhorn algorithm, a major breakthrough of the past decade <span class='cite'>[<a href='Notesli2.html#Xcuturi2013sinkhorn'>13</a>]</span>, which has
+revitalized the application of optimal transport across diverse fields. We begin by presenting the following
+lemma, which indicates that the solution to the entropic regularized OT problem has a so-called <span class='cmti-10x-x-109'>diagonal
+rescaling decomposition</span>.
+</p>
+    <div class='newtheorem'>
+<!-- l. 954 --><p class='noindent'><span class='head'>
+<a id='x13-14001r1'></a>
+<span class='cmbx-10x-x-109'>Proposition 3.2.1 </span>(Diagonal rescaling decomposition)<span class='cmbx-10x-x-109'>.</span>  </span> <span class='cmti-10x-x-109'>The solution to (</span><span class='cmbx-10x-x-109'>??</span><span class='cmti-10x-x-109'>) is unique and has the form</span> \(\mathbf {P} = \mathrm {diag}(\mathbf {u})\mathbf {K}\mathrm {diag}(\mathbf {v})\)<span class='cmti-10x-x-109'>,
+or componentwisely </span>\begin {align*}  P_{i,j} = u_i K_{i,j} v_j, \quad \forall (i,j) \in [n] \times [m]  \end {align*}
+</p><!-- l. 959 --><p class='indent'>    <span class='cmti-10x-x-109'>for two (unknown) scaling variables</span> \((\mathbf {u}, \mathbf {v}) \in \mathbb {R}_+^n \times \mathbb {R}_+^m\)<span class='cmti-10x-x-109'>.</span>
+</p>
+    </div>
+<!-- l. 960 --><p class='indent'>
+</p>
+    <div class='proof'>
+<!-- l. 963 --><p class='indent'>    <span class='head'>
+<span class='cmti-10x-x-109'>Proof.</span> </span>Introducing two dual variables \(\mathbf {f} \in \mathbb {R}^n, \mathbf {g} \in \mathbb {R}^m\) for each marginal constraint, the Lagrangian of (<span class='cmbx-10x-x-109'>??</span>) reads
+\begin {align*}  \mathcal {L}(\mathbf {P}; \mathbf {f}, \mathbf {g}) = \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) - \langle \mathbf {f}, \mathbf {P} \mathbb {1} - \mathbf {a} \rangle - \langle \mathbf {g}, \mathbf {P}^{\mathrm {T}} \mathbb {1} - \mathbf {b} \rangle .  \end {align*}
+</p><!-- l. 968 --><p class='indent'>    First-order conditions then yield \begin {align*}  \frac {\partial \mathcal {L}(\mathbf {P}, \mathbf {f}, \mathbf {g})}{\partial P_{i,j}} = C_{i,j} + \epsilon \log (P_{i,j}) - f_i - g_j = 0,  \end {align*}
+</p><!-- l. 972 --><p class='indent'>    from which we get \begin {align*}  P_{i,j} = e^{f_i/\epsilon } e^{-C_{i,j}/\epsilon } e^{g_j/\epsilon },  \end {align*}
+</p><!-- l. 976 --><p class='indent'>    or in the matrix form \begin {align*}  \mathbf {P} = \text {diag}(e^{\mathbf {f}/\epsilon }) e^{-\mathbf {C}/\epsilon } \text {diag}(e^{\mathbf {g}/\epsilon }).  \end {align*}
+</p><!-- l. 980 --><p class='indent'>    Taking \(\mathbf {u} = e^{\mathbf {f}/\epsilon }, \mathbf {v} = e^{\mathbf {g}/\epsilon }, \mathbf {K} = e^{-\mathbf {C}/\epsilon }\), the diagonal rescaling decomposition is obtained.                                                 □
+                                                                                            
+                                                                                            
+</p>
+    </div>
+<!-- l. 983 --><p class='indent'>    The above proposition implies that the unknown variables \((\mathbf {u},\mathbf {v})\) satisfy the following nonlinear equations
+which corresond to the mass conservation constraints \(\mathbf {P} \in \mathbf {U}(\mathbf {a},\mathbf {b})\): \begin {align*}  \operatorname {diag}(\mathbf {u}) \mathbf {K} \operatorname {diag}(\mathbf {v}) \mathbb {1} &amp;= \mathbf {a}, \quad \operatorname {diag}(\mathbf {v}) \mathbf {K}^{\mathrm {T}} \operatorname {diag}(\mathbf {u}) \mathbb {1} = \mathbf {b}.  \end {align*}
+</p><!-- l. 988 --><p class='indent'>    These two equations can be further simplified, since \(\operatorname {diag}(\mathbf {v}) \mathbb {1}\) is simply \(\mathbf {v}\), and the multiplication of \(\operatorname {diag}(\mathbf {u})\) times \(\mathbf {K} \mathbf {v}\) is
+\begin {align} \label {eqn:Sinkhorn00} \mathbf {u} \odot (\mathbf {K} \mathbf {v}) = \mathbf {a}, \quad \mathbf {v} \odot (\mathbf {K}^{\mathrm {T}} \mathbf {u}) = \mathbf {b},  \end {align}
+</p><!-- l. 993 --><p class='indent'>    where \(\odot \) corresponds to entrywise multiplication of vectors. That problem is known in the
+numerical analysis community as the matrix scaling problem. An intuitive way to handle these
+equations is to solve them iteratively, by modifying first \(\mathbf {u}\) so that it satisfies the left-hand side of
+Equation (<span class='cmbx-10x-x-109'>??</span>), and then \(\mathbf {v}\) to satisfy its right-hand side. These two updates define <span class='cmti-10x-x-109'>Sinkhorn’s
+algorithm</span>,
+</p><!-- l. 998 --><p class='indent'>    \begin {align} \label {eqn:Sinkhorn01} \mathbf {u}^{(\ell +1)} := \frac {\mathbf {a}}{\mathbf {K} \mathbf {v}^{(\ell )}}, \quad \mathbf {v}^{(\ell +1)} &amp;:= \frac {\mathbf {b}}{\mathbf {K}^{\mathrm {T}} \mathbf {u}^{(\ell +1)}},  \end {align}
+</p><!-- l. 999 --><p class='indent'>    initialized with an arbitrary positive vector \(\mathbf {v}^{(0)} = \mathbb {1}\). The division operator used above between two vectors is to
+be understood entrywise.
+</p><!-- l. 1001 --><p class='indent'>    Note that a different initialization will likely lead to a different solution for \(\mathbf {u}, \mathbf {v}\), since \(\mathbf {u}, \mathbf {v}\) are only defined up to
+a multiplicative constant (if \(\mathbf {u}, \mathbf {v}\) satisfy (<span class='cmbx-10x-x-109'>??</span>), then so do \(\lambda \mathbf {u}, \mathbf {v}/\lambda \) for any \(\lambda &gt; 0\)). It turns out, however, that these iterations
+converge and all result in the same optimal coupling \(\operatorname {diag}(\mathbf {u}) \mathbf {K} \operatorname {diag}(\mathbf {v})\), which is evolved from the Gibbs kernel \(\mathbf {K}\) by
+progressively shifting the mass away from the diagonal.
+</p>
+    <div class='newtheorem'>
+<!-- l. 1003 --><p class='noindent'><span class='head'>
+<a id='x13-14002r2'></a>
+<span class='cmbx-10x-x-109'>Remark 3.2.2 </span>(Overall complexity)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>By performing a careful convergence analysis (assuming</span> \(n = m\) <span class='cmti-10x-x-109'>for
+simplicity), </span><span class='cite'><span class='cmti-10x-x-109'>[</span><a href='Notesli2.html#Xaltschuler2017near'><span class='cmti-10x-x-109'>1</span></a><span class='cmti-10x-x-109'>]</span></span> <span class='cmti-10x-x-109'>showed that by setting</span> \(\epsilon = \frac {4 \log (n)}{\tau }\)<span class='cmti-10x-x-109'>,</span> \(O(\|\mathbf {C}\|_{\infty }^3 \log (n) \tau ^{-3})\) <span class='cmti-10x-x-109'>Sinkhorn iterations (with an additional rounding step to compute a
+valid coupling</span> \(\hat {\mathbf {P}} \in \mathbf {U}(\mathbf {a}, \mathbf {b})\)<span class='cmti-10x-x-109'>) are sufficient to ensure that </span>\begin {align*}  \langle \hat {\mathbf {P}}, \mathbf {C} \rangle \leq L_{\mathbf {C}}(\mathbf {a}, \mathbf {b}) + \tau .  \end {align*}
+</p><!-- l. 1008 --><p class='indent'>    <span class='cmti-10x-x-109'>This implies that Sinkhorn computes a</span> \(\tau \)<span class='cmti-10x-x-109'>-approximate solution of the unregularized OT problem in</span> \(O(n^2 \log (n) \tau ^{-3})\)
+<span class='cmti-10x-x-109'>operations.</span>
+</p>
+    </div>
+<!-- l. 1009 --><p class='indent'>
+</p><!-- l. 1011 --><p class='indent'>    Note that Sinkhorn algorithm (<span class='cmbx-10x-x-109'>??</span>) is equivalent to the Bregman iteration. We summarize it in the
+following lemma.
+</p>
+    <div class='newtheorem'>
+<!-- l. 1012 --><p class='noindent'><span class='head'>
+<a id='x13-14003r3'></a>
+                                                                                            
+                                                                                            
+<span class='cmbx-10x-x-109'>Lemma 3.2.3 </span>(Bregman interation)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Denoting </span>\begin {align*}  \mathcal {C}_\mathbf {a} \coloneqq \{\mathbf {P} : \mathbf {P} \mathbb {1} = \mathbf {a} \}, \quad \mathcal {C}_\mathbf {b} \coloneqq \{\mathbf {P} : \mathbf {P}^\mathrm {T} \mathbb {1} = \mathbf {b} \}  \end {align*}
+</p><!-- l. 1018 --><p class='indent'>    <span class='cmti-10x-x-109'>as the row and column constraints, we have</span> \(\mathbf {U}(\mathbf {a}, \mathbf {b}) = \mathcal {C}_\mathbf {a} \cap \mathcal {C}_\mathbf {b}\)<span class='cmti-10x-x-109'>. One can use Bregman iterative projections </span><span class='cite'><span class='cmti-10x-x-109'>[</span><a href='Notesli2.html#Xbregman1967relaxation'><span class='cmti-10x-x-109'>5</span></a><span class='cmti-10x-x-109'>]</span></span><span class='cmti-10x-x-109'>,</span>
+\begin {align} \label {eqn:Bregman} \mathbf {P}^{(\ell +1)} \coloneqq \operatorname {Proj}^{\operatorname {KL}}_{\mathcal {C}_\mathbf {a}} (\mathbf {P}^{(\ell )}) &amp; \quad \mathbf {P}^{(\ell +2)} \coloneqq \operatorname {Proj}^{\operatorname {KL}}_{\mathcal {C}_\mathbf {b}} (\mathbf {P}^{(\ell +1)}).  \end {align}
+</p><!-- l. 1024 --><p class='indent'>    <span class='cmti-10x-x-109'>Since the sets</span> \(\mathcal {C}_\mathbf {a}\) <span class='cmti-10x-x-109'>and</span> \(\mathcal {C}_\mathbf {b}\) <span class='cmti-10x-x-109'>are affine, these iterations are known to converge to the solution of</span>  (<a href='Notesse7.html#x12-13008r6'>3.6<!-- tex4ht:ref: eqn:KL_proj  --></a>)<span class='cmti-10x-x-109'>; see </span><span class='cite'><span class='cmti-10x-x-109'>[</span><a href='Notesli2.html#Xbregman1967relaxation'><span class='cmti-10x-x-109'>5</span></a><span class='cmti-10x-x-109'>]</span></span><span class='cmti-10x-x-109'>.
+These iterates are equivalent to Sinkhorn iterations</span> (<span class='cmbx-10x-x-109'>??</span>)<span class='cmti-10x-x-109'>.</span>
+</p>
+    </div>
+<!-- l. 1025 --><p class='indent'>
+</p>
+    <div class='proof'>
+<!-- l. 1028 --><p class='indent'>    <span class='head'>
+<span class='cmti-10x-x-109'>Proof.</span> </span>We only prove the equivalence between Sinkhorn and Bregman. The convergence can
+be found in the reference. Assuming we have a diagonally rescaling decomposition at \((2\ell )\)-th step:
+\begin {align*}  \mathbf {P}^{(2\ell )} &amp;\coloneqq \operatorname {diag}(\mathbf {u}^{(\ell )}) \mathbf {K} \operatorname {diag}(\mathbf {v}^{(\ell )}).  \end {align*}
+</p><!-- l. 1032 --><p class='indent'>    Now let us consider the KL projection problem in (<span class='cmbx-10x-x-109'>??</span>): \begin {align*}  \mathbf {P}^{(2\ell +1)} = \operatorname {Proj}^{\operatorname {KL}}_{\mathcal {C}_\mathbf {a}} (\mathbf {P}^{(2\ell )}) = \operatorname {argmin}_{\mathbf {P}\in \mathcal {C}_{\mathbf {a}}} \epsilon \operatorname {KL}(\mathbf {P}|\mathbf {P}^{2\ell }).  \end {align*}
+</p><!-- l. 1036 --><p class='indent'>    Rewrite this constrained problem in Lagrangian form \begin {align*}  \mathcal {L}(\mathbf {P};\mathbf {f}) = \epsilon \operatorname {KL}(\mathbf {P}|\mathbf {P}^{2\ell }) - \langle \mathbf {f}, \mathbf {P} \mathbb {1} - \mathbf {a} \rangle  \end {align*}
+</p><!-- l. 1040 --><p class='indent'>    and take the first-order derivative, we have \begin {align*}  \frac {\partial \mathcal {L}(\mathbf {P};\mathbf {f})}{\partial P_{i,j}} = \epsilon \log \frac {P_{ij}}{P_{ij}^{(2\ell )}} - f_i = 0 \Rightarrow P_{ij} = e^{f_i/\epsilon }P_{ij}^{(2\ell )} \Rightarrow \mathbf {P}^{(2\ell +1)} = \operatorname {diag}(e^{\mathbf {f}/\epsilon })\mathbf {P}^{(2\ell )}.  \end {align*}
+</p><!-- l. 1046 --><p class='indent'>    From the constraint of \(\mathcal {C}_\mathbf {a}\), \begin {align*}  \mathbf {P}^{(2\ell +1)}\mathbb {1}= \mathbf {a} \Rightarrow \operatorname {diag}(e^{\mathbf {f}/\epsilon })\mathbf {P}^{(2\ell )}\mathbb {1} = e^{\mathbf {f}/\epsilon }\odot (\mathbf {P}^{(2\ell )}\mathbb {1}) = \mathbf {a} \Rightarrow e^{\mathbf {f}/\epsilon } = \frac {\mathbf {a}}{\mathbf {P}^{(2\ell )}\mathbb {1}}.  \end {align*}
+</p><!-- l. 1051 --><p class='indent'>    Then \begin {align*}  \mathbf {P}^{(2\ell +1)} &amp; = \operatorname {diag}(e^{\mathbf {f}/\epsilon })\mathbf {P}^{(2\ell )} \\ &amp; = \operatorname {diag}\left (\frac {\mathbf {a}}{\mathbf {P}^{(2\ell )}\mathbb {1}}\right )\mathbf {P}^{(2\ell )} \\ &amp; = \operatorname {diag}\left (\frac {\mathbf {a}}{ \mathbf {u}^{(\ell )} \odot (\mathbf {K} \mathbf {v}^{(\ell )}) }\right ) \operatorname {diag}(\mathbf {u}^{(\ell )}) \mathbf {K} \operatorname {diag}(\mathbf {v}^{(\ell )}) \\ &amp; = \operatorname {diag}\left (\frac {\mathbf {a}}{ \mathbf {K} \mathbf {v}^{(\ell )} }\right ) \mathbf {K} \operatorname {diag}(\mathbf {v}^{(\ell )})  \end {align*}
+</p><!-- l. 1058 --><p class='indent'>    from which we see that the update from \(\mathbf {P}^{(2\ell )} \rightarrow \mathbf {P}^{(2\ell +1)}\) is equivalent to take \(\mathbf {u}^{(\ell )} \rightarrow \frac {\mathbf {a}}{ \mathbf {K} \mathbf {v}^{(\ell )} }: = \mathbf {u}^{(\ell +1)}\): \begin {align*}  \mathbf {P}^{(2\ell +1)} &amp;\coloneqq \operatorname {diag}(\mathbf {u}^{(\ell +1)}) \mathbf {K} \operatorname {diag}(\mathbf {v}^{(\ell )}).  \end {align*}
+</p><!-- l. 1062 --><p class='indent'>    Similarly the update from \(\mathbf {P}^{(2\ell +1)} \rightarrow \mathbf {P}^{(2\ell +2)}\) is equivalent to take \(\mathbf {v}^{(\ell )} \rightarrow \frac {\mathbf {b}}{ \mathbf {K}^{\mathrm {T}} \mathbf {u}^{(\ell +1)} }: = \mathbf {v}^{(\ell +1)}\): \begin {align*}  \mathbf {P}^{(2\ell +2)} &amp;\coloneqq \operatorname {diag}(\mathbf {u}^{(\ell +1)}) \mathbf {K} \operatorname {diag}(\mathbf {v}^{(\ell +1)}).  \end {align*}
+</p><!-- l. 1066 --><p class='indent'>    The equivalence is proved.                                                                                          □
+</p>
+    </div>
+                                                                                            
+                                                                                            
+    <!-- l. 1076 --><div class='crosslinks'><p class='noindent'>[<a href='Notesse9.html'>next</a>] [<a href='Notesse7.html'>prev</a>] [<a href='Notesse7.html#tailNotesse7.html'>prev-tail</a>] [<a href='Notesse8.html'>front</a>] [<a href='Notesch3.html#Notesse8.html'>up</a>] </p></div>
+<!-- l. 1076 --><p class='indent'>    <a id='tailNotesse8.html'></a> </p> 
+</body> 
+</html>

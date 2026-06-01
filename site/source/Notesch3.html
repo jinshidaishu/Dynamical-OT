@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>3 Entropic Regularization of Optimal Transport</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='Notes.css' rel='stylesheet' type='text/css' /> 
+<meta content='Notes.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+    <!-- l. 881 --><div class='crosslinks'><p class='noindent'>[<a href='Notesch4.html'>next</a>] [<a href='Notesch2.html'>prev</a>] [<a href='Notesch2.html#tailNotesch2.html'>prev-tail</a>] [<a href='#tailNotesch3.html'>tail</a>] [<a href='Notes.html#Notesch3.html'>up</a>] </p></div>
+    <h2 class='chapterHead' id='entropic-regularization'><span class='titlemark'>Chapter 3</span><br /><a id='x11-120003'></a>Entropic Regularization of Optimal Transport</h2>
+<!-- l. 883 --><p class='noindent'>Note that Kantorovich OT (<span class='cmbx-10x-x-109'>??</span>) is a linear programming with convex constraints, therefore simplex algorithm
+or interior point methods can be naturally adopted. However, the computational cost for these methods are \(O(N^3 \log N), N = \max \{n,m\}\),
+hence inefficient.
+</p><!-- l. 885 --><p class='indent'>    This chapter introduces a family of numerical schemes to approximate solutions to Kantorovich
+formulation of optimal transport (<span class='cmbx-10x-x-109'>??</span>) and its many generalizations. It operates by adding an entropic
+regularization penalty to the original problem. This regularization has several important advantages,
+which make it, when taken altogether, a very useful tool: the minimization of the regularized
+problem can be solved using a simple alternate minimization scheme; that scheme translates into
+iterations that are simple matrix-vector products, making them particularly suited to execution
+on GPU; for some applications, these matrix-vector products do not require storing an \(n \times m\) cost
+matrix, but instead only require access to a kernel evaluation; in the case where a large group of
+measures share the same support, all of these matrix-vector products can be cast as matrix-matrix
+products with significant speedups; the resulting approximate distance is smooth with respect to
+input histogram weights and positions of the Diracs and can be differentiated using automatic
+differentiation.
+</p>
+    <div class='sectionTOCS'>
+    <span class='sectionToc'>3.1 <a href='Notesse7.html#entropic-regularization1'>Entropic Regularization</a></span>
+<br />    <span class='sectionToc'>3.2 <a href='Notesse8.html#sinkhorn'>Sinkhorn</a></span>
+<br />    <span class='sectionToc'>3.3 <a href='Notesse9.html#sinkhorn-in-logdomain'>Sinkhorn in Log-Domain</a></span>
+    </div>
+
+
+                                                                                            
+                                                                                            
+    <!-- l. 1238 --><div class='crosslinks'><p class='noindent'>[<a href='Notesch4.html'>next</a>] [<a href='Notesch2.html'>prev</a>] [<a href='Notesch2.html#tailNotesch2.html'>prev-tail</a>] [<a href='Notesch3.html'>front</a>] [<a href='Notes.html#Notesch3.html'>up</a>] </p></div>
+<!-- l. 1238 --><p class='indent'>    <a id='tailNotesch3.html'></a> </p> 
+</body> 
+</html>

@@ -1,0 +1,536 @@
+\:CrossWord{)F1F-}{Notes.html}{1}%
+\:CrossWord{TITLE+}{\bf  Dynamical Optimal Transport}{1}%
+\:CrossWord{)M1x0}{;}{1}%
+\:CrossWord{)QQQ2-2-1}{1}{3}%
+\:CrossWord{)QQQ2-3-2}{1}{3}%
+\:CrossWord{)QQQ2-4-3}{1}{3}%
+\:CrossWord{)QQQ2-5-4}{1}{3}%
+\:CrossWord{)QQQ2-6-5}{1}{3}%
+\:CrossWord{)QQQ2-7-6}{1}{3}%
+\:CrossWord{)QQQ2-8-7}{1}{3}%
+\:CrossWord{)QQQ2-9-8}{1}{3}%
+\:CrossWord{)QQQ2-10-14}{1}{3}%
+\:CrossWord{)QQQ2-11-15}{1}{3}%
+\:CrossWord{)QQQ2-12-16}{1}{3}%
+\:CrossWord{)QQQ2-13-17}{1}{3}%
+\:CrossWord{)QQQ2-14-18}{1}{3}%
+\:CrossWord{)QQQ2-15-19}{1}{3}%
+\:CrossWord{)QQQ2-16-20}{1}{3}%
+\:CrossWord{)QQQ2-17-23}{1}{3}%
+\:CrossWord{)QQQ2-18-24}{1}{3}%
+\:CrossWord{)QQQ2-19-29}{1}{3}%
+\:CrossWord{)QQQ2-20-30}{1}{3}%
+\:CrossWord{)QQQ2-21-31}{1}{3}%
+\:CrossWord{)QQQ2-22-32}{1}{3}%
+\:CrossWord{)QQQ2-23-33}{1}{3}%
+\:CrossWord{)QQQ2-24-35}{1}{3}%
+\:CrossWord{)QQQ2-25-39}{1}{3}%
+\:CrossWord{)QQQ2-26-43}{1}{3}%
+\:CrossWord{)QQQ2-27-44}{1}{3}%
+\:CrossWord{)QQQ2-28-45}{1}{4}%
+\:CrossWord{)QQQ2-29-46}{1}{4}%
+\:CrossWord{)QQQ2-30-47}{1}{4}%
+\:CrossWord{)QQQ2-31-48}{1}{4}%
+\:CrossWord{)QQQ2-32-53}{1}{4}%
+\:CrossWord{)QQQ2-33-54}{1}{4}%
+\:CrossWord{)QQQ2-34-55}{1}{4}%
+\:CrossWord{)QQQ2-35-56}{1}{4}%
+\:CrossWord{)QQQ2-36-57}{1}{4}%
+\:CrossWord{)QQQ2-37-58}{1}{4}%
+\:CrossWord{)QQQ2-38-59}{1}{4}%
+\:CrossWord{)QQQ2-39-60}{1}{4}%
+\:CrossWord{)BNotesli1.html(L }{Notes.html}{4}%
+\:CrossWord{)F2F-}{Notesli1.html}{4}%
+\:CrossWord{fileidcut 2}{1}{4}%
+\:CrossWord{cutfile 1(L }{Notesli1.html}{4}%
+\:CrossWord{Notesli1.html(L }{Notesli1.html}{4}%
+\:CrossWord{)Qx2-1000}{2}{4}%
+\:CrossWord{)QQQ2-9-9}{2}{4}%
+\:CrossWord{)QQQ2-9-11}{2}{4}%
+\:CrossWord{)QQQ2-16-21}{2}{5}%
+\:CrossWord{)QQQ2-16-22}{2}{5}%
+\:CrossWord{)QQQ2-18-25}{2}{5}%
+\:CrossWord{)QQQ2-18-26}{2}{5}%
+\:CrossWord{)QQQ2-18-27}{2}{5}%
+\:CrossWord{)QQQ2-23-34}{2}{5}%
+\:CrossWord{)QQQ2-24-36}{2}{5}%
+\:CrossWord{)QQQ2-24-37}{2}{5}%
+\:CrossWord{)QQQ2-24-38}{2}{5}%
+\:CrossWord{)QQQ2-25-40}{2}{5}%
+\:CrossWord{)QQQ2-25-41}{2}{5}%
+\:CrossWord{)QQQ2-25-42}{2}{5}%
+\:CrossWord{)QQQ2-31-49}{2}{5}%
+\:CrossWord{)QQQ2-31-50}{2}{5}%
+\:CrossWord{)QQQ2-31-51}{2}{5}%
+\:CrossWord{)QQQ2-31-52}{2}{6}%
+\:CrossWord{)QtailNotesli1.html}{2}{2}%
+\:CrossWord{)BNotesch1.html(L }{Notes.html}{3}%
+\:CrossWord{)F3F-}{Notesch1.html}{3}%
+\:CrossWord{fileidcut 3}{2}{3}%
+\:CrossWord{cutfile 2(L }{Notesch1.html}{3}%
+\:CrossWord{Notesch1.html(L }{Notesch1.html}{3}%
+\:CrossWord{)N 2(L }{Notesch1.html}{3}%
+\:CrossWord{)Qx3-20001}{3}{3}%
+\:CrossWord{)BNotesse1.html(L }{Notesch1.html}{3}%
+\:CrossWord{)F4F-}{Notesse1.html}{3}%
+\:CrossWord{fileidcut 4}{3}{3}%
+\:CrossWord{cutfile 3(L }{Notesse1.html}{3}%
+\:CrossWord{Notesse1.html(L }{Notesse1.html}{3}%
+\:CrossWord{)Qx4-30001.1}{4}{3}%
+\:CrossWord{)Qx4-3001r1}{4}{3}%
+\:CrossWord{)Qx4-3002x1}{4}{3}%
+\:CrossWord{)Qx4-3003x1}{4}{3}%
+\:CrossWord{)Qx4-3004x1}{4}{4}%
+\:CrossWord{)Qx4-3005r2}{4}{4}%
+\:CrossWord{)Qx4-3006r3}{4}{4}%
+\:CrossWord{)Qx4-3007r4}{4}{4}%
+\:CrossWord{)Qx4-3008x4}{4}{5}%
+\:CrossWord{)Qx4-3009x4}{4}{5}%
+\:CrossWord{)Qx4-3010x4}{4}{5}%
+\:CrossWord{)Qx4-3011r5}{4}{5}%
+\:CrossWord{)Qx4-3012r6}{4}{5}%
+\:CrossWord{)Qx4-3013r7}{4}{6}%
+\:CrossWord{)Qx4-3014r8}{4}{6}%
+\:CrossWord{)Qx4-3015r9}{4}{6}%
+\:CrossWord{)Qx4-3016r10}{4}{7}%
+\:CrossWord{)Qx4-3017r11}{4}{7}%
+\:CrossWord{)Qx4-3018r12}{4}{7}%
+\:CrossWord{)QtailNotesse1.html}{4}{9}%
+\:CrossWord{)BNotesse2.html(L }{Notesch1.html}{9}%
+\:CrossWord{)F5F-}{Notesse2.html}{9}%
+\:CrossWord{fileidcut 5}{4}{9}%
+\:CrossWord{cutfile 4(L }{Notesse2.html}{9}%
+\:CrossWord{Notesse2.html(L }{Notesse2.html}{9}%
+\:CrossWord{)N 4(L }{Notesse2.html}{9}%
+\:CrossWord{)Qx5-40001.2}{5}{9}%
+\:CrossWord{)Qx5-4001r1}{5}{9}%
+\:CrossWord{)Qx5-4002r2}{5}{9}%
+\:CrossWord{)Qx5-4003r3}{5}{9}%
+\:CrossWord{)Qx5-4004r4}{5}{10}%
+\:CrossWord{)Qx5-4005r5}{5}{10}%
+\:CrossWord{)Qx5-4006r6}{5}{10}%
+\:CrossWord{)QtailNotesse2.html}{5}{12}%
+\:CrossWord{)BNotesse3.html(L }{Notesch1.html}{12}%
+\:CrossWord{)F6F-}{Notesse3.html}{12}%
+\:CrossWord{fileidcut 6}{5}{12}%
+\:CrossWord{cutfile 5(L }{Notesse3.html}{12}%
+\:CrossWord{Notesse3.html(L }{Notesse3.html}{12}%
+\:CrossWord{)N 5(L }{Notesse3.html}{12}%
+\:CrossWord{)Qx6-50001.3}{6}{12}%
+\:CrossWord{)QtailNotesse3.html}{6}{13}%
+\:CrossWord{)QtailNotesch1.html}{3}{14}%
+\:CrossWord{)BNotesch2.html(L }{Notes.html}{15}%
+\:CrossWord{)F7F-}{Notesch2.html}{15}%
+\:CrossWord{fileidcut 7}{6}{15}%
+\:CrossWord{cutfile 6(L }{Notesch2.html}{15}%
+\:CrossWord{Notesch2.html(L }{Notesch2.html}{15}%
+\:CrossWord{)N 3(L }{Notesch2.html}{15}%
+\:CrossWord{)Qx7-60002}{7}{15}%
+\:CrossWord{)BNotesse4.html(L }{Notesch2.html}{15}%
+\:CrossWord{)F8F-}{Notesse4.html}{15}%
+\:CrossWord{fileidcut 8}{7}{15}%
+\:CrossWord{cutfile 7(L }{Notesse4.html}{15}%
+\:CrossWord{Notesse4.html(L }{Notesse4.html}{15}%
+\:CrossWord{)Qx8-70002.1}{8}{15}%
+\:CrossWord{)Qx8-7001r1}{8}{15}%
+\:CrossWord{)Qx8-7002r2}{8}{16}%
+\:CrossWord{)Qx8-7003r3}{8}{16}%
+\:CrossWord{)Qx8-7004r4}{8}{16}%
+\:CrossWord{)Qx8-7005r5}{8}{16}%
+\:CrossWord{)Qx8-7006r6}{8}{17}%
+\:CrossWord{)Qx8-7007r7}{8}{17}%
+\:CrossWord{)QtailNotesse4.html}{8}{19}%
+\:CrossWord{)BNotesse5.html(L }{Notesch2.html}{19}%
+\:CrossWord{)F9F-}{Notesse5.html}{19}%
+\:CrossWord{fileidcut 9}{8}{19}%
+\:CrossWord{cutfile 8(L }{Notesse5.html}{19}%
+\:CrossWord{Notesse5.html(L }{Notesse5.html}{19}%
+\:CrossWord{)N 8(L }{Notesse5.html}{19}%
+\:CrossWord{)Qx9-80002.2}{9}{19}%
+\:CrossWord{)Qx9-8001r1}{9}{19}%
+\:CrossWord{)Qx9-8002r2}{9}{19}%
+\:CrossWord{)Qx9-90002.2.1}{9}{20}%
+\:CrossWord{)Qx9-9001r3}{9}{20}%
+\:CrossWord{)Qx9-9002r1}{9}{21}%
+\:CrossWord{1cAp0}{x9-9002r1}{22}%
+\:CrossWord{)Qx9-100002.2.2}{9}{23}%
+\:CrossWord{)Qx9-10001r2}{9}{24}%
+\:CrossWord{2cAp0}{x9-10001r2}{25}%
+\:CrossWord{)Qx9-10002r4}{9}{26}%
+\:CrossWord{)Qx9-10003r5}{9}{26}%
+\:CrossWord{)Qx9-10004r6}{9}{26}%
+\:CrossWord{)Qx9-10005r3}{9}{28}%
+\:CrossWord{3cAp0}{x9-10005r3}{29}%
+\:CrossWord{)QtailNotesse5.html}{9}{31}%
+\:CrossWord{)BNotesse6.html(L }{Notesch2.html}{31}%
+\:CrossWord{)F10F-}{Notesse6.html}{31}%
+\:CrossWord{fileidcut 10}{9}{31}%
+\:CrossWord{cutfile 9(L }{Notesse6.html}{31}%
+\:CrossWord{Notesse6.html(L }{Notesse6.html}{31}%
+\:CrossWord{)N 9(L }{Notesse6.html}{31}%
+\:CrossWord{)Qx10-110002.3}{10}{31}%
+\:CrossWord{)Qx10-11001r1}{10}{31}%
+\:CrossWord{)Qx10-11002r2}{10}{31}%
+\:CrossWord{)QtailNotesse6.html}{10}{33}%
+\:CrossWord{)QtailNotesch2.html}{7}{34}%
+\:CrossWord{)BNotesch3.html(L }{Notes.html}{35}%
+\:CrossWord{)F11F-}{Notesch3.html}{35}%
+\:CrossWord{fileidcut 11}{10}{35}%
+\:CrossWord{cutfile 10(L }{Notesch3.html}{35}%
+\:CrossWord{Notesch3.html(L }{Notesch3.html}{35}%
+\:CrossWord{)N 7(L }{Notesch3.html}{35}%
+\:CrossWord{)Qx11-120003}{11}{35}%
+\:CrossWord{)BNotesse7.html(L }{Notesch3.html}{35}%
+\:CrossWord{)F12F-}{Notesse7.html}{35}%
+\:CrossWord{fileidcut 12}{11}{35}%
+\:CrossWord{cutfile 11(L }{Notesse7.html}{35}%
+\:CrossWord{Notesse7.html(L }{Notesse7.html}{35}%
+\:CrossWord{)Qx12-130003.1}{12}{35}%
+\:CrossWord{)Qx12-13001r1}{12}{35}%
+\:CrossWord{)Qx12-13002r1}{12}{35}%
+\:CrossWord{)Qx12-13003r2}{12}{36}%
+\:CrossWord{)Qx12-13004r2}{12}{36}%
+\:CrossWord{)Qx12-13005r3}{12}{36}%
+\:CrossWord{)Qx12-13006r4}{12}{36}%
+\:CrossWord{)Qx12-13007r5}{12}{36}%
+\:CrossWord{)Qx12-13008r6}{12}{36}%
+\:CrossWord{)Qx12-13009r3}{12}{36}%
+\:CrossWord{)Qx12-13010r7}{12}{36}%
+\:CrossWord{)QtailNotesse7.html}{12}{38}%
+\:CrossWord{)BNotesse8.html(L }{Notesch3.html}{38}%
+\:CrossWord{)F13F-}{Notesse8.html}{38}%
+\:CrossWord{fileidcut 13}{12}{38}%
+\:CrossWord{cutfile 12(L }{Notesse8.html}{38}%
+\:CrossWord{Notesse8.html(L }{Notesse8.html}{38}%
+\:CrossWord{)N 12(L }{Notesse8.html}{38}%
+\:CrossWord{)Qx13-140003.2}{13}{38}%
+\:CrossWord{)Qx13-14001r1}{13}{38}%
+\:CrossWord{)Qx13-14002r2}{13}{39}%
+\:CrossWord{)Qx13-14003r3}{13}{39}%
+\:CrossWord{)QtailNotesse8.html}{13}{41}%
+\:CrossWord{)BNotesse9.html(L }{Notesch3.html}{41}%
+\:CrossWord{)F14F-}{Notesse9.html}{41}%
+\:CrossWord{fileidcut 14}{13}{41}%
+\:CrossWord{cutfile 13(L }{Notesse9.html}{41}%
+\:CrossWord{Notesse9.html(L }{Notesse9.html}{41}%
+\:CrossWord{)N 13(L }{Notesse9.html}{41}%
+\:CrossWord{)Qx14-150003.3}{14}{41}%
+\:CrossWord{)Qx14-15001r1}{14}{41}%
+\:CrossWord{)Qx14-15002r2}{14}{42}%
+\:CrossWord{)Qx14-15003r3}{14}{42}%
+\:CrossWord{)Qx14-15004r4}{14}{43}%
+\:CrossWord{)Qx14-15005r5}{14}{43}%
+\:CrossWord{)QtailNotesse9.html}{14}{45}%
+\:CrossWord{)QtailNotesch3.html}{11}{46}%
+\:CrossWord{)BNotesch4.html(L }{Notes.html}{47}%
+\:CrossWord{)F15F-}{Notesch4.html}{47}%
+\:CrossWord{fileidcut 15}{14}{47}%
+\:CrossWord{cutfile 14(L }{Notesch4.html}{47}%
+\:CrossWord{Notesch4.html(L }{Notesch4.html}{47}%
+\:CrossWord{)N 11(L }{Notesch4.html}{47}%
+\:CrossWord{)Qx15-160004}{15}{47}%
+\:CrossWord{)BNotesse10.html(L }{Notesch4.html}{47}%
+\:CrossWord{)F16F-}{Notesse10.html}{47}%
+\:CrossWord{fileidcut 16}{15}{47}%
+\:CrossWord{cutfile 15(L }{Notesse10.html}{47}%
+\:CrossWord{Notesse10.html(L }{Notesse10.html}{47}%
+\:CrossWord{)Qx16-170004.1}{16}{47}%
+\:CrossWord{)Qx16-17001r1}{16}{48}%
+\:CrossWord{)Qx16-17002r2}{16}{48}%
+\:CrossWord{)Qx16-17003r3}{16}{48}%
+\:CrossWord{)Qx16-180004.1.1}{16}{49}%
+\:CrossWord{)Qx16-18001r4}{16}{49}%
+\:CrossWord{)Qx16-18002r5}{16}{49}%
+\:CrossWord{)Qx16-18003r6}{16}{49}%
+\:CrossWord{)Qx16-18005x1}{16}{50}%
+\:CrossWord{)Qx16-18007x2}{16}{50}%
+\:CrossWord{)Qx16-18009x3}{16}{50}%
+\:CrossWord{)Qx16-18011x4}{16}{50}%
+\:CrossWord{)Qx16-18012r7}{16}{50}%
+\:CrossWord{)Qx16-18013r8}{16}{51}%
+\:CrossWord{)Qx16-18014r9}{16}{52}%
+\:CrossWord{)Qx16-18015r10}{16}{53}%
+\:CrossWord{)Qx16-18016r11}{16}{53}%
+\:CrossWord{)Qx16-18017r12}{16}{54}%
+\:CrossWord{)Qx16-18018r13}{16}{54}%
+\:CrossWord{)Qx16-190004.1.2}{16}{55}%
+\:CrossWord{)Qx16-19001r14}{16}{55}%
+\:CrossWord{)Qx16-19002r15}{16}{56}%
+\:CrossWord{)QtailNotesse10.html}{16}{58}%
+\:CrossWord{)BNotesse11.html(L }{Notesch4.html}{58}%
+\:CrossWord{)F17F-}{Notesse11.html}{58}%
+\:CrossWord{fileidcut 17}{16}{58}%
+\:CrossWord{cutfile 16(L }{Notesse11.html}{58}%
+\:CrossWord{Notesse11.html(L }{Notesse11.html}{58}%
+\:CrossWord{)N 16(L }{Notesse11.html}{58}%
+\:CrossWord{)Qx17-200004.2}{17}{58}%
+\:CrossWord{)QtailNotesse11.html}{17}{59}%
+\:CrossWord{)BNotesse12.html(L }{Notesch4.html}{59}%
+\:CrossWord{)F18F-}{Notesse12.html}{59}%
+\:CrossWord{fileidcut 18}{17}{59}%
+\:CrossWord{cutfile 17(L }{Notesse12.html}{59}%
+\:CrossWord{Notesse12.html(L }{Notesse12.html}{59}%
+\:CrossWord{)N 17(L }{Notesse12.html}{59}%
+\:CrossWord{)Qx18-210004.3}{18}{59}%
+\:CrossWord{)Qx18-220004.3.1}{18}{59}%
+\:CrossWord{)Qx18-22001r1}{18}{60}%
+\:CrossWord{)Qx18-230004.3.2}{18}{60}%
+\:CrossWord{)Qx18-240004.3.3}{18}{61}%
+\:CrossWord{)Qx18-24001r1}{18}{62}%
+\:CrossWord{4cAp0}{x18-24001r1}{63}%
+\:CrossWord{)Qx18-24002r2}{18}{64}%
+\:CrossWord{)Qx18-24003r3}{18}{64}%
+\:CrossWord{)Qx18-24004r4}{18}{64}%
+\:CrossWord{)Qx18-24005r5}{18}{65}%
+\:CrossWord{)Qx18-24006r6}{18}{65}%
+\:CrossWord{)QtailNotesse12.html}{18}{67}%
+\:CrossWord{)BNotesse13.html(L }{Notesch4.html}{67}%
+\:CrossWord{)F19F-}{Notesse13.html}{67}%
+\:CrossWord{fileidcut 19}{18}{67}%
+\:CrossWord{cutfile 18(L }{Notesse13.html}{67}%
+\:CrossWord{Notesse13.html(L }{Notesse13.html}{67}%
+\:CrossWord{)N 18(L }{Notesse13.html}{67}%
+\:CrossWord{)Qx19-250004.4}{19}{67}%
+\:CrossWord{)QtailNotesse13.html}{19}{68}%
+\:CrossWord{)QtailNotesch4.html}{15}{69}%
+\:CrossWord{)BNotesch5.html(L }{Notes.html}{71}%
+\:CrossWord{)F20F-}{Notesch5.html}{71}%
+\:CrossWord{fileidcut 20}{19}{71}%
+\:CrossWord{cutfile 19(L }{Notesch5.html}{71}%
+\:CrossWord{Notesch5.html(L }{Notesch5.html}{71}%
+\:CrossWord{)N 15(L }{Notesch5.html}{71}%
+\:CrossWord{)Qx20-260005}{20}{71}%
+\:CrossWord{)BNotesse14.html(L }{Notesch5.html}{72}%
+\:CrossWord{)F21F-}{Notesse14.html}{72}%
+\:CrossWord{fileidcut 21}{20}{72}%
+\:CrossWord{cutfile 20(L }{Notesse14.html}{72}%
+\:CrossWord{Notesse14.html(L }{Notesse14.html}{72}%
+\:CrossWord{)Qx21-270005.1}{21}{72}%
+\:CrossWord{)Qx21-27001r1}{21}{72}%
+\:CrossWord{)Qx21-27002r2}{21}{72}%
+\:CrossWord{)Qx21-27003r3}{21}{73}%
+\:CrossWord{)Qx21-27004r4}{21}{74}%
+\:CrossWord{)QtailNotesse14.html}{21}{75}%
+\:CrossWord{)BNotesse15.html(L }{Notesch5.html}{75}%
+\:CrossWord{)F22F-}{Notesse15.html}{75}%
+\:CrossWord{fileidcut 22}{21}{75}%
+\:CrossWord{cutfile 21(L }{Notesse15.html}{75}%
+\:CrossWord{Notesse15.html(L }{Notesse15.html}{75}%
+\:CrossWord{)N 21(L }{Notesse15.html}{75}%
+\:CrossWord{)Qx22-280005.2}{22}{75}%
+\:CrossWord{)Qx22-28001r1}{22}{75}%
+\:CrossWord{)Qx22-28002r2}{22}{76}%
+\:CrossWord{)QtailNotesse15.html}{22}{78}%
+\:CrossWord{)BNotesse16.html(L }{Notesch5.html}{78}%
+\:CrossWord{)F23F-}{Notesse16.html}{78}%
+\:CrossWord{fileidcut 23}{22}{78}%
+\:CrossWord{cutfile 22(L }{Notesse16.html}{78}%
+\:CrossWord{Notesse16.html(L }{Notesse16.html}{78}%
+\:CrossWord{)N 22(L }{Notesse16.html}{78}%
+\:CrossWord{)Qx23-290005.3}{23}{78}%
+\:CrossWord{)Qx23-300005.3.1}{23}{78}%
+\:CrossWord{)Qx23-30001r1}{23}{78}%
+\:CrossWord{)Qx23-30002r2}{23}{79}%
+\:CrossWord{)QtailNotesse16.html}{23}{81}%
+\:CrossWord{)BNotesse17.html(L }{Notesch5.html}{81}%
+\:CrossWord{)F24F-}{Notesse17.html}{81}%
+\:CrossWord{fileidcut 24}{23}{81}%
+\:CrossWord{cutfile 23(L }{Notesse17.html}{81}%
+\:CrossWord{Notesse17.html(L }{Notesse17.html}{81}%
+\:CrossWord{)N 23(L }{Notesse17.html}{81}%
+\:CrossWord{)Qx24-310005.4}{24}{81}%
+\:CrossWord{)Qx24-320005.4.1}{24}{81}%
+\:CrossWord{)Qx24-32001r1}{24}{82}%
+\:CrossWord{)Qx24-330005.4.2}{24}{82}%
+\:CrossWord{)Qx24-33001r2}{24}{82}%
+\:CrossWord{)Qx24-33002r3}{24}{83}%
+\:CrossWord{)Qx24-33003r4}{24}{83}%
+\:CrossWord{)Qx24-340005.4.3}{24}{84}%
+\:CrossWord{)Qx24-34001r1}{24}{85}%
+\:CrossWord{)Qx24-34002r5}{24}{85}%
+\:CrossWord{)Qx24-34003r6}{24}{85}%
+\:CrossWord{)Qx24-34004r7}{24}{86}%
+\:CrossWord{)Qx24-34005r8}{24}{86}%
+\:CrossWord{)Qx24-34006r9}{24}{87}%
+\:CrossWord{)Qx24-34007r10}{24}{87}%
+\:CrossWord{)Qx24-34008r2}{24}{87}%
+\:CrossWord{)Qx24-34009r3}{24}{88}%
+\:CrossWord{)Qx24-34010r4}{24}{88}%
+\:CrossWord{)Qx24-34011r11}{24}{88}%
+\:CrossWord{)Qx24-34012r5}{24}{88}%
+\:CrossWord{)Qx24-34013r6}{24}{88}%
+\:CrossWord{)Qx24-34014r12}{24}{88}%
+\:CrossWord{)Qx24-34015r13}{24}{89}%
+\:CrossWord{)QtailNotesse17.html}{24}{90}%
+\:CrossWord{)BNotesse18.html(L }{Notesch5.html}{90}%
+\:CrossWord{)F25F-}{Notesse18.html}{90}%
+\:CrossWord{fileidcut 25}{24}{90}%
+\:CrossWord{cutfile 24(L }{Notesse18.html}{90}%
+\:CrossWord{Notesse18.html(L }{Notesse18.html}{90}%
+\:CrossWord{)N 24(L }{Notesse18.html}{90}%
+\:CrossWord{)Qx25-350005.5}{25}{90}%
+\:CrossWord{)Qx25-360005.5.1}{25}{90}%
+\:CrossWord{)Qx25-36001r7}{25}{90}%
+\:CrossWord{)Qx25-36002r8}{25}{90}%
+\:CrossWord{)Qx25-36003r9}{25}{90}%
+\:CrossWord{)Qx25-36004r10}{25}{90}%
+\:CrossWord{)Qx25-36005r11}{25}{90}%
+\:CrossWord{)Qx25-36006r12}{25}{90}%
+\:CrossWord{)Qx25-36007r13}{25}{90}%
+\:CrossWord{)Qx25-36008r14}{25}{90}%
+\:CrossWord{)Qx25-36010x1}{25}{91}%
+\:CrossWord{)Qx25-36012x2}{25}{91}%
+\:CrossWord{)Qx25-36014x3}{25}{91}%
+\:CrossWord{)Qx25-36015r1}{25}{91}%
+\:CrossWord{)Qx25-370005.5.2}{25}{92}%
+\:CrossWord{)Qx25-37001r15}{25}{92}%
+\:CrossWord{)Qx25-380005.5.3}{25}{92}%
+\:CrossWord{)Qx25-38001r2}{25}{92}%
+\:CrossWord{)QtailNotesse18.html}{25}{94}%
+\:CrossWord{)QtailNotesch5.html}{20}{95}%
+\:CrossWord{)BNotesch6.html(L }{Notes.html}{97}%
+\:CrossWord{)F26F-}{Notesch6.html}{97}%
+\:CrossWord{fileidcut 26}{25}{97}%
+\:CrossWord{cutfile 25(L }{Notesch6.html}{97}%
+\:CrossWord{Notesch6.html(L }{Notesch6.html}{97}%
+\:CrossWord{)N 20(L }{Notesch6.html}{97}%
+\:CrossWord{)Qx26-390006}{26}{97}%
+\:CrossWord{)BNotesse19.html(L }{Notesch6.html}{97}%
+\:CrossWord{)F27F-}{Notesse19.html}{97}%
+\:CrossWord{fileidcut 27}{26}{97}%
+\:CrossWord{cutfile 26(L }{Notesse19.html}{97}%
+\:CrossWord{Notesse19.html(L }{Notesse19.html}{97}%
+\:CrossWord{)Qx27-400006.1}{27}{97}%
+\:CrossWord{)QtailNotesse19.html}{27}{98}%
+\:CrossWord{)QtailNotesch6.html}{26}{99}%
+\:CrossWord{)BNotesch7.html(L }{Notes.html}{101}%
+\:CrossWord{)F28F-}{Notesch7.html}{101}%
+\:CrossWord{fileidcut 28}{27}{101}%
+\:CrossWord{cutfile 27(L }{Notesch7.html}{101}%
+\:CrossWord{Notesch7.html(L }{Notesch7.html}{101}%
+\:CrossWord{)N 26(L }{Notesch7.html}{101}%
+\:CrossWord{)Qx28-410007}{28}{101}%
+\:CrossWord{)QtailNotesch7.html}{28}{102}%
+\:CrossWord{)BNotesch8.html(L }{Notes.html}{103}%
+\:CrossWord{)F29F-}{Notesch8.html}{103}%
+\:CrossWord{fileidcut 29}{28}{103}%
+\:CrossWord{cutfile 28(L }{Notesch8.html}{103}%
+\:CrossWord{Notesch8.html(L }{Notesch8.html}{103}%
+\:CrossWord{)N 28(L }{Notesch8.html}{103}%
+\:CrossWord{)Qx29-420008}{29}{103}%
+\:CrossWord{)BNotesse20.html(L }{Notesch8.html}{103}%
+\:CrossWord{)F30F-}{Notesse20.html}{103}%
+\:CrossWord{fileidcut 30}{29}{103}%
+\:CrossWord{cutfile 29(L }{Notesse20.html}{103}%
+\:CrossWord{Notesse20.html(L }{Notesse20.html}{103}%
+\:CrossWord{)Qx30-430008.1}{30}{103}%
+\:CrossWord{)Qx30-43001r1}{30}{103}%
+\:CrossWord{)QtailNotesse20.html}{30}{105}%
+\:CrossWord{)BNotesse21.html(L }{Notesch8.html}{105}%
+\:CrossWord{)F31F-}{Notesse21.html}{105}%
+\:CrossWord{fileidcut 31}{30}{105}%
+\:CrossWord{cutfile 30(L }{Notesse21.html}{105}%
+\:CrossWord{Notesse21.html(L }{Notesse21.html}{105}%
+\:CrossWord{)N 30(L }{Notesse21.html}{105}%
+\:CrossWord{)Qx31-440008.2}{31}{105}%
+\:CrossWord{)Qx31-44001r1}{31}{105}%
+\:CrossWord{)Qx31-44002r2}{31}{106}%
+\:CrossWord{)Qx31-44003r3}{31}{106}%
+\:CrossWord{)Qx31-44004r4}{31}{106}%
+\:CrossWord{)Qx31-450008.2.1}{31}{107}%
+\:CrossWord{)Qx31-45001r5}{31}{107}%
+\:CrossWord{)Qx31-460008.2.2}{31}{107}%
+\:CrossWord{)Qx31-470008.2.3}{31}{108}%
+\:CrossWord{)Qx31-480008.2.4}{31}{108}%
+\:CrossWord{)Qx31-48001r6}{31}{108}%
+\:CrossWord{)QtailNotesse21.html}{31}{109}%
+\:CrossWord{)BNotesse22.html(L }{Notesch8.html}{109}%
+\:CrossWord{)F32F-}{Notesse22.html}{109}%
+\:CrossWord{fileidcut 32}{31}{109}%
+\:CrossWord{cutfile 31(L }{Notesse22.html}{109}%
+\:CrossWord{Notesse22.html(L }{Notesse22.html}{109}%
+\:CrossWord{)N 31(L }{Notesse22.html}{109}%
+\:CrossWord{)Qx32-490008.3}{32}{109}%
+\:CrossWord{)Qx32-49001r1}{32}{109}%
+\:CrossWord{)Qx32-49002r2}{32}{110}%
+\:CrossWord{)QtailNotesse22.html}{32}{111}%
+\:CrossWord{)QtailNotesch8.html}{29}{112}%
+\:CrossWord{)Qx1-49003r46}{1}{113}%
+\:CrossWord{)BNotesap1.html(L }{Notes.html}{113}%
+\:CrossWord{)F33F-}{Notesap1.html}{113}%
+\:CrossWord{fileidcut 33}{32}{113}%
+\:CrossWord{cutfile 32(L }{Notesap1.html}{113}%
+\:CrossWord{Notesap1.html(L }{Notesap1.html}{113}%
+\:CrossWord{)N 29(L }{Notesap1.html}{113}%
+\:CrossWord{)Qx33-50000A}{33}{113}%
+\:CrossWord{)BNotesse23.html(L }{Notesap1.html}{113}%
+\:CrossWord{)F34F-}{Notesse23.html}{113}%
+\:CrossWord{fileidcut 34}{33}{113}%
+\:CrossWord{cutfile 33(L }{Notesse23.html}{113}%
+\:CrossWord{Notesse23.html(L }{Notesse23.html}{113}%
+\:CrossWord{)Qx34-51000A.1}{34}{113}%
+\:CrossWord{)QtailNotesse23.html}{34}{114}%
+\:CrossWord{)BNotesse24.html(L }{Notesap1.html}{114}%
+\:CrossWord{)F35F-}{Notesse24.html}{114}%
+\:CrossWord{fileidcut 35}{34}{114}%
+\:CrossWord{cutfile 34(L }{Notesse24.html}{114}%
+\:CrossWord{Notesse24.html(L }{Notesse24.html}{114}%
+\:CrossWord{)N 34(L }{Notesse24.html}{114}%
+\:CrossWord{)Qx35-52000A.2}{35}{114}%
+\:CrossWord{)QtailNotesse24.html}{35}{115}%
+\:CrossWord{)BNotesse25.html(L }{Notesap1.html}{115}%
+\:CrossWord{)F36F-}{Notesse25.html}{115}%
+\:CrossWord{fileidcut 36}{35}{115}%
+\:CrossWord{cutfile 35(L }{Notesse25.html}{115}%
+\:CrossWord{Notesse25.html(L }{Notesse25.html}{115}%
+\:CrossWord{)N 35(L }{Notesse25.html}{115}%
+\:CrossWord{)Qx36-53000A.3}{36}{115}%
+\:CrossWord{)QtailNotesse25.html}{36}{116}%
+\:CrossWord{)QtailNotesap1.html}{33}{117}%
+\:CrossWord{)Qx1-53001r46}{1}{119}%
+\:CrossWord{)BNotesap2.html(L }{Notes.html}{119}%
+\:CrossWord{)F37F-}{Notesap2.html}{119}%
+\:CrossWord{fileidcut 37}{36}{119}%
+\:CrossWord{cutfile 36(L }{Notesap2.html}{119}%
+\:CrossWord{Notesap2.html(L }{Notesap2.html}{119}%
+\:CrossWord{)N 33(L }{Notesap2.html}{119}%
+\:CrossWord{)Qx37-54000B}{37}{119}%
+\:CrossWord{)QtailNotesap2.html}{37}{120}%
+\:CrossWord{)Qx1-54001r46}{1}{121}%
+\:CrossWord{)BNotesap3.html(L }{Notes.html}{121}%
+\:CrossWord{)F38F-}{Notesap3.html}{121}%
+\:CrossWord{fileidcut 38}{37}{121}%
+\:CrossWord{cutfile 37(L }{Notesap3.html}{121}%
+\:CrossWord{Notesap3.html(L }{Notesap3.html}{121}%
+\:CrossWord{)N 37(L }{Notesap3.html}{121}%
+\:CrossWord{)Qx38-55000C}{38}{121}%
+\:CrossWord{)QtailNotesap3.html}{38}{122}%
+\:CrossWord{)BNotesli2.html(L }{Notes.html}{123}%
+\:CrossWord{)F39F-}{Notesli2.html}{123}%
+\:CrossWord{fileidcut 39}{38}{123}%
+\:CrossWord{cutfile 38(L }{Notesli2.html}{123}%
+\:CrossWord{Notesli2.html(L }{Notesli2.html}{123}%
+\:CrossWord{)N 38(L }{Notesli2.html}{123}%
+\:CrossWord{)Qx39-56000}{39}{123}%
+\:CrossWord{)QXaltschuler2017near}{39}{123}%
+\:CrossWord{)QXbenamou2000computational}{39}{123}%
+\:CrossWord{)QXbenamou2015augmented}{39}{123}%
+\:CrossWord{)QXbonneel2019spot}{39}{123}%
+\:CrossWord{)QXbregman1967relaxation}{39}{123}%
+\:CrossWord{)QXcang2022supervised}{39}{123}%
+\:CrossWord{)QXcarrillo2022primal}{39}{124}%
+\:CrossWord{)QXchapel2020partial}{39}{124}%
+\:CrossWord{)QXchen2018neural}{39}{124}%
+\:CrossWord{)QXchizat2017unbalanced}{39}{124}%
+\:CrossWord{)QXchizat2018scaling}{39}{124}%
+\:CrossWord{)QXchizat2018unbalanced}{39}{124}%
+\:CrossWord{)QXcuturi2013sinkhorn}{39}{124}%
+\:CrossWord{)QXgangbo2019unnormalized}{39}{124}%
+\:CrossWord{)QXlee2021generalized}{39}{124}%
+\:CrossWord{)QXLi_JMP2021}{39}{125}%
+\:CrossWord{)QXotto2001geometry}{39}{125}%
+\:CrossWord{)QXpeyre2015entropic}{39}{125}%
+\:CrossWord{)QXpeyre2019computational}{39}{125}%
+\:CrossWord{)QXpiccoli2014generalized}{39}{125}%
+\:CrossWord{)QXtong2020trajectorynet}{39}{125}%
+\:CrossWord{)QtailNotesli2.html}{39}{126}%

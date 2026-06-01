@@ -1,0 +1,126 @@
+\begin{thebibliography}{10}
+
+\bibitem{altschuler2017near}
+Jason Altschuler, Jonathan Niles-Weed, and Philippe Rigollet.
+\newblock Near-linear time approximation algorithms for optimal transport via
+  sinkhorn iteration.
+\newblock {\em Advances in neural information processing systems}, 30, 2017.
+
+\bibitem{benamou2000computational}
+Jean-David Benamou and Yann Brenier.
+\newblock A computational fluid mechanics solution to the {M}onge-{K}antorovich
+  mass transfer problem.
+\newblock {\em Numerische Mathematik}, 84(3):375--393, 2000.
+
+\bibitem{benamou2015augmented}
+Jean-David Benamou and Guillaume Carlier.
+\newblock Augmented {L}agrangian methods for transport optimization, mean field
+  games and degenerate elliptic equations.
+\newblock {\em Journal of Optimization Theory and Applications}, 167:1--26,
+  2015.
+
+\bibitem{bonneel2019spot}
+Nicolas Bonneel and David Coeurjolly.
+\newblock Spot: sliced partial optimal transport.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38(4):1--13, 2019.
+
+\bibitem{bregman1967relaxation}
+Lev~M Bregman.
+\newblock The relaxation method of finding the common point of convex sets and
+  its application to the solution of problems in convex programming.
+\newblock {\em USSR computational mathematics and mathematical physics},
+  7(3):200--217, 1967.
+
+\bibitem{cang2022supervised}
+Zixuan Cang, Qing Nie, and Yanxiang Zhao.
+\newblock Supervised optimal transport.
+\newblock {\em SIAM Journal on Applied Mathematics}, 82(5):1851--1877, 2022.
+
+\bibitem{carrillo2022primal}
+Jos{\'e}~A Carrillo, Katy Craig, Li~Wang, and Chaozhen Wei.
+\newblock Primal dual methods for {W}asserstein gradient flows.
+\newblock {\em Foundations of Computational Mathematics}, pages 1--55, 2022.
+
+\bibitem{chapel2020partial}
+Laetitia Chapel, Mokhtar~Z Alaya, and Gilles Gasso.
+\newblock Partial optimal tranport with applications on positive-unlabeled
+  learning.
+\newblock {\em Advances in Neural Information Processing Systems},
+  33:2903--2913, 2020.
+
+\bibitem{chen2018neural}
+Ricky~TQ Chen, Yulia Rubanova, Jesse Bettencourt, and David~K Duvenaud.
+\newblock Neural ordinary differential equations.
+\newblock {\em Advances in neural information processing systems}, 31, 2018.
+
+\bibitem{chizat2017unbalanced}
+Lenaic Chizat.
+\newblock {\em Unbalanced optimal transport: Models, numerical methods,
+  applications}.
+\newblock PhD thesis, Universit{\'e} Paris sciences et lettres, 2017.
+
+\bibitem{chizat2018scaling}
+Lenaic Chizat, Gabriel Peyr{\'e}, Bernhard Schmitzer, and Fran{\c{c}}ois-Xavier
+  Vialard.
+\newblock Scaling algorithms for unbalanced optimal transport problems.
+\newblock {\em Mathematics of Computation}, 87(314):2563--2609, 2018.
+
+\bibitem{chizat2018unbalanced}
+Lenaic Chizat, Gabriel Peyr{\'e}, Bernhard Schmitzer, and Fran{\c{c}}ois-Xavier
+  Vialard.
+\newblock Unbalanced optimal transport: Dynamic and {K}antorovich formulations.
+\newblock {\em Journal of Functional Analysis}, 274(11):3090--3123, 2018.
+
+\bibitem{cuturi2013sinkhorn}
+Marco Cuturi.
+\newblock Sinkhorn distances: Lightspeed computation of optimal transport.
+\newblock {\em Advances in neural information processing systems}, 26, 2013.
+
+\bibitem{gangbo2019unnormalized}
+Wilfrid Gangbo, Wuchen Li, Stanley Osher, and Michael Puthawala.
+\newblock Unnormalized optimal transport.
+\newblock {\em Journal of Computational Physics}, 399:108940, 2019.
+
+\bibitem{lee2021generalized}
+Wonjun Lee, Rongjie Lai, Wuchen Li, and Stanley Osher.
+\newblock Generalized unnormalized optimal transport and its fast algorithms.
+\newblock {\em Journal of Computational Physics}, 436:110041, 2021.
+
+\bibitem{Li_JMP2021}
+Wuchen Li.
+\newblock Hessian metric via transport information geometry.
+\newblock {\em Journal of Mathematical Physics}, 62(3):033301, 2021.
+
+\bibitem{otto2001geometry}
+Felix Otto.
+\newblock The geometry of dissipative evolution equations: the porous medium
+  equation.
+\newblock {\em Communications in Partial Differential Equations},
+  40(1-2):101–174, 2001.
+
+\bibitem{peyre2015entropic}
+Gabriel Peyr{\'e}.
+\newblock Entropic approximation of {W}asserstein gradient flows.
+\newblock {\em SIAM Journal on Imaging Sciences}, 8(4):2323--2351, 2015.
+
+\bibitem{peyre2019computational}
+Gabriel Peyr{\'e}, Marco Cuturi, et~al.
+\newblock Computational optimal transport: With applications to data science.
+\newblock {\em Foundations and Trends{\textregistered} in Machine Learning},
+  11(5-6):355--607, 2019.
+
+\bibitem{piccoli2014generalized}
+Benedetto Piccoli and Francesco Rossi.
+\newblock Generalized wasserstein distance and its application to transport
+  equations with source.
+\newblock {\em Archive for Rational Mechanics and Analysis}, 211:335--358,
+  2014.
+
+\bibitem{tong2020trajectorynet}
+Alexander Tong, Jessie Huang, Guy Wolf, David Van~Dijk, and Smita Krishnaswamy.
+\newblock Trajectorynet: A dynamic optimal transport network for modeling
+  cellular dynamics.
+\newblock In {\em International conference on machine learning}, pages
+  9526--9536. PMLR, 2020.
+
+\end{thebibliography}

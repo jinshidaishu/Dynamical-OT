@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Continuity Equation and Benamou–Brenier Formula | Dynamical Optimal Transport</title>
+  <meta name="description" content="Lecture notes on dynamical optimal transport.">
+  <link rel="stylesheet" href="Notes.css">
+  <link rel="stylesheet" href="assets/site-20260531.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        tags: "ams",
+        macros: {
+          al: "\\alpha",
+          la: "\\lambda",
+          va: "\\varphi",
+          pa: "\\partial",
+          tri: "\\triangle",
+          Rnn: "\\mathbb{R}^{n\\times n}",
+          Rnm: "\\mathbb{R}^{n\\times m}",
+          Rmm: "\\mathbb{R}^{m\\times m}",
+          Rn: "\\mathbb{R}^n",
+          Rm: "\\mathbb{R}^m",
+          Urange: "\\langle \\hat{U} \\rangle",
+          Vrange: "\\langle \\hat{V} \\rangle",
+          Qrange: "\\langle \\hat{Q} \\rangle",
+          Uhat: "\\hat{U}",
+          Vhat: "\\hat{V}",
+          Qhat: "\\hat{Q}",
+          Utilde: "\\tilde{U}",
+          Vtilde: "\\tilde{V}",
+          Qtilde: "\\tilde{Q}",
+          RR: "\\mathbb{R}",
+          R: "\\mathbb{R}",
+          NN: "\\mathbb{N}",
+          PP: "\\mathcal{P}",
+          bbZ: "\\mathbb{Z}",
+          bbR: "\\mathbb{R}",
+          bbC: "\\mathbb{C}",
+          calE: "\\mathcal{E}",
+          calK: "\\mathcal{K}",
+          calC: "\\mathcal{C}",
+          Z: "\\mathbb{Z}",
+          bx: "\\mathbf{x}",
+          bX: "\\mathbf{X}",
+          by: "\\mathbf{y}",
+          bz: "\\mathbf{z}",
+          bfm: "\\mathbf{m}",
+          bn: "\\mathbf{n}",
+          br: "\\mathbf{r}",
+          bv: "\\mathbf{v}",
+          bu: "\\mathbf{u}",
+          bT: "\\mathbf{T}",
+          ve: "\\varepsilon",
+          phinone: "\\phi^{n+1}",
+          phin: "\\phi^{n}",
+          eps: "\\epsilon",
+          F: "\\mathcal{F}",
+          E: "\\mathcal{E}",
+          G: "\\mathcal{G}",
+          lm: "\\displaystyle\\liminf",
+          TTT: "\\mathbb{T}^3",
+          p: "\\partial",
+          ud: "\\mathrm{d}",
+          tr: "\\operatorname{tr}",
+          I: "\\mathrm{I}",
+          TT: "\\mathbb{T}^2",
+          Ptwo: "\\mathcal{P}_2(\\mathbb{R}^n)",
+          W: "W_2",
+          dx: "\\mathrm{d}\\mathbf{x}",
+          dt: "\\mathrm{d}t",
+          dd: "\\mathrm{d}",
+          KL: "\\operatorname{KL}",
+          argmin: "\\operatorname{argmin}",
+          argmax: "\\operatorname{argmax}",
+          prox: "\\operatorname{prox}",
+          diag: "\\operatorname{diag}",
+          grad: "\\operatorname{grad}",
+          div: "\\operatorname{div}",
+          divergence: "\\operatorname{div}",
+          id: "\\mathrm{Id}",
+          gradw: "\\nabla_{\\!W}",
+          defeq: "\\stackrel{\\scriptscriptstyle \\text{def}}=",
+          deldrho: ["\\frac{\\delta #1}{\\delta\\rho}", 1],
+          upmu: "\\mu",
+          upnu: "\\nu"
+        }
+      }
+    };
+  </script>
+  <script defer src="assets/site-20260530.js"></script>
+  <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+</head>
+<body class="content-page" data-page="Notesse14.html">
+  
+<header class="site-header">
+  <a class="mobile-brand" href="index.html">Dynamical OT</a>
+  <button class="toc-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">Contents</button>
+  <nav aria-label="Site links">
+    <a href="index.html">home</a>
+    <a href="Notesli1.html">structure</a>
+    <a href="Notesap2.html">exercises</a>
+  </nav>
+</header>
+  <div class="site-frame">
+    
+<nav class="site-sidebar" aria-label="Contents">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">OT</span>
+    <span>
+      <strong>Dynamical Optimal Transport</strong>
+      <small>Yanxiang Zhao</small>
+    </span>
+  </a>
+  <div class="sidebar-section">Forage</div>
+  <div class="toc-list">
+    <a class="toc-link toc-chapter" href="Notesch1.html#preliminaries" data-page="Notesch1.html"><span>1</span>Preliminaries</a>
+    <a class="toc-link toc-section" href="Notesse1.html#pushforward" data-page="Notesse1.html"><span>1.1</span>Push-forward</a>
+    <a class="toc-link toc-section" href="Notesse2.html#transport" data-page="Notesse2.html"><span>1.2</span>Transport</a>
+    <a class="toc-link toc-section" href="Notesse3.html#jacobian" data-page="Notesse3.html"><span>1.3</span>Jacobian</a>
+    <a class="toc-link toc-chapter" href="Notesch2.html#static-ot" data-page="Notesch2.html"><span>2</span>Static OT</a>
+    <a class="toc-link toc-section" href="Notesse4.html#monge-vs-kantorovich" data-page="Notesse4.html"><span>2.1</span>Monge v.s. Kantorovich</a>
+    <a class="toc-link toc-section" href="Notesse5.html#discrete-ot" data-page="Notesse5.html"><span>2.2</span>Discrete OT</a>
+    <a class="toc-link toc-subsection" href="Notesse5.html#discrete-monge" data-page="Notesse5.html"><span>2.2.1</span>Discrete Monge</a>
+    <a class="toc-link toc-subsection" href="Notesse5.html#discrete-kantorovich" data-page="Notesse5.html"><span>2.2.2</span>Discrete Kantorovich</a>
+    <a class="toc-link toc-section" href="Notesse6.html#wasserstein-distance" data-page="Notesse6.html"><span>2.3</span>Wasserstein Distance</a>
+    <a class="toc-link toc-chapter" href="Notesch3.html#entropic-regularization" data-page="Notesch3.html"><span>3</span>Entropic Regularization</a>
+    <a class="toc-link toc-section" href="Notesse7.html#entropic-regularization1" data-page="Notesse7.html"><span>3.1</span>Entropic Regularization</a>
+    <a class="toc-link toc-section" href="Notesse8.html#sinkhorn" data-page="Notesse8.html"><span>3.2</span>Sinkhorn</a>
+    <a class="toc-link toc-section" href="Notesse9.html#sinkhorn-in-logdomain" data-page="Notesse9.html"><span>3.3</span>Sinkhorn in Log-Domain</a>
+    <a class="toc-link toc-chapter" href="Notesch4.html#unbalanced-static-ot" data-page="Notesch4.html"><span>4</span>Unbalanced Static OT</a>
+    <a class="toc-link toc-section" href="Notesse10.html#unbalanced-ot" data-page="Notesse10.html"><span>4.1</span>Unbalanced OT</a>
+    <a class="toc-link toc-subsection" href="Notesse10.html#dykstras-algorithm" data-page="Notesse10.html"><span>4.1.1</span>Dykstra’s Algorithm</a>
+    <a class="toc-link toc-subsection" href="Notesse10.html#alternative-derivations-of-dykstra" data-page="Notesse10.html"><span>4.1.2</span>Alternative Derivations of Dykstra</a>
+    <a class="toc-link toc-section" href="Notesse11.html#partial-ot" data-page="Notesse11.html"><span>4.2</span>Partial OT</a>
+    <a class="toc-link toc-section" href="Notesse12.html#supervised-ot" data-page="Notesse12.html"><span>4.3</span>Supervised OT</a>
+    <a class="toc-link toc-subsection" href="Notesse12.html#sot-formulation" data-page="Notesse12.html"><span>4.3.1</span>sOT: Formulation</a>
+    <a class="toc-link toc-subsection" href="Notesse12.html#entropic-sot" data-page="Notesse12.html"><span>4.3.2</span>Entropic sOT</a>
+    <a class="toc-link toc-subsection" href="Notesse12.html#general-sinkhorn-for-sot" data-page="Notesse12.html"><span>4.3.3</span>General Sinkhorn for sOT</a>
+    <a class="toc-link toc-section" href="Notesse13.html#wassertein-barycenter" data-page="Notesse13.html"><span>4.4</span>Wassertein Barycenter</a>
+    <a class="toc-link toc-chapter" href="Notesch5.html#dynamical-ot" data-page="Notesch5.html"><span>5</span>Dynamical OT</a>
+    <a class="toc-link toc-section" href="Notesse14.html#benamoubrenier" data-page="Notesse14.html"><span>5.1</span>Benamou-Brenier</a>
+    <a class="toc-link toc-section" href="Notesse15.html#straight-trajectories" data-page="Notesse15.html"><span>5.2</span>Straight Trajectories</a>
+    <a class="toc-link toc-section" href="Notesse16.html#lagrangian-form" data-page="Notesse16.html"><span>5.3</span>Lagrangian Form</a>
+    <a class="toc-link toc-subsection" href="Notesse16.html#continuous-normalizing-flows" data-page="Notesse16.html"><span>5.3.1</span>Continuous Normalizing Flows</a>
+    <a class="toc-link toc-section" href="Notesse17.html#otto-calculus" data-page="Notesse17.html"><span>5.4</span>Otto Calculus</a>
+    <a class="toc-link toc-subsection" href="Notesse17.html#wasserstein-geometry-wasserstein-norm-and-wasserstein-scalar-product" data-page="Notesse17.html"><span>5.4.1</span>Wasserstein Geometry: Wasserstein norm and Wasserstein Scalar Product</a>
+    <a class="toc-link toc-subsection" href="Notesse17.html#review-gradient-flow-dynamics" data-page="Notesse17.html"><span>5.4.2</span>Review: Gradient Flow Dynamics</a>
+    <a class="toc-link toc-subsection" href="Notesse17.html#wasserstein-gradient-flow-dynamics" data-page="Notesse17.html"><span>5.4.3</span>Wasserstein Gradient Flow Dynamics</a>
+    <a class="toc-link toc-section" href="Notesse18.html#jko-scheme" data-page="Notesse18.html"><span>5.5</span>JKO Scheme</a>
+    <a class="toc-link toc-subsection" href="Notesse18.html#jko-flow-implict-euler-scheme-in-wasserstein-metric" data-page="Notesse18.html"><span>5.5.1</span>JKO Flow: Implict Euler Scheme in Wasserstein Metric</a>
+    <a class="toc-link toc-subsection" href="Notesse18.html#jko-scheme-in-dynamical-form" data-page="Notesse18.html"><span>5.5.2</span>JKO Scheme in Dynamical Form</a>
+    <a class="toc-link toc-subsection" href="Notesse18.html#jko-scheme-in-finite-dimensional-case" data-page="Notesse18.html"><span>5.5.3</span>JKO Scheme in Finite Dimensional Case</a>
+    <a class="toc-link toc-chapter" href="Notesch6.html#unbalanced-dynamical-ot" data-page="Notesch6.html"><span>6</span>Unbalanced Dynamical OT</a>
+    <a class="toc-link toc-section" href="Notesse19.html#fishrao-problem" data-page="Notesse19.html"><span>6.1</span>Fish-Rao Problem</a>
+    <a class="toc-link toc-chapter" href="Notesch7.html#deep-learning-approaches" data-page="Notesch7.html"><span>7</span>Deep Learning Approaches</a>
+    <a class="toc-link toc-chapter" href="Notesch8.html#ext-dynamical-ot" data-page="Notesch8.html"><span>8</span>Ext. Dynamical OT</a>
+    <a class="toc-link toc-section" href="Notesse20.html#wasserstein-gradient-flow" data-page="Notesse20.html"><span>8.1</span>Wasserstein Gradient Flow</a>
+    <a class="toc-link toc-section" href="Notesse21.html#transport-hessian-metric" data-page="Notesse21.html"><span>8.2</span>Transport Hessian Metric</a>
+    <a class="toc-link toc-subsection" href="Notesse21.html#transport-hessian-distance" data-page="Notesse21.html"><span>8.2.1</span>Transport Hessian Distance</a>
+    <a class="toc-link toc-subsection" href="Notesse21.html#transport-hessian-gradient-flow" data-page="Notesse21.html"><span>8.2.2</span>Transport Hessian Gradient Flow</a>
+    <a class="toc-link toc-subsection" href="Notesse21.html#transport-newton-flow" data-page="Notesse21.html"><span>8.2.3</span>Transport Newton Flow</a>
+    <a class="toc-link toc-subsection" href="Notesse21.html#transport-hessian-gradient-flow-vs-stein-gradient-flow" data-page="Notesse21.html"><span>8.2.4</span>Transport Hessian Gradient Flow v.s. Stein Gradient Flow</a>
+    <a class="toc-link toc-section" href="Notesse22.html#nonlocal-ot-and-bb" data-page="Notesse22.html"><span>8.3</span>Nonlocal OT and BB</a>
+    <a class="toc-link toc-chapter" href="Notesap1.html#proximal-operator" data-page="Notesap1.html"><span>A</span>Proximal Operator</a>
+    <a class="toc-link toc-section" href="Notesse23.html#proximal-operator1" data-page="Notesse23.html"><span>A.1</span>Proximal Operator</a>
+    <a class="toc-link toc-section" href="Notesse24.html#proximal-gradient-descent" data-page="Notesse24.html"><span>A.2</span>Proximal Gradient Descent</a>
+    <a class="toc-link toc-section" href="Notesse25.html#primaldual-algorithm" data-page="Notesse25.html"><span>A.3</span>Primal-dual Algorithm</a>
+    <a class="toc-link toc-chapter" href="Notesap2.html#exercises" data-page="Notesap2.html"><span>B</span>Exercises</a>
+    <a class="toc-link toc-chapter" href="Notesap3.html#answers-to-exercises" data-page="Notesap3.html"><span>C</span>Answers to Exercises</a>
+    <a class="toc-link toc-chapter" href="Notesli2.html#bibliography" data-page="Notesli2.html"><span>Ref.</span>Bibliography</a>
+  </div>
+</nav>
+    <main class="site-main">
+      <!-- l. 2111 -->
+    <h3 class='sectionHead' id='benamoubrenier'><span class='titlemark'>5.1   </span> <a id='x21-270005.1'></a>The Continuity Equation and Benamou–Brenier Formula</h3>
+<!-- l. 2113 --><p class='noindent'>Let \(\Omega \subset \mathbb {R}^d\) be a convex set (\(\Omega = \mathbb {R}^d\) is admissible). Throughout, we commit a mild abuse of notation and identify all
+probability measures with their densities: \(\text {d}\rho (\mathbf {x}) = \rho (\mathbf {x})\text {d}\mathbf {x}\). In other words, when we have two probability densities \(\rho _1\)
+and \(\rho _2\), their \(p\)-Wasserstein distance means the \(p\)-Wasserstein distance between the two measures \(\rho _1\text {d}\mathbf {x}, \rho _2\text {d}\mathbf {x}\):
+\begin {align*}  W_p(\rho _1,\rho _2): = W_p(\rho _1 \text {d}\mathbf {x}, \rho _2 \text {d}\mathbf {x}).  \end {align*}
+</p><!-- l. 2117 --><p class='indent'>    Let \(\mu \in \mathcal {P}_2(\Omega )\) be a probability measure with finite second moments, and let \(\mathbf {v} : [0, T] \times \Omega \to \mathbb {R}^d\) be a smooth bounded vector field
+tangent to the boundary of \(\Omega \). Let \(\mathbf {X}(t, \mathbf {x})\) denote the flow of \(\mathbf {v}\), namely \begin {align} \label {eqn:dynamicalOT_velocity_flow} \begin {cases} \dot {\mathbf {X}}(t, \mathbf {x}) = \mathbf {v}(t, \mathbf {X}(t, \mathbf {x})), \\ \mathbf {X}(0, \mathbf {x}) = \mathbf {x}, \end {cases}  \end {align}
+</p><!-- l. 2124 --><p class='indent'>    and set \(\rho (t,\cdot ) = (\mathbf {X}(t))_\sharp \mu \). Note that, since \(\mathbf {v}\) is tangent to the boundary, the flow remains inside \(\Omega \), hence \(\rho (t,\cdot ) \in \mathcal {P}_2(\Omega )\).
+</p>
+    <div class='newtheorem'>
+<!-- l. 2126 --><p class='noindent'><span class='head'>
+<a id='x21-27001r1'></a>
+<span class='cmbx-10x-x-109'>Lemma 5.1.1.</span>  </span> <span class='cmti-10x-x-109'>Let</span> \(\mathbf {v}_t(\cdot ) := \mathbf {v}(t, \cdot )\) <span class='cmti-10x-x-109'>and</span> \(\rho _t(\cdot ) := \rho (t, \cdot )\) <span class='cmti-10x-x-109'>(the two notations are interchangeable hereafter). The continuity equation</span>
+\begin {align} \label {eqn:continuity} \partial _t \rho _t + \nabla \cdot (\rho _t \mathbf {v}_t) = 0  \end {align}
+</p><!-- l. 2131 --><p class='indent'>    <span class='cmti-10x-x-109'>holds in the distributional sense.</span>
+</p>
+    </div>
+<!-- l. 2132 --><p class='indent'>
+</p>
+    <div class='proof'>
+<!-- l. 2135 --><p class='indent'>    <span class='head'>
+<span class='cmti-10x-x-109'>Proof.</span> </span>Let \(\psi \in C_c^\infty (\Omega )\), and consider the function \(t \mapsto \int _\Omega \rho _t(x) \psi (x) \, dx\). Then, using the definitions of \(\mathbf {X}\) and \(\rho _t\), we get \begin {align*}  \int _\Omega \partial _t \rho _t(\mathbf {x}) \psi (\mathbf {x}) \, \text {d}\mathbf {x} = &amp;\frac {\text {d}}{\text {d}t} \int _\Omega \rho _t(\mathbf {x}) \psi (\mathbf {x}) \, \text {d}\mathbf {x} = \frac {\text {d}}{\text {d}t} \int _\Omega \psi (\mathbf {X}(t,\mathbf {x})) \mu (\mathbf {x}) \, \text {d}\mathbf {x} \\ =&amp; \int _\Omega \nabla \psi (\mathbf {X}(t, \mathbf {x})) \cdot \dot {\mathbf {X}}(t, \mathbf {x}) \mu (\mathbf {x}) \, \text {d}\mathbf {x} \\ =&amp; \int _\Omega \nabla \psi (\mathbf {X}(t, \mathbf {x})) \cdot \mathbf {v}_t(\mathbf {X}(t, \mathbf {x})) \mu (\mathbf {x}) \, \text {d}\mathbf {x} \\ =&amp; \int _\Omega \nabla \psi (\mathbf {x}) \cdot \mathbf {v}_t(\mathbf {x}) \rho _t(\mathbf {x}) \, \text {d}\mathbf {x} = -\int _\Omega \psi (\mathbf {x}) \, \nabla \cdot (\rho _t \mathbf {v}_t) \, \text {d}\mathbf {x},  \end {align*}
+</p><!-- l. 2142 --><p class='indent'>    which implies the continuity equation.                                                                           □
+</p>
+    </div>
+    <div class='newtheorem'>
+<!-- l. 2145 --><p class='noindent'><span class='head'>
+<a id='x21-27002r2'></a>
+
+<span class='cmbx-10x-x-109'>Definition 5.1.2.</span>  </span><span class='cmti-10x-x-109'>Given a pair</span> \((\rho _t, \mathbf {v}_t)\) <span class='cmti-10x-x-109'>solving the continuity equation (</span><span class='eqref-fixed' title='eqn:continuity'>5.2</span><span class='cmti-10x-x-109'>), with</span> \(\mathbf {v}_t \cdot \mathbf {n}|_{\partial \Omega } = 0\) <span class='cmti-10x-x-109'>(namely,</span> \(\mathbf {v}_t\) <span class='cmti-10x-x-109'>is tangent to the
+boundary of</span> \(\Omega \)<span class='cmti-10x-x-109'>), the dynamical optimal transport is defined as </span>\begin {align} \label {eqn:dynamicalOT02} C_{\mathrm {BB}}(\mu ,\nu ) = \min _{(\rho ,\mathbf {v})\in \mathcal {C}_{\mathrm {BB}}}\ A[\rho _t, \mathbf {v}_t] = \int _0^1\int _{\Omega } \rho _t(\mathbf {x}) \|\mathbf {v}_t(\mathbf {x})\|^2 \ \dx \dt ,  \end {align}
+</p><!-- l. 2150 --><p class='indent'>    <span class='cmti-10x-x-109'>where we define the set of constraints as </span>\begin {align}  \mathcal {C}_{\mathrm {BB}}(\mu ,\nu ) : = \left \{ (\rho _t,\mathbf {v}_t) | \partial _t\rho _t = -\nabla \cdot (\rho _t \mathbf {v}_t),\ \rho (0,\mathbf {x})=\mu ,\ \rho (1,\mathbf {x})=\nu ,\ \mathbf {v}\cdot \mathbf {n}|_{\partial \Omega } = 0 \right \}.  \end {align}
+</p>
+    </div>
+<!-- l. 2154 --><p class='indent'>
+</p><!-- l. 2156 --><p class='indent'>    The following remarkable formula, due to Benamou and Brenier <span class='cite'>[<a href='Notesli2.html#Xbenamou2000computational'>2</a>]</span> (hence the notation \(C_{\mathrm {BB}}\)), shows a link
+between the continuity equation and the \(W_2\)-distance.
+</p>
+    <div class='newtheorem'>
+<!-- l. 2158 --><p class='noindent'><span class='head'>
+<a id='x21-27003r3'></a>
+<span class='cmbx-10x-x-109'>Theorem 5.1.3 </span>(Benamou–Brenier Theorem)<span class='cmbx-10x-x-109'>.</span>  </span> <span class='cmti-10x-x-109'>Given two probability measures</span> \(\mu , \nu \in \mathcal {P}_2(\Omega )\)<span class='cmti-10x-x-109'>, it holds that</span>
+\begin {align} \label {eqn:dynamicalOT} W_2^2(\mu , \nu ) = C_{\mathrm {BB}}(\mu ,\nu ).  \end {align}
+</p>
+    </div>
+<!-- l. 2163 --><p class='indent'>
+</p>
+    <div class='proof'>
+<!-- l. 2166 --><p class='indent'>    <span class='head'>
+<span class='cmti-10x-x-109'>Proof.</span> </span>We give only a formal proof.
+</p><!-- l. 2168 --><p class='indent'>    Let \((\rho _t, \bv _t)\) be a couple (probability measure/smooth vector field) satisfying \(\rho _0 = \mu , \rho _1 = \nu \), and \(\partial _t \rho _t + \nabla \cdot (\rho _t \bv _t) = 0\). Let \(\mathbf {X}(t, \mathbf {x})\) denote the flow of \(\mathbf {v}_t\). By
+the uniqueness for the continuity equation, the unique solution \(\rho _t\) is the one constructed in Lemma <a href='#x21-27001r1'>5.1.1<!-- tex4ht:ref: lemma:continuity_eqn  --></a>,
+namely \(\rho _t = (\mathbf {X}(t))_\sharp \mu \). In particular, \(\mathbf {X}(1)_\sharp \mu = \nu \), which implies that \(\mathbf {X}(1,\mathbf {x})\) is a transport map from \(\mu \) to \(\nu \). Then by the definition of \(\mathbf {X}\) and
+Holder inequality, we get \begin {align}  A[\rho _t, v_t] &amp;= \int _0^1 \int _{\Omega } \|\mathbf {v}_t(\mathbf {x})\|_2^2 \rho _t(\mathbf {x}) \, \dx \dt \nonumber \\ &amp;= \int _0^1 \int _{\Omega } \|\mathbf {v}_t(\mathbf {X}(t,\mathbf {x}))\|_2^2 \ \mu (\mathbf {x}) \, \dx \dt = \int _{\Omega } \left [ \int _0^1 \|\dot {\mathbf {X}}(t,\mathbf {x})\|_2^2 \ \mu (\mathbf {x}) \, \dt \right ] \dx \\ &amp;= \int _{\Omega } \mu (\mathbf {x}) \int _0^1 \|\dot {\mathbf {X}}(t,\mathbf {x})\|_2^2 \ \dt \ \dx \geq \int _{\Omega } \mu (\mathbf {x}) \left (\int _0^1 \dot {\mathbf {X}}(t,\mathbf {x}) \, \dt \right )^2 \, \dx \nonumber \\ &amp;= \int _{\Omega } |\mathbf {X}(1,\mathbf {x}) - \mathbf {x}|^2 \mu (\mathbf {x})\, \dx \geq W^2_2(\mu , \nu ). \nonumber  \end {align}
+</p><!-- l. 2176 --><p class='indent'>    Hence, this proves that \(W^2_2(\mu , \nu )\) is always less than or equal to the infimum appearing in the statement.
+</p><!-- l. 2178 --><p class='indent'>    On the other hand, take \( \mathbf {X}(t,\mathbf {x}) = \mathbf {x} + t(\mathbf {T}(\mathbf {x}) - \mathbf {x}) \), where \( \mathbf {T} \) is the optimal Monge map from \( \mu \) to \( \nu \), set \( \rho _t := (\mathbf {X}_t)_\sharp \mu \) and let \( \mathbf {v}_t \) be such that \( \dot {\mathbf {X}} = \mathbf {v}_t \circ \mathbf {X}_t \).
+With this choice we have \( \dot {\mathbf {X}}(t,\mathbf {x}) = \mathbf {T}(\mathbf {x}) - \mathbf {x} = \mathbf {v}_t(\mathbf {X}(t,\mathbf {x})) \), and looking at the computations above one can easily check that all
+inequalities in (4.2) become equalities, therefore we have \[ \inf A[\rho _t, v_t] \le A[\rho _t, v_t] = W_2^2(\mu ,\nu ). \] Finally we have \[ \inf A[\rho _t, v_t] = W^2_2(\mu , \nu ). \] The equivalence is
+obtained.                                                                                                                       □
+</p>
+    </div>
+
+<!-- l. 2190 --><p class='indent'>    The proof of the Benamou-Brenier theorem indeed provides an explicit relation between the optimal
+Monge map \(\mathbf {T}^*(\mathbf {x})\) and the optimal \((\rho ^*, \mathbf {v}^*)\).
+</p>
+    <div class='newtheorem'>
+<!-- l. 2191 --><p class='noindent'><span class='head'>
+<a id='x21-27004r4'></a>
+<span class='cmbx-10x-x-109'>Corollary 5.1.4.</span>  </span><span class='cmti-10x-x-109'>Let</span> \(\mathbf {T}^*\) <span class='cmti-10x-x-109'>be the optimal Monge map from</span> \(\mu \) <span class='cmti-10x-x-109'>to</span> \(\nu \)<span class='cmti-10x-x-109'>, then the optimal solution</span> \((\rho ^*, v^*)\) <span class='cmti-10x-x-109'>of the dynamical OT
+(</span><span class='eqref-fixed' title='eqn:dynamicalOT'>5.5</span><span class='cmti-10x-x-109'>) can be constructed as below: Take</span> \(\mathbf {X}(t,\mathbf {x}) = (1-t)\mathbf {x}+t\mathbf {T}^*(\mathbf {x})\)<span class='cmti-10x-x-109'>, then </span>\begin {align*}  \rho ^*(t,\mathbf {x})=(\mathbf {X}_t)_{\sharp }\mu , \quad \mathbf {v}^*(t,\mathbf {x}) = \dot {\mathbf {X}}\circ (\mathbf {X}_t^{-1}) = (\mathbf {T}^*-\emph {Id})\circ \mathbf {X}_t^{-1} = \mathbf {T}^*(\mathbf {X}_t^{-1}(\mathbf {x})) - \mathbf {X}_t^{-1}(\mathbf {x}).  \end {align*}
+</p><!-- l. 2196 --><p class='indent'>    <span class='cmti-10x-x-109'>Reversely, given the optimal solution</span> \((\rho ^*, \mathbf {v}^*)\) <span class='cmti-10x-x-109'>of the dynamical OT (</span><span class='eqref-fixed' title='eqn:dynamicalOT'>5.5</span><span class='cmti-10x-x-109'>), the optimal Monge map</span> \(\mathbf {T}^*\) <span class='cmti-10x-x-109'>can be
+constructed as follows: </span>\begin {align*}  \mathbf {T}^*(\mathbf {x}) = \mathbf {x} + \mathbf {v}^*_t(\mathbf {X}(t,\mathbf {x})) = \mathbf {x} + \mathbf {v}^*_0(\mathbf {X}(0,\mathbf {x})) = \mathbf {x} + \mathbf {v}^*(0,\mathbf {x}).  \end {align*}
+</p>
+    </div>
+<!-- l. 2200 --><p class='indent'>
+
+</p>
+    <!-- l. 2207 -->
+<!-- l. 2207 -->
+      <nav class="page-nav" aria-label="Page navigation">
+        <a class="prev-link" href="Notesch5.html">Previous</a>
+        <a class="next-link" href="Notesse15.html">Next</a>
+      </nav>
+    </main>
+  </div>
+</body>
+</html>
