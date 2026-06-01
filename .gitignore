@@ -1,1 +1,4 @@
 .DS_Store
+
+# Local source and build workspace; GitHub Pages publishes docs/.
+site/
