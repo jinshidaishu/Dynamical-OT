@@ -194,8 +194,8 @@ tangent space \(T_{\rho }M\) (or equivalently Hessian operator \(\text {Hess}_{W
 <!-- l. 3464 --><p class='noindent'><span class='head'>
 <a id='x31-44001r1'></a>
 <span class='cmbx-10x-x-109'>Lemma 8.2.1.</span>  </span><span class='cmti-10x-x-109'>Let</span> \(H^E_{\rho }\) <span class='cmti-10x-x-109'>be defined as in (</span><span class='eqref-fixed' title='eqn:H_symbol'>8.6</span><span class='cmti-10x-x-109'>), and its inverse as in (</span><span class='eqref-fixed' title='eqn:inverse_H'>8.7</span><span class='cmti-10x-x-109'>). Then Poisson equation</span>
-\begin {align}  H_{\rho }^E \Psi (y)\stackrel {\emph {def}}{=} \int _y H_{\rho }^E(x,y)\Psi (y) \text {d}y = f(x)  \end {align}
-</p><!-- l. 3469 --><p class='indent'>    <span class='cmti-10x-x-109'>has an explicit solution </span>\begin {align}  \Psi (y) = (H_{\rho }^E)^{-1}f(x) \stackrel {\emph {def}}{=} \int _{x} (H_{\rho }^E)^{-1}(x,y) f(x) \text {d}x.  \end {align}
+\begin {align}  H_{\rho }^E \Psi (y)\stackrel {\mathrm {def}}{=} \int _y H_{\rho }^E(x,y)\Psi (y) \text {d}y = f(x)  \end {align}
+</p><!-- l. 3469 --><p class='indent'>    <span class='cmti-10x-x-109'>has an explicit solution </span>\begin {align}  \Psi (y) = (H_{\rho }^E)^{-1}f(x) \stackrel {\mathrm {def}}{=} \int _{x} (H_{\rho }^E)^{-1}(x,y) f(x) \text {d}x.  \end {align}
 </p>
     </div>
 <!-- l. 3473 --><p class='indent'>
@@ -205,7 +205,7 @@ tangent space \(T_{\rho }M\) (or equivalently Hessian operator \(\text {Hess}_{W
     <div class='newtheorem'>
 <!-- l. 3476 --><p class='noindent'><span class='head'>
 <a id='x31-44002r2'></a>
-<span class='cmbx-10x-x-109'>Corollary 8.2.2.</span>  </span> <span class='cmti-10x-x-109'>Let </span>\[ (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1} \sigma (y) = \Psi (x), \] <span class='cmti-10x-x-109'>be the transport Hessian potential, then </span>\begin {align*}  \sigma (y) &amp;= \Big ( (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y} )^{-1} \Big )^{-1}\Psi (x) \\ &amp;= (-\Delta _{\rho ,y})\cdot (H_{\rho }^E)^{-1} \cdot (-\Delta _{\rho ,x}) \Psi (x) \\ &amp; \stackrel {\emph {def}}{=} (-\Delta _{\rho ,y}) \int _x (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,x})\Psi (x) \emph {d}x.  \end {align*}
+<span class='cmbx-10x-x-109'>Corollary 8.2.2.</span>  </span> <span class='cmti-10x-x-109'>Let </span>\[ (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1} \sigma (y) = \Psi (x), \] <span class='cmti-10x-x-109'>be the transport Hessian potential, then </span>\begin {align*}  \sigma (y) &amp;= \Big ( (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y} )^{-1} \Big )^{-1}\Psi (x) \\ &amp;= (-\Delta _{\rho ,y})\cdot (H_{\rho }^E)^{-1} \cdot (-\Delta _{\rho ,x}) \Psi (x) \\ &amp; \stackrel {\mathrm {def}}{=} (-\Delta _{\rho ,y}) \int _x (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,x})\Psi (x) \mathrm {d}x.  \end {align*}
 </p>
     </div>
 <!-- l. 3487 --><p class='indent'>
@@ -223,9 +223,9 @@ becomes </span>\[ (-\Delta _{\rho ,x})^{-1}\sigma (x) = \Psi (x), \] <span class
 <!-- l. 3501 --><p class='noindent'><span class='head'>
 <a id='x31-44004r4'></a>
 <span class='cmbx-10x-x-109'>Remark 8.2.4.</span>  </span><span class='cmti-10x-x-109'>Using the transport Hessian potential</span> \(\Psi \) <span class='cmti-10x-x-109'>defined in Corollary </span><a href='#x31-44002r2'><span class='cmti-10x-x-109'>8.2.2</span><!-- tex4ht:ref: corollary:HessianPotential  --></a><span class='cmti-10x-x-109'>, the transport Hessian
-metric</span> \(W_{\rho }^H(\sigma _1,\sigma _2)\) <span class='cmti-10x-x-109'>in (</span><span class='eqref-fixed' title='eqn:H_symbol'>8.6</span><span class='cmti-10x-x-109'>) can be rewritten as </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) &amp;= \left \langle (\sigma _1, \Psi _2) \right \rangle _{L^2} \\ &amp; = \left \langle ((-\Delta _{\rho ,x})\cdot (H_{\rho }^E)^{-1}\cdot (-\Delta _{\rho ,y})\Psi _1(y), \Psi _2(x)) \right \rangle _{L^2} \\ &amp; = \int _x \Psi _2(x) (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y)(-\Delta _{\rho ,y})\Psi _1(y) \emph {d}y \ \emph {d}x \\ &amp; = \int _x \int _y \Big ( \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) \nabla _y\Psi _1(y) \Big )\cdot \nabla _x\Psi _2(x) \rho (x)\rho (y)\ \emph {d}x\emph {d}y.  \end {align*}
-</p><!-- l. 3509 --><p class='indent'>    <span class='cmti-10x-x-109'>In other words, </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) = \int _x \int _y \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) (\nabla _y\Psi _1(y), \nabla _x\Psi _2(x) ) \rho (x)\rho (y)\ \emph {d}x\emph {d}y,  \end {align*}
-</p><!-- l. 3513 --><p class='indent'>    <span class='cmti-10x-x-109'>in which the transport hessian potential</span> \(\Psi _i\) <span class='cmti-10x-x-109'>are defined as in Corollary </span><a href='#x31-44002r2'><span class='cmti-10x-x-109'>8.2.2</span><!-- tex4ht:ref: corollary:HessianPotential  --></a><span class='cmti-10x-x-109'>, </span>\begin {align*}  \sigma _i(x) = (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,y})\Psi _i(y) \emph {d}y.  \end {align*}
+metric</span> \(W_{\rho }^H(\sigma _1,\sigma _2)\) <span class='cmti-10x-x-109'>in (</span><span class='eqref-fixed' title='eqn:H_symbol'>8.6</span><span class='cmti-10x-x-109'>) can be rewritten as </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) &amp;= \left \langle (\sigma _1, \Psi _2) \right \rangle _{L^2} \\ &amp; = \left \langle ((-\Delta _{\rho ,x})\cdot (H_{\rho }^E)^{-1}\cdot (-\Delta _{\rho ,y})\Psi _1(y), \Psi _2(x)) \right \rangle _{L^2} \\ &amp; = \int _x \Psi _2(x) (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y)(-\Delta _{\rho ,y})\Psi _1(y) \mathrm {d}y \ \mathrm {d}x \\ &amp; = \int _x \int _y \Big ( \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) \nabla _y\Psi _1(y) \Big )\cdot \nabla _x\Psi _2(x) \rho (x)\rho (y)\ \mathrm {d}x\mathrm {d}y.  \end {align*}
+</p><!-- l. 3509 --><p class='indent'>    <span class='cmti-10x-x-109'>In other words, </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) = \int _x \int _y \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) (\nabla _y\Psi _1(y), \nabla _x\Psi _2(x) ) \rho (x)\rho (y)\ \mathrm {d}x\mathrm {d}y,  \end {align*}
+</p><!-- l. 3513 --><p class='indent'>    <span class='cmti-10x-x-109'>in which the transport hessian potential</span> \(\Psi _i\) <span class='cmti-10x-x-109'>are defined as in Corollary </span><a href='#x31-44002r2'><span class='cmti-10x-x-109'>8.2.2</span><!-- tex4ht:ref: corollary:HessianPotential  --></a><span class='cmti-10x-x-109'>, </span>\begin {align*}  \sigma _i(x) = (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,y})\Psi _i(y) \mathrm {d}y.  \end {align*}
 </p>
     </div>
 <!-- l. 3517 --><p class='indent'>
@@ -238,7 +238,7 @@ metric</span> \(W_{\rho }^H(\sigma _1,\sigma _2)\) <span class='cmti-10x-x-109'>
     <div class='newtheorem'>
 <!-- l. 3523 --><p class='noindent'><span class='head'>
 <a id='x31-45001r5'></a>
-<span class='cmbx-10x-x-109'>Definition 8.2.5.</span>  </span><span class='cmti-10x-x-109'>The transport Hessian distance</span> \(\emph {dist}_H(\rho ^0,\rho ^1)\) <span class='cmti-10x-x-109'>is defined as </span>\begin {align}  \emph {dist}_H(\rho ^0,\rho ^1) = \min _{\rho } \int _0^1 W_{\rho }^H(\partial _t\rho ,\partial _t\rho )\ \emph {d}t = \min _{\rho } \int _0^1 \Big \langle \partial _t\rho (x), (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\partial _t\rho (y) \Big \rangle _{L^2}\ \emph {d}t  \end {align}
+<span class='cmbx-10x-x-109'>Definition 8.2.5.</span>  </span><span class='cmti-10x-x-109'>The transport Hessian distance</span> \(\mathrm {dist}_H(\rho ^0,\rho ^1)\) <span class='cmti-10x-x-109'>is defined as </span>\begin {align}  \mathrm {dist}_H(\rho ^0,\rho ^1) = \min _{\rho } \int _0^1 W_{\rho }^H(\partial _t\rho ,\partial _t\rho )\ \mathrm {d}t = \min _{\rho } \int _0^1 \Big \langle \partial _t\rho (x), (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\partial _t\rho (y) \Big \rangle _{L^2}\ \mathrm {d}t  \end {align}
 </p><!-- l. 3529 --><p class='indent'>    <span class='cmti-10x-x-109'>over all smooth paths</span> \(\rho (t,x)\) <span class='cmti-10x-x-109'>such that</span> \(\rho (t=0,x) = \rho ^0, \rho (t=1,x) = \rho ^1\)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
