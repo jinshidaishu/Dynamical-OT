@@ -330,7 +330,7 @@ const homeContent = `
   <div>
     <p class="eyebrow">Lecture notes</p>
     <h1><span>Dynamical Optimal Transport</span><small>by Yanxiang Zhao</small></h1>
-    <p class="lede">A free online resource for theory, methods, and algorithms of dynamical optimal transport.</p>
+    <p class="lede">A Free Online Resource for Theory, Methods, and Algorithms of Dynamical Optimal Transport.</p>
   </div>
   <figure>
     <img src="assets/dynamical-ot-manifold-hero.png" alt="Dynamical optimal transport flow between two densities on a manifold">
