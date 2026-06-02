@@ -174,24 +174,24 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 888 -->
+      <!-- l. 880 -->
     <h3 class='sectionHead' id='entropic-regularization1'><span class='titlemark'>3.1   </span> <a id='x12-130003.1'></a>Entropic Regularization</h3>
-<!-- l. 890 --><p class='noindent'>The discrete entropy of a coupling matrix is defined as \begin {equation}  H(\mathbf {P}) := -\sum _{i,j} P_{ij} \log (P_{ij} - 1),  \end {equation}<a id='x12-13001r1'></a> with an analogous definition for vectors, with
+<!-- l. 882 --><p class='noindent'>The discrete entropy of a coupling matrix is defined as \begin {equation}  H(\mathbf {P}) := -\sum _{i,j} P_{ij} \log (P_{ij} - 1),  \end {equation}<a id='x12-13001r1'></a> with an analogous definition for vectors, with
 the convention that \(\mathbf {H}(\mathbf {a}) = -\infty \) if one of the entries is \(0\) or negative. The function \(H\) is \(1\)-strongly concave,
 because its Hessian is \(\nabla ^2 H(P) = -\text {diag}(1/P_{ij})\) and \(P_{ij} \leq 1\). The idea of the entropic regularization of optimal transport is to use \(-H\)
 as a regularizing function to obtain approximate solutions to the original transport problem
 (<span class='eqref-fixed' title='eqn:Kantorovich_discrete_02'>2.11</span>).
 </p>
     <div class='newtheorem'>
-<!-- l. 896 --><p class='noindent'><span class='head'>
+<!-- l. 888 --><p class='noindent'><span class='head'>
 <a id='x12-13002r1'></a>
 
 <span class='cmbx-10x-x-109'>Definition 3.1.1.</span>  </span><span class='cmti-10x-x-109'>The entropic regularization of the Kantorovich OT is defined as </span>\begin {align} \label {eqn:OT_entropic} L_{\mathbf {C}}^{\epsilon }(\mathbf {a}, \mathbf {b}) = W_{\epsilon }(\mathbf {a}, \mathbf {b}) = \min _{\mathbf {P} \in \mathbf {U}(\mathbf {a},\mathbf {b})} \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}).  \end {align}
 </p>
     </div>
-<!-- l. 901 --><p class='indent'>     Here we use two notations for the entropic approximation. The two notations \(L_{\mathbf {C}}^{\epsilon }(\mathbf {a}, \mathbf {b})\) and \(W_{\epsilon }(\mathbf {a}, \mathbf {b})\) will be used
+<!-- l. 893 --><p class='indent'>     Here we use two notations for the entropic approximation. The two notations \(L_{\mathbf {C}}^{\epsilon }(\mathbf {a}, \mathbf {b})\) and \(W_{\epsilon }(\mathbf {a}, \mathbf {b})\) will be used
 interchangeably hereafter.
-</p><!-- l. 904 --><p class='indent'>    Since the objective is an \(\epsilon \)-strongly convex function, Problem (<span class='eqref-fixed' title='eqn:OT_entropic'>3.2</span>) has a unique optimal solution. The
+</p><!-- l. 896 --><p class='indent'>    Since the objective is an \(\epsilon \)-strongly convex function, Problem (<span class='eqref-fixed' title='eqn:OT_entropic'>3.2</span>) has a unique optimal solution. The
 idea to regularize the optimal transport problem by an entropic term can be traced back to modeling ideas in
 transportation theory: Actual traffic patterns in a network do not agree with those predicted by
 the solution of the optimal transport problem. Indeed, the former are more diffuse than the
@@ -201,21 +201,21 @@ that is able to form a more “blurred” prediction of traffic given marginals 
 costs.
 </p>
     <div class='newtheorem'>
-<!-- l. 906 --><p class='noindent'><span class='head'>
+<!-- l. 898 --><p class='noindent'><span class='head'>
 <a id='x12-13003r2'></a>
 <span class='cmbx-10x-x-109'>Proposition 3.1.2 </span>(Convergence with \(\epsilon \))<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>The unique solution </span>\(\mathbf {P}_{\epsilon }^*\) <span class='cmti-10x-x-109'>of (</span><span class='eqref-fixed' title='eqn:OT_entropic'>3.2</span><span class='cmti-10x-x-109'>) converges to the optimal solution with
 maximal entropy within the set of all optimal solutions of the Kantorovich problem, namely </span>\begin {equation}  \lim _{\epsilon \to 0}\mathbf {P}^*_{\epsilon } = \underset { \mathbf {P}}{\mathrm {argmin}} \left \{-H(\mathbf {P}) : \mathbf {P} \in \mathbf {U}(\mathbf {a},\mathbf {b}), \ \ \langle \mathbf {P}, \mathbf {C} \rangle = L_{\mathbf {C}}(\mathbf {a}, \mathbf {b})\right \},  \end {equation}<a id='x12-13004r2'></a> <span class='cmti-10x-x-109'>so that in
 particular </span>\begin {equation}  \lim _{\epsilon \to 0} L_{C}^{\epsilon }(\mathbf {a}, \mathbf {b}) = L_{\mathbf {C}}(\mathbf {a}, \mathbf {b}).  \end {equation}<a id='x12-13005r3'></a> <span class='cmti-10x-x-109'>One also has </span>\begin {equation}  \lim _{\epsilon \to \infty }\mathbf {P}^*_{\epsilon } = \mathbf {a} \otimes \mathbf {b} = \mathbf {a}\mathbf {b}^{\mathrm {T}} = (a_i b_j)_{i,j}.  \end {equation}<a id='x12-13006r4'></a>
 </p>
     </div>
-<!-- l. 919 --><p class='indent'>
-</p><!-- l. 921 --><p class='indent'>    Defining the Kullback–Leibler divergence between couplings as \begin {equation}  \text {KL}(\mathbf {P}|\mathbf {K}) = \sum _{i,j} P_{ij} \log \left (\frac {P_{ij}}{K_{ij}}\right ) -P_{ij} + K_{ij}, \tag {4.6}  \end {equation}<a id='x12-13007r5'></a> the unique solution \(\mathbf {P}^*_{\epsilon }\) of (<span class='eqref-fixed' title='eqn:OT_entropic'>3.2</span>) is a
+<!-- l. 911 --><p class='indent'>
+</p><!-- l. 913 --><p class='indent'>    Defining the Kullback–Leibler divergence between couplings as \begin {equation}  \text {KL}(\mathbf {P}|\mathbf {K}) = \sum _{i,j} P_{ij} \log \left (\frac {P_{ij}}{K_{ij}}\right ) -P_{ij} + K_{ij}, \tag {4.6}  \end {equation}<a id='x12-13007r5'></a> the unique solution \(\mathbf {P}^*_{\epsilon }\) of (<span class='eqref-fixed' title='eqn:OT_entropic'>3.2</span>) is a
 projection onto \(\mathbf {U}(\mathbf {a}, \mathbf {b})\) of the Gibbs kernel associated to the cost matrix \(\mathbf {C}\) as \[ \mathbf {K} := e^{-\frac {\mathbf {C}}{\epsilon }}. \] Indeed one has that using the
 definition above that \begin {equation} \label {eqn:KL_proj} \mathbf {P}^*_{\epsilon } = \text {Proj}_{\mathbf {U}(\mathbf {a},\mathbf {b})}^{\text {KL}}(\mathbf {K}) := \underset { \mathbf {P} \in \mathbf {U}(\mathbf {a},\mathbf {b})}{\mathrm {argmin}} \text {KL}(\mathbf {P} | \mathbf {K}).  \end {equation}<a id='x12-13008r6'></a> In other words, the unique solution of the entropic OT is the projection of \(\mathbf {K}\) onto \(\mathbf {U}(\mathbf {a},\mathbf {b})\) with
 respect to KL divergence.
 </p>
     <div class='newtheorem'>
-<!-- l. 935 --><p class='noindent'><span class='head'>
+<!-- l. 927 --><p class='noindent'><span class='head'>
 <a id='x12-13009r3'></a>
 <span class='cmbx-10x-x-109'>Definition 3.1.3 </span>(Entropic regularization between discrete measures)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>For discrete measures of the form
 (</span><span class='eqref-fixed' title='eqn:discrete_measure02'>2.5</span><span class='cmti-10x-x-109'>), the definition of regularized optimal transport extends naturally to </span>\begin {equation}  \mathcal {L}_{c}^{\epsilon }(\alpha , \beta ) := L_{\mathbf {C}}^{\epsilon }(a, b),  \end {equation}<a id='x12-13010r7'></a> <span class='cmti-10x-x-109'>with cost </span>\( C_{ij} = c(x_i, y_j) \)<span class='cmti-10x-x-109'>, to emphasize the
@@ -223,11 +223,11 @@ dependency with respect to the positions </span>\( (x_i, y_j) \) <span class='cm
 
 </p>
     </div>
-<!-- l. 941 --><p class='indent'>
+<!-- l. 933 --><p class='indent'>
 
 </p>
-    <!-- l. 948 -->
-<!-- l. 948 -->
+    <!-- l. 940 -->
+<!-- l. 940 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesch3.html">Previous</a>
         <a class="next-link" href="Notesse8.html">Next</a>

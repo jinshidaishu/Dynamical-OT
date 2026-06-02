@@ -174,52 +174,52 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 3681 -->
+      <!-- l. 3671 -->
     <h3 class='sectionHead' id='nonlocal-ot-and-bb'><span class='titlemark'>8.3   </span> <a id='x32-490008.3'></a>Nonlocal Optimal Transport and Nonlocal Benamou-Brenier</h3>
-<!-- l. 3685 --><p class='noindent'>The standard OT has a differential viewpoint from which one can derive the Benamou-Brenier
+<!-- l. 3675 --><p class='noindent'>The standard OT has a differential viewpoint from which one can derive the Benamou-Brenier
 formula.
-</p><!-- l. 3687 --><p class='indent'>    Let \(\Omega \subset \mathbb {R}^d\) be a convex set, \(\rho _0\in \mathcal {P}_2(\Omega )\) be a probability measure with finite 2nd moments, and \(v: [0,1]\times \Omega \rightarrow \mathbb {R}^d\) be a smooth bounded
+</p><!-- l. 3677 --><p class='indent'>    Let \(\Omega \subset \mathbb {R}^d\) be a convex set, \(\rho _0\in \mathcal {P}_2(\Omega )\) be a probability measure with finite 2nd moments, and \(v: [0,1]\times \Omega \rightarrow \mathbb {R}^d\) be a smooth bounded
 vector field tangent to the boundary of \(\Omega \). Let \(X(t,x)\) denote the flow of \(v\), namely \begin {align} \label {eqn:X_eqn} \begin {cases} \dot {X}(t,x) = v(t,X(t,x)), \\ X(0,x) = x, \end {cases}  \end {align}
-</p><!-- l. 3694 --><p class='indent'>    and set \begin {align} \label {eqn:rho_construction} \rho (t,\cdot ) = (X(t,\cdot ))_{\#} \rho _0.  \end {align}
+</p><!-- l. 3684 --><p class='indent'>    and set \begin {align} \label {eqn:rho_construction} \rho (t,\cdot ) = (X(t,\cdot ))_{\#} \rho _0.  \end {align}
 </p>
     <div class='newtheorem'>
-<!-- l. 3700 --><p class='noindent'><span class='head'>
+<!-- l. 3690 --><p class='noindent'><span class='head'>
 <a id='x32-49001r1'></a>
 <span class='cmbx-10x-x-109'>Lemma 8.3.1.</span>  </span><span class='cmti-10x-x-109'>Let</span>  \(\rho = \rho (t,x)\)  <span class='cmti-10x-x-109'>be  defined  above,  then  it  satisfies  the  continuity  equation  </span>\[ \partial _t \rho + \nabla \cdot (v\rho ) = 0 \]  <span class='cmti-10x-x-109'>holds  in  the
 distributional sense.</span>
 </p>
     </div>
-<!-- l. 3706 --><p class='indent'>
+<!-- l. 3696 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 3708 --><p class='indent'>    <span class='head'>
+<!-- l. 3698 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>Take an arbitrary test function \(\psi \in C_c^{\infty }(\Omega )\), we have \begin {align*}  \int \partial _t\rho (t,x)\psi (x)\text {d}x &amp;= \frac {\text {d}}{\text {d}t} \int \rho (t,x)\psi (x) \text {d}x = \frac {\text {d}}{\text {d}t} \int \psi (X(t,x)) \rho _0(x) \text {d}x \\ &amp;= \int \nabla \psi (X(t,x))\cdot \dot {X}(t,x)\rho _0(x)\text {d}x \\ &amp; = \int \nabla \psi (X(t,x))\cdot v(t, X(t,x))\rho _0(x)\text {d}x \\ &amp; = \int \nabla \psi (x)\cdot v(t, x)\rho (t,x)\text {d}x = - \int \psi (x)\nabla \cdot (v(t,x)\rho (t,x)),  \end {align*}
-</p><!-- l. 3715 --><p class='indent'>    which leads to the continuity equation.                                                                          □
+</p><!-- l. 3705 --><p class='indent'>    which leads to the continuity equation.                                                                          □
 </p>
     </div>
     <div class='newtheorem'>
-<!-- l. 3719 --><p class='noindent'><span class='head'>
+<!-- l. 3709 --><p class='noindent'><span class='head'>
 
 <a id='x32-49002r2'></a>
 <span class='cmbx-10x-x-109'>Theorem 8.3.2 </span>(Benamou-Brenier formula)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Given two probability measures</span> \(\rho _0,\rho _1 \in \mathcal {P}_2(\Omega )\)<span class='cmti-10x-x-109'>, it holds that</span>
 \begin {align*}  W_2^2(\rho _0,\rho _1) &amp;= \inf _{v,\rho } \left \{ \int _0^1 \int _{\Omega } |v(t,x)|^2 \rho (t,x)\mathrm {d}x\mathrm {d}t: \partial _t\rho + \nabla \cdot (v\rho ) = 0, \rho (0,x) = \rho _0, \rho (1,x) = \rho _1, v\cdot \nu |_{\partial \Omega } = 0 \right \}\\ &amp; = \int _0^1 W_{\rho }(\partial _t\rho ,\partial _t\rho )\ \mathrm {d}t.  \end {align*}
 </p>
     </div>
-<!-- l. 3725 --><p class='indent'>
+<!-- l. 3715 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 3727 --><p class='indent'>    <span class='head'>
+<!-- l. 3717 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>The constraint in Benamou-Brenier formula leads that \(\rho (t,x)\) is uniquely constructed by (<span class='eqref-fixed' title='eqn:X_eqn'>8.25</span>)
 and (<span class='eqref-fixed' title='eqn:rho_construction'>8.26</span>). More specifically \(X(1,\cdot )\) is a transport map from \(\rho _0\) to \(\rho _1\). By equations (<span class='eqref-fixed' title='eqn:X_eqn'>8.25</span>) and (<span class='eqref-fixed' title='eqn:rho_construction'>8.26</span>), we have
 \begin {align*}  \int _0^1 |v|^2 \rho \ dxdt &amp;= \int _0^1 \int _{\Omega } |v(t,X(t,x))|^2 \rho _0(x) dxdt = \int _0^1 \int _{\Omega } |\dot {X}(t,x)|^2 \rho _0 dxdt \\ &amp; = \int _{\Omega } \rho _0(x) \int _0^1 |\dot {X}(t,x)|^2 dtdx \ge \int _{\Omega } \rho _0(x) \left |\int _0^1 \dot {X}(t,x) dt \right |^2 dx\\ &amp; = \int _{\Omega } \rho _0(x) |X(1,x) - x|^2 dx \ge W_2^2(\rho _0,\rho _1).  \end {align*}
-</p><!-- l. 3733 --><p class='indent'>    The equality holds by taking \(T = \nabla \phi \) to be an optimal transport from \(\rho _0\) to \(\rho _1\), and constructing \(X(t,x) = x + t(T(x) - x)\) and
+</p><!-- l. 3723 --><p class='indent'>    The equality holds by taking \(T = \nabla \phi \) to be an optimal transport from \(\rho _0\) to \(\rho _1\), and constructing \(X(t,x) = x + t(T(x) - x)\) and
 \(\rho (t,\cdot ) = (X(t,x))_{\#}\rho _0\).
                                                                                            □
 </p>
     </div>
 
-    <!-- l. 3887 -->
-<!-- l. 3887 -->
+    <!-- l. 3877 -->
+<!-- l. 3877 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse21.html">Previous</a>
         <a class="next-link" href="Notesap1.html">Next</a>

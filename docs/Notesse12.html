@@ -174,9 +174,9 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 1829 -->
+      <!-- l. 1821 -->
     <h3 class='sectionHead' id='supervised-ot'><span class='titlemark'>4.3   </span> <a id='x18-210004.3'></a>Supervised Optimal Transport</h3>
-<!-- l. 1831 --><p class='noindent'>While unbalanced OT and partial OT address issues with unbalanced marginals, other significant limitations
+<!-- l. 1823 --><p class='noindent'>While unbalanced OT and partial OT address issues with unbalanced marginals, other significant limitations
 remain in the standard OT framework, particularly with natural constraints on transport plans that arise in
 practical applications. For example, in scenarios where ground transportation is disrupted by natural
 disasters, certain locations demanding resources cannot be accessed from specific supply points.
@@ -184,7 +184,7 @@ This necessitates incorporating constraints directly into the optimal transport 
 setting some transport plan entries to zero. This scenario complicates the optimal transport
 problem as it turns the total possible transported mass into an uncertain variable due to these
 blockages.
-</p><!-- l. 1833 --><p class='indent'>    In the work of Cang et al. <span class='cite'>[<a href='Notesli2.html#Xcang2022supervised'>6</a>]</span>, the concept of supervised optimal transport (sOT) is introduced. This
+</p><!-- l. 1825 --><p class='indent'>    In the work of Cang et al. <span class='cite'>[<a href='Notesli2.html#Xcang2022supervised'>6</a>]</span>, the concept of supervised optimal transport (sOT) is introduced. This
 variant supervises the transport plan by imposing specific elementwise constraints, thereby optimizing both
 the total transported mass and the transport plan simultaneously. Unlike the partial OT problems that
 handle constraints through pre-defined inequalities <span class='cite'>[<a href='Notesli2.html#Xbenamou2015augmented'>3</a>]</span>, the constraints in sOT are dynamically determined
@@ -192,55 +192,55 @@ during the optimization process, based on the presence of ’infinity’ entries
 links closely with the unbalanced OT framework <span class='cite'>[<a href='Notesli2.html#Xchizat2018unbalanced'>12</a>]</span>, showcasing how sOT can be reformulated to integrate
 with these existing models, offering a novel approach to handling complex transport scenarios with inherent
 spatial constraints.
-</p><!-- l. 1838 --><p class='noindent'>
+</p><!-- l. 1830 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='sot-formulation'><span class='titlemark'>4.3.1   </span> <a id='x18-220004.3.1'></a>sOT: Formulation</h4>
-<!-- l. 1841 --><p class='noindent'>In the framework of sOT, the marginal measures \((\mathbf {a},\mathbf {b})\in \mathbb {R}_+^n\times \mathbb {R}_+^m\) do not necessarily have the same sum, and we
+<!-- l. 1833 --><p class='noindent'>In the framework of sOT, the marginal measures \((\mathbf {a},\mathbf {b})\in \mathbb {R}_+^n\times \mathbb {R}_+^m\) do not necessarily have the same sum, and we
 are interested in the cost matrix \(\mathbf {C} = (C_{ij})\) that contains \(\infty \) entries. The \(\infty \)-pattern of \(\mathbf {C}\) is defined as the set
 \begin {align} \label {eqn:infinifty_pattern} \mathcal {P}_{\infty }(\mathbf {C}) = \{ (i,j): C_{ij} = \infty , \ i = 1,2,\cdots ,n, \ j = 1,2,\cdots ,m \},  \end {align}
-</p><!-- l. 1845 --><p class='indent'>    of positions of \(\mathbf {C}\) containing an infinity element. Similarly one can define 0-pattern of a transport plan \(\mathbf {P}\). By
+</p><!-- l. 1837 --><p class='indent'>    of positions of \(\mathbf {C}\) containing an infinity element. Similarly one can define 0-pattern of a transport plan \(\mathbf {P}\). By
 virtue of the optimal transport, the 0-pattern of the optimal plan \(\mathbf {P}^*\) must contain the \(\infty \)-pattern of
 \(\mathbf {C}\), namely, \(\mathcal {P}_0(\mathbf {P}^*)\supseteq \mathcal {P}_{\infty }(\mathbf {C})\). We further define a feasible set \(\mathcal {A}_{\mathbf {C}}\) for the <span class='cmti-10x-x-109'>marginal blocked distribution</span> \((\boldsymbol \upmu ,\boldsymbol \upnu )\) as follows:
 \begin {align}  \mathcal {A}_{\mathbf {C}} = \Big \{ (\boldsymbol \upmu ,\boldsymbol \upnu )\in [0,\mathbf {a}]\times [0,\mathbf {b}] \ \Big |\ \exists \mathbf {P} \in \mathbf {U}(\mathbf {a}-\boldsymbol \upmu , \mathbf {b}-\boldsymbol \upnu ) \text {\ such\ that\ } \langle \mathbf {P}, \mathbf {C} \rangle &lt; \infty \Big \},  \end {align}
-</p><!-- l. 1849 --><p class='indent'>    in which the inclusion \((\boldsymbol \upmu ,\boldsymbol \upnu )\in [0,\mathbf {a}]\times [0,\mathbf {b}]\) is entrywise, namely, \(\mu _i\in [0,a_i], i=1,2,\cdots n\) and \(\nu _j\in [0,b_j], j=1,2,\cdots m\).
-</p><!-- l. 1851 --><p class='indent'>    We define sOT as the following minimization problem \begin {align} \label {eqn:UUOT_formI} L_{\text {sOT}}(\mathbf {a},\mathbf {b};\mathbf {C}) := \min _{(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {B}} \min _{\mathbf {P}\in \mathbf {U}(\mathbf {a}-\boldsymbol \upmu , \mathbf {b}-\boldsymbol \upnu )} \langle \mathbf {P}, \mathbf {C} \rangle  \end {align}
-</p><!-- l. 1855 --><p class='indent'>    where \(\mathcal {B}:= \text {argmin}_{(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {A}_{\mathbf {C}}}\ \|\boldsymbol \upmu \|_1 + \|\boldsymbol \upnu \|_1\). In other words, we aim to find the optimal transport plan \(\mathbf {P}\) which transports the most marginal
+</p><!-- l. 1841 --><p class='indent'>    in which the inclusion \((\boldsymbol \upmu ,\boldsymbol \upnu )\in [0,\mathbf {a}]\times [0,\mathbf {b}]\) is entrywise, namely, \(\mu _i\in [0,a_i], i=1,2,\cdots n\) and \(\nu _j\in [0,b_j], j=1,2,\cdots m\).
+</p><!-- l. 1843 --><p class='indent'>    We define sOT as the following minimization problem \begin {align} \label {eqn:UUOT_formI} L_{\text {sOT}}(\mathbf {a},\mathbf {b};\mathbf {C}) := \min _{(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {B}} \min _{\mathbf {P}\in \mathbf {U}(\mathbf {a}-\boldsymbol \upmu , \mathbf {b}-\boldsymbol \upnu )} \langle \mathbf {P}, \mathbf {C} \rangle  \end {align}
+</p><!-- l. 1847 --><p class='indent'>    where \(\mathcal {B}:= \text {argmin}_{(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {A}_{\mathbf {C}}}\ \|\boldsymbol \upmu \|_1 + \|\boldsymbol \upnu \|_1\). In other words, we aim to find the optimal transport plan \(\mathbf {P}\) which transports the most marginal
 density (blocks the least \((\boldsymbol \upmu ,\boldsymbol \upnu )\)) with minimal cost.
 
-</p><!-- l. 1857 --><p class='indent'>    The sOT in the forms (<span class='eqref-fixed' title='eqn:UUOT_formI'>4.30</span>) is a double optimization problem which is computationally challenging. Here,
+</p><!-- l. 1849 --><p class='indent'>    The sOT in the forms (<span class='eqref-fixed' title='eqn:UUOT_formI'>4.30</span>) is a double optimization problem which is computationally challenging. Here,
 we recast it to the form of a single optimization: \begin {align} \label {eqn:UUOT_formII} L_{\text {sOT}}(\mathbf {a},\mathbf {b};\mathbf {C}) = \min _{\substack {(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {A}_{\mathbf {C}}\\ \mathbf {P}\in \mathbf {U}(\mathbf {a}-\boldsymbol \upmu ,\mathbf {b}-\boldsymbol \upnu )}} \langle \mathbf {P}, \mathbf {C} \rangle + \gamma (\|\boldsymbol \upmu \|_1 + \|\boldsymbol \upnu \|_1)  \end {align}
-</p><!-- l. 1861 --><p class='indent'>    for sufficiently large \(\gamma \) depending on \(\mathbf {C}\). The equivalence between (<span class='eqref-fixed' title='eqn:UUOT_formI'>4.30</span>) and (<span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span>) is summarized in lemma
+</p><!-- l. 1853 --><p class='indent'>    for sufficiently large \(\gamma \) depending on \(\mathbf {C}\). The equivalence between (<span class='eqref-fixed' title='eqn:UUOT_formI'>4.30</span>) and (<span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span>) is summarized in lemma
 <a href='#x18-22001r1'>4.3.1<!-- tex4ht:ref: lemma:equivalence  --></a>.
 </p>
     <div class='newtheorem'>
-<!-- l. 1863 --><p class='noindent'><span class='head'>
+<!-- l. 1855 --><p class='noindent'><span class='head'>
 <a id='x18-22001r1'></a>
 <span class='cmbx-10x-x-109'>Lemma 4.3.1.</span>  </span> <span class='cmti-10x-x-109'>Given a cost matrix</span> \(\mathbf {C}\) <span class='cmti-10x-x-109'>with</span> \(\infty \)<span class='cmti-10x-x-109'>-pattern</span> \(\mathcal {P}_{\infty }(\mathbf {C})\)<span class='cmti-10x-x-109'>, The two sOT formulations (</span><span class='eqref-fixed' title='eqn:UUOT_formI'>4.30</span><span class='cmti-10x-x-109'>) and (</span><span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span><span class='cmti-10x-x-109'>) are
 equivalent for sufficiently large</span> \(\gamma \)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
-<!-- l. 1865 --><p class='indent'>
-</p><!-- l. 1867 --><p class='indent'>    Note that \(\mathcal {A}_{\mathbf {C}}\) is always non-empty, we can therefore rewrite the formulation (<span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span>) in a simpler form:
+<!-- l. 1857 --><p class='indent'>
+</p><!-- l. 1859 --><p class='indent'>    Note that \(\mathcal {A}_{\mathbf {C}}\) is always non-empty, we can therefore rewrite the formulation (<span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span>) in a simpler form:
 \begin {align} \label {eqn:UUOT_formIII} L_{\text {sOT}}(\mathbf {a},\mathbf {b};\mathbf {C}) = \min _{\mathbf {P}\in \mathbf {U}(\le \mathbf {a},\le \mathbf {b})} \langle \mathbf {P}, \mathbf {C} \rangle + \gamma (\|\mathbf {a}-\mathbf {P}\mathbb {1}\|_1 + \|\mathbf {b}-\mathbf {P}^{\mathrm {T}}\mathbb {1}\|_1).  \end {align}
-</p><!-- l. 1875 --><p class='noindent'>
+</p><!-- l. 1867 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='entropic-sot'><span class='titlemark'>4.3.2   </span> <a id='x18-230004.3.2'></a>Entropic sOT</h4>
-<!-- l. 1879 --><p class='noindent'>We now consider the entropic regularization of sOT (<span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span>): \begin {align} \label {eqn:EntropicUUOT_formI} \min _{\substack {(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {A}_{\textbf {C}}\\ \textbf {P}\in \mathbf {U}(\textbf {a}-\boldsymbol \upmu ,\textbf {b}-\boldsymbol \upnu )}} \langle \textbf {P}, \textbf {C} \rangle - \epsilon H(\textbf {P}) + \gamma (\|\boldsymbol \upmu \|_1 + \|\boldsymbol \upnu \|_1)  \end {align}
-</p><!-- l. 1883 --><p class='indent'>    or equivalently \begin {align} \label {eqn:EntropicUUOT_formII} \min _{\textbf {P} \in \mathbf {U}(\le \textbf {a}, \le \textbf {b})} \langle \textbf {P}, \textbf {C} \rangle - \epsilon H(\textbf {P}) + \gamma (\|\textbf {a} - \textbf {P}\mathbb {1} \|_1 + \|\textbf {b} - \textbf {P}^{\mathrm {T}}\mathbb {1} \|_1) .  \end {align}
-</p><!-- l. 1887 --><p class='indent'>    It is well known that the unique solution \(\textbf {P}_{\epsilon }^*\) of (<span class='eqref-fixed' title='eqn:EntropicUUOT_formII'>4.34</span>) converges to the optimal solution with maximal
+<!-- l. 1871 --><p class='noindent'>We now consider the entropic regularization of sOT (<span class='eqref-fixed' title='eqn:UUOT_formII'>4.31</span>): \begin {align} \label {eqn:EntropicUUOT_formI} \min _{\substack {(\boldsymbol \upmu ,\boldsymbol \upnu )\in \mathcal {A}_{\textbf {C}}\\ \textbf {P}\in \mathbf {U}(\textbf {a}-\boldsymbol \upmu ,\textbf {b}-\boldsymbol \upnu )}} \langle \textbf {P}, \textbf {C} \rangle - \epsilon H(\textbf {P}) + \gamma (\|\boldsymbol \upmu \|_1 + \|\boldsymbol \upnu \|_1)  \end {align}
+</p><!-- l. 1875 --><p class='indent'>    or equivalently \begin {align} \label {eqn:EntropicUUOT_formII} \min _{\textbf {P} \in \mathbf {U}(\le \textbf {a}, \le \textbf {b})} \langle \textbf {P}, \textbf {C} \rangle - \epsilon H(\textbf {P}) + \gamma (\|\textbf {a} - \textbf {P}\mathbb {1} \|_1 + \|\textbf {b} - \textbf {P}^{\mathrm {T}}\mathbb {1} \|_1) .  \end {align}
+</p><!-- l. 1879 --><p class='indent'>    It is well known that the unique solution \(\textbf {P}_{\epsilon }^*\) of (<span class='eqref-fixed' title='eqn:EntropicUUOT_formII'>4.34</span>) converges to the optimal solution with maximal
 entropy within the set of all optimal solutions of the problem (<span class='eqref-fixed' title='eqn:UUOT_formIII'>4.32</span>).
-</p><!-- l. 1889 --><p class='indent'>    Taking \(\textbf {K} = \exp (-\textbf {C}/\epsilon )\) as the Gibbs kernel, sOT problem (<span class='eqref-fixed' title='eqn:EntropicUUOT_formII'>4.34</span>) can be rewritten in terms of the KL divergence as:
+</p><!-- l. 1881 --><p class='indent'>    Taking \(\textbf {K} = \exp (-\textbf {C}/\epsilon )\) as the Gibbs kernel, sOT problem (<span class='eqref-fixed' title='eqn:EntropicUUOT_formII'>4.34</span>) can be rewritten in terms of the KL divergence as:
 \begin {align} \label {eqn:KLUUOT_formI} \min _{\textbf {P} \in \mathbf {U}(\le \textbf {a}, \le \textbf {b})} \epsilon \text {KL}(\textbf {P}|\textbf {K}) + \gamma (\|\textbf {a} - \textbf {P}\mathbb {1} \|_1 + \|\textbf {b} - \textbf {P}^{\mathrm {T}}\mathbb {1} \|_1),  \end {align}
-</p><!-- l. 1893 --><p class='indent'>    or equivalently \begin {align} \label {eqn:KLUUOT_formII} \min _{\textbf {P} \in \mathbb {R}_{+}^{n\times m}} \epsilon \text {KL}(\textbf {P}|\textbf {K}) + \gamma \|\textbf {a} - \textbf {P}\mathbb {1} \|_1 + \iota _{[0,\textbf {a}]}(\textbf {P}\mathbb {1}) + \gamma \|\textbf {b} - \textbf {P}^{\mathrm {T}}\mathbb {1} \|_1 + \iota _{[0,\textbf {b}]}(\textbf {P}^{\mathrm {T}}\mathbb {1}).  \end {align}
-</p><!-- l. 1898 --><p class='indent'>    Note that the entropic sOT (<span class='eqref-fixed' title='eqn:KLUUOT_formII'>4.36</span>) matches with the unbalanced OT (<span class='eqref-fixed' title='eqn:OT_unbalanced'>4.1</span>) with the choices:
+</p><!-- l. 1885 --><p class='indent'>    or equivalently \begin {align} \label {eqn:KLUUOT_formII} \min _{\textbf {P} \in \mathbb {R}_{+}^{n\times m}} \epsilon \text {KL}(\textbf {P}|\textbf {K}) + \gamma \|\textbf {a} - \textbf {P}\mathbb {1} \|_1 + \iota _{[0,\textbf {a}]}(\textbf {P}\mathbb {1}) + \gamma \|\textbf {b} - \textbf {P}^{\mathrm {T}}\mathbb {1} \|_1 + \iota _{[0,\textbf {b}]}(\textbf {P}^{\mathrm {T}}\mathbb {1}).  \end {align}
+</p><!-- l. 1890 --><p class='indent'>    Note that the entropic sOT (<span class='eqref-fixed' title='eqn:KLUUOT_formII'>4.36</span>) matches with the unbalanced OT (<span class='eqref-fixed' title='eqn:OT_unbalanced'>4.1</span>) with the choices:
 \begin {align} \label {eqn:psi1_psi2} \phi _1(\mathbf {P}) &amp;= \psi _1(\mathbf {P}\mathbb {1}) = \gamma \|\textbf {a} - \textbf {P}\mathbb {1} \|_1 + \iota _{[0,\textbf {a}]}(\textbf {P}\mathbb {1}), \\ \phi _2(\mathbf {P}) &amp;= \psi _2(\mathbf {P}^{\mathrm {T}}\mathbb {1}) = \gamma \|\textbf {b} - \textbf {P}^{\mathrm {T}}\mathbb {1} \|_1 + \iota _{[0,\textbf {b}]}(\textbf {P}^{\mathrm {T}}\mathbb {1}).  \end {align}
-</p><!-- l. 1903 --><p class='indent'>    Therefore we only need to compute the proximal operators \(\mathrm {prox}_{\psi _i}^{\epsilon \mathrm {KL}}(\cdot )\) and insert them into the general Sinkhorn
+</p><!-- l. 1895 --><p class='indent'>    Therefore we only need to compute the proximal operators \(\mathrm {prox}_{\psi _i}^{\epsilon \mathrm {KL}}(\cdot )\) and insert them into the general Sinkhorn
 (<span class='eqref-fixed' title='eqn:generalSinkhorn'>4.20</span>).
-</p><!-- l. 1908 --><p class='noindent'>
+</p><!-- l. 1900 --><p class='noindent'>
 </p>
 
     <h4 class='subsectionHead' id='general-sinkhorn-for-sot'><span class='titlemark'>4.3.3   </span> <a id='x18-240004.3.3'></a>General Sinkhorn for sOT</h4>
-<!-- l. 1912 --><p class='noindent'>To derive the genral Sinkhorn for sOT, we need to consider several minimization problems listed in the
+<!-- l. 1904 --><p class='noindent'>To derive the genral Sinkhorn for sOT, we need to consider several minimization problems listed in the
 following lemmas.
 </p>
     <figure class='figure' id='x18-24001r1'><span id='schematic-of-minimization-of-lemma-ref-lemmaotmin-for-scalar-case-and-lemma-ref-lemmaotmin-for-vector-case-'></span> 
@@ -249,21 +249,21 @@ following lemmas.
 
                                                                                             
 <div class='center'>
-<!-- l. 1916 --><p class='noindent'>
-</p><!-- l. 1917 --><p class='noindent'><img alt='PIC' height='369' src='Figures/OT_min.png' width='369' /></p></div>
+<!-- l. 1908 --><p class='noindent'>
+</p><!-- l. 1909 --><p class='noindent'><img alt='PIC' height='369' src='Figures/OT_min.png' width='369' /></p></div>
 <figcaption class='caption'><span class='id'>Figure 4.1: </span><span class='content'><span class='cmr-10'>Schematic of minimization of Lemma </span><a href='#x18-24002r2'><span class='cmr-10'>4.3.2</span><!-- tex4ht:ref: lemma:OT_min  --></a> <span class='cmr-10'>for scalar case and Lemma </span><a href='#x18-24002r2'><span class='cmr-10'>4.3.2</span><!-- tex4ht:ref: lemma:OT_min  --></a> <span class='cmr-10'>for vector case. </span></span></figcaption><!-- tex4ht:label?: x18-24001r1  -->
 
     </figure>
     <div class='newtheorem'>
-<!-- l. 1926 --><p class='noindent'><span class='head'>
+<!-- l. 1918 --><p class='noindent'><span class='head'>
 <a id='x18-24002r2'></a>
 <span class='cmbx-10x-x-109'>Lemma 4.3.2.</span>  </span> <span class='cmti-10x-x-109'>The following scalar minimization problem has the solution: </span>\begin {align}  \underset {p\le b}{\mathrm {argmin}}\ \epsilon \mathrm {KL}(p|k) + M \| p-b \|_1 = \min \{ ke^{\frac {M}{\epsilon }}, b \}.  \end {align}
 </p>
     </div>
-<!-- l. 1931 --><p class='indent'>
+<!-- l. 1923 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 1933 --><p class='indent'>    <span class='head'>
+<!-- l. 1925 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>If \(b\le k\), the minimum is attained at \(p^*=b\) because both \(\mathrm {KL}(p|k)\) and \(\|p-b\|_1\) are decreasing functions over the domain
 \(p\le b\). If \(k&lt;b\), then taking the first order optimality condition gives \[ \epsilon \log \frac {p}{k} - M = 0 \Rightarrow p = e^{\frac {M}{\epsilon }}k. \] If \(e^{\frac {M}{\epsilon }}k \le b\), then the minimum is attained at \(p^* = e^{\frac {M}{\epsilon }}k\).; on
 the other hand, if \(e^{\frac {M}{\epsilon }}k &gt; b\), it indicates that the objective function keeps decreasing over the domain \(p&lt;b\) (and
@@ -272,69 +272,69 @@ conclusion. See a schematic of the proof in Figure <a href='#schematic-of-minimi
 </p>
     </div>
     <div class='newtheorem'>
-<!-- l. 1941 --><p class='noindent'><span class='head'>
+<!-- l. 1933 --><p class='noindent'><span class='head'>
 <a id='x18-24003r3'></a>
 <span class='cmbx-10x-x-109'>Corollary 4.3.3.</span>  </span><span class='cmti-10x-x-109'>The following scalar minimization problem has the solution: </span>\begin {align}  \underset {p\ge 0}{\mathrm {argmin}}\ \epsilon \mathrm {KL}(p|k) + M \| p - b \|_1 = \min \left \{ ke^{\frac {M}{\epsilon }}, \max \left \{ke^{-\frac {M}{\epsilon }}, b \right \} \right \}.  \end {align}
 </p>
     </div>
-<!-- l. 1946 --><p class='indent'>
-</p><!-- l. 1950 --><p class='indent'>    The lemma above can be extended into vector case as follows,
+<!-- l. 1938 --><p class='indent'>
+</p><!-- l. 1942 --><p class='indent'>    The lemma above can be extended into vector case as follows,
 </p>
     <div class='newtheorem'>
-<!-- l. 1951 --><p class='noindent'><span class='head'>
+<!-- l. 1943 --><p class='noindent'><span class='head'>
 <a id='x18-24004r4'></a>
 
 <span class='cmbx-10x-x-109'>Lemma 4.3.4.</span>  </span> <span class='cmti-10x-x-109'>Let</span> \(\mathbf {p}, \mathbf {k}\in \mathbb {R}_+^n\)<span class='cmti-10x-x-109'>, then </span>\begin {align}  \underset {\mathbf {P}^{\mathrm {T}}\mathbb {1}\le \mathbf {b}}{\mathrm {argmin}}\ \epsilon \mathrm {KL}(\mathbf {p}|\mathbf {k}) + M \| \mathbf {p}^{\mathrm {T}}\mathbb {1}-\mathbf {b} \|_1 = \min \left \{ e^{\frac {M}{\epsilon }}, \frac {b}{\mathbf {k}^{\mathrm {T}}\mathbb {1}} \right \} \mathbf {k}.  \end {align}
 </p>
     </div>
-<!-- l. 1956 --><p class='indent'>
+<!-- l. 1948 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 1958 --><p class='indent'>    <span class='head'>
+<!-- l. 1950 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>The proof is similar as that of the previous one. If \(\mathbf {k}\) is beyond the domain \(\mathbf {p}^{\mathrm {T}}\mathbb {1}\le \mathbf {b}\), both \(\epsilon \mathrm {KL}(\mathbf {p}|\mathbf {k})\) and \(M \| \mathbf {p}^{\mathrm {T}}\mathbb {1}-\mathbf {b} \|_1 \) are
 convex, and the minimal point \(\mathbf {p} = e^{\frac {M}{\epsilon }}\mathbf {k}\) is also beyond the domain \(\mathbf {p}^{\mathrm {T}}\mathbb {1}\le b\), then the minimum is attained on the
 domain boundary \(\mathbf {p}^{\mathrm {T}}\mathbb {1} = \mathbf {b}\). Minimizing \(\epsilon \mathrm {KL}(\mathbf {p}|\mathbf {k})\) over \(\mathbf {p}^{\mathrm {T}}\mathbb {1} = \mathbf {b}\) yields \(\mathbf {p}^* = \frac {\mathbf {k}}{\mathbf {k}^{\mathrm {T}}\mathbb {1}}\mathbf {b}\).
-</p><!-- l. 1960 --><p class='indent'>    On the other hand, if \(\mathbf {k}\) is in the domain \(\mathbf {p}^{\mathrm {T}}\mathbb {1} \le \mathbf {b}\), namely, \(\mathbf {k}^{\mathrm {T}}\mathbb {1}\le \mathbf {b}\), then we get the minimal point \(\mathbf {p}^* = e^{\frac {M}{\epsilon }}\mathbf {k}\) of \(\epsilon \mathrm {KL}(\mathbf {p}|\mathbf {k}) + M ( \mathbf {p}^{\mathrm {T}}\mathbb {1}-\mathbf {b} )\). If it is also
+</p><!-- l. 1952 --><p class='indent'>    On the other hand, if \(\mathbf {k}\) is in the domain \(\mathbf {p}^{\mathrm {T}}\mathbb {1} \le \mathbf {b}\), namely, \(\mathbf {k}^{\mathrm {T}}\mathbb {1}\le \mathbf {b}\), then we get the minimal point \(\mathbf {p}^* = e^{\frac {M}{\epsilon }}\mathbf {k}\) of \(\epsilon \mathrm {KL}(\mathbf {p}|\mathbf {k}) + M ( \mathbf {p}^{\mathrm {T}}\mathbb {1}-\mathbf {b} )\). If it is also
 in the domain \(\mathbf {p}^{\mathrm {T}}\mathbb {1}\le \mathbf {b}\), then it is the expected minimizer \(\mathbf {p}^* = e^{\frac {M}{\epsilon }}\mathbf {k}\); on the other hand, if \(\mathbf {p}^{*,\mathrm {T}}\mathbb {1} = e^{\frac {M}{\epsilon }}\mathbf {k}^{\mathrm {T}}\mathbb {1} &gt; \mathbf {b}\), the minimum of the original
 problem is reached on the domain boundary, leading to \(\mathbf {p}^* = \frac {\mathbf {k}}{\mathbf {k}^{\mathrm {T}}\mathbb {1}}\mathbf {b}\). Proof is completed.                              □
 </p>
     </div>
-<!-- l. 1963 --><p class='indent'>    We can further extend the conclusion to matrix case.
+<!-- l. 1955 --><p class='indent'>    We can further extend the conclusion to matrix case.
 </p>
     <div class='newtheorem'>
-<!-- l. 1964 --><p class='noindent'><span class='head'>
+<!-- l. 1956 --><p class='noindent'><span class='head'>
 <a id='x18-24005r5'></a>
 <span class='cmbx-10x-x-109'>Lemma 4.3.5.</span>  </span><span class='cmti-10x-x-109'>Let</span> \(\mathbf {P}, \mathbf {K}\in \mathbb {R}_+^{n\times n}, \mathbf {a}, \mathbf {b}\in \mathbb {R}_+^n\)<span class='cmti-10x-x-109'>, the following minimization problems have the solutions: </span>\begin {align}  &amp; \underset {\mathbf {P}\mathbb {1} \leq \mathbf {a}}{\mathrm {argmin}}\ \epsilon \mathrm {KL}(\mathbf {P}|\mathbf {K}) + M \| \mathbf {P}\mathbb {1} -\mathbf {a} \|_1 = \mathrm {diag}\left (\min \left \{ \frac {\mathbf {a}}{\mathbf {K}\mathbb {1}}, e^{\frac {M}{\epsilon }}\mathbb {1} \right \} \right ) \mathbf {K}, \\ &amp;\underset {\mathbf {P}^{\mathrm {T}}\mathbb {1}\le \mathbf {b}}{\mathrm {argmin}}\ \epsilon \mathrm {KL}(\mathbf {P}|\mathbf {K}) + M \| \mathbf {P}^{\mathrm {T}}\mathbb {1} -\mathbf {b} \|_1 = \mathbf {K} \mathrm {diag}\left (\min \left \{ \frac {\mathbf {b}}{\mathbf {K}^{\mathrm {T}}\mathbb {1}}, e^{\frac {M}{\epsilon }}\mathbb {1} \right \} \right ).  \end {align}
 </p>
     </div>
-<!-- l. 1970 --><p class='indent'>
-</p><!-- l. 1974 --><p class='indent'>    Now using the idea of Lemma <a href='#x18-24004r4'>4.3.4<!-- tex4ht:ref: lemma:OT_min02  --></a>, we can compute the proximal operators \(\mathrm {prox}_{\psi _i}^{\epsilon \mathrm {KL}}(\cdot )\) which is summarized in the
+<!-- l. 1962 --><p class='indent'>
+</p><!-- l. 1966 --><p class='indent'>    Now using the idea of Lemma <a href='#x18-24004r4'>4.3.4<!-- tex4ht:ref: lemma:OT_min02  --></a>, we can compute the proximal operators \(\mathrm {prox}_{\psi _i}^{\epsilon \mathrm {KL}}(\cdot )\) which is summarized in the
 following lemma.
 </p>
     <div class='newtheorem'>
-<!-- l. 1976 --><p class='noindent'><span class='head'>
+<!-- l. 1968 --><p class='noindent'><span class='head'>
 <a id='x18-24006r6'></a>
 <span class='cmbx-10x-x-109'>Lemma 4.3.6.</span>  </span> <span class='cmti-10x-x-109'>Let</span> \(\psi _i(\cdot ) = \gamma \|\mathbf {a}_i-\cdot \|_1 + \iota _{[0,\mathbf {a}_i]}(\cdot ), i = 1, 2\) <span class='cmti-10x-x-109'>with</span> \(\mathbf {a}_1=\mathbf {a}\) <span class='cmti-10x-x-109'>and</span> \(\mathbf {a}_2 = \mathbf {b}\)<span class='cmti-10x-x-109'>, then the proximal operator of</span> \(\psi _i\) <span class='cmti-10x-x-109'>with respect the</span> \(\mathrm {KL}\) <span class='cmti-10x-x-109'>divergence is given as</span>
 \begin {align}  \mathrm {prox}_{\psi _i}^{\epsilon \mathrm {KL}} (\mathbf {q}) = \min \{e^{\gamma /\epsilon }\mathbf {q}, \mathbf {a}_i\}, \ i = 1, 2.  \end {align}
 
 </p>
     </div>
-<!-- l. 1981 --><p class='indent'>
+<!-- l. 1973 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 1984 --><p class='indent'>    <span class='head'>
+<!-- l. 1976 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>By definition of the proximal operator with respect to the KL divergence, we have \begin {align*}  \mathrm {prox}_{\gamma \|\textbf {a}_i-\cdot \| + \iota _{[0,\textbf {a}_i]}(\cdot )}^{\epsilon \mathrm {KL}}(\mathbf {q}) &amp;= \underset {\mathbf {p}\in [0,\mathbf {a}_i]}{\mathrm {argmin}}\ \epsilon \mathrm {KL}(\mathbf {p}|\mathbf {q}) + \gamma \|\textbf {a}_i-\textbf {p}\|  \end {align*}
-</p><!-- l. 1989 --><p class='indent'>    If \(\mathbf {a}_i\le \mathbf {q}\), both \(\mathrm {KL}(\cdot |\mathbf {q})\) and \(\|\mathbf {a}_i-\cdot \|\) decrease over domain \([0,\mathbf {a}_i]\), so the minimum is attained at \(\mathbf {p} = \mathbf {a}_i\); if \(\mathbf {a}_i \ge \mathbf {q}\), taking the derivative of \(\epsilon \mathrm {KL}(\mathbf {p}|\mathbf {q}) + \gamma \|\mathbf {a}_i-\mathbf {p}\|\) with
+</p><!-- l. 1981 --><p class='indent'>    If \(\mathbf {a}_i\le \mathbf {q}\), both \(\mathrm {KL}(\cdot |\mathbf {q})\) and \(\|\mathbf {a}_i-\cdot \|\) decrease over domain \([0,\mathbf {a}_i]\), so the minimum is attained at \(\mathbf {p} = \mathbf {a}_i\); if \(\mathbf {a}_i \ge \mathbf {q}\), taking the derivative of \(\epsilon \mathrm {KL}(\mathbf {p}|\mathbf {q}) + \gamma \|\mathbf {a}_i-\mathbf {p}\|\) with
 respect to \(\mathbf {p}\) and set it to zero, we find \(\mathbf {p} = \min \{e^{\gamma /\epsilon }\mathbf {q}, \mathbf {a}_i\}\). Combining both two cases yields the result.                      □
 </p>
     </div>
-<!-- l. 1992 --><p class='indent'>    Inserting Lemma <a href='#x18-24006r6'>4.3.6<!-- tex4ht:ref: lemma:prox_OptionI  --></a> to the general Dykstra algorithm for KL divergence (<span class='eqref-fixed' title='eqn:generalSinkhorn'>4.20</span>), we obtain the
+<!-- l. 1984 --><p class='indent'>    Inserting Lemma <a href='#x18-24006r6'>4.3.6<!-- tex4ht:ref: lemma:prox_OptionI  --></a> to the general Dykstra algorithm for KL divergence (<span class='eqref-fixed' title='eqn:generalSinkhorn'>4.20</span>), we obtain the
 generalized Sinkhorn iteration for entropic sOT: Given \(\textbf {u}^0 = \textbf {v}^0 = \mathbb {1}\), for any \(k=0,1,2,\cdots \), execute the following steps:
 \begin {align}  \textbf {u}^{(\ell +1)} &amp;= \frac {\min \{ e^{\gamma /\epsilon }\textbf {K}\textbf {v}^{(\ell )}, \textbf {a}\}}{\textbf {K} \textbf {v}^{(\ell )}} = \min \left \{ e^{\frac {\gamma }{\epsilon }}\mathbb {1}, \frac {\textbf {a}}{\textbf {K}\textbf {v}^{(\ell )}} \right \}; \\ \textbf {v}^{(\ell +1)} &amp;= \frac {\min \{ e^{\gamma /\epsilon }\textbf {K}^{\mathrm {T}}\textbf {u}^{(\ell +1)}, \textbf {b}\}}{\textbf {K}^{\mathrm {T}} \textbf {u}^{(\ell +1)}} = \min \left \{ e^{\frac {\gamma }{\epsilon }}\mathbb {1}, \frac {\textbf {b}}{\textbf {K}^{\mathrm {T}}\textbf {u}^{(\ell +1)}} \right \}.  \end {align}
 
 </p>
-    <!-- l. 2004 -->
-<!-- l. 2004 -->
+    <!-- l. 1996 -->
+<!-- l. 1996 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse11.html">Previous</a>
         <a class="next-link" href="Notesse13.html">Next</a>

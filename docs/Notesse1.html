@@ -174,13 +174,13 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 251 -->
+      <!-- l. 243 -->
     <h3 class='sectionHead' id='pushforward'><span class='titlemark'>1.1   </span> <a id='x4-30001.1'></a>Push-forward Operator</h3>
-<!-- l. 253 --><p class='noindent'>In the optimal transport theory, an important concept is the push-forward operator of a measure. To
+<!-- l. 245 --><p class='noindent'>In the optimal transport theory, an important concept is the push-forward operator of a measure. To
 understand it, we begin with some elementary definitions in measure theory.
 </p>
     <div class='newtheorem'>
-<!-- l. 256 --><p class='noindent'><span class='head'>
+<!-- l. 248 --><p class='noindent'><span class='head'>
 <a id='x4-3001r1'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.1 </span>(\(\sigma \)-algebra)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>A </span>\(\sigma \)<span class='cmti-10x-x-109'>-algebra is a collection </span>\(\Sigma \) <span class='cmti-10x-x-109'>of subsets of </span>\(\Omega \) <span class='cmti-10x-x-109'>with these properties:</span>
      </p><ol class='enumerate1'>
@@ -191,30 +191,30 @@ understand it, we begin with some elementary definitions in measure theory.
      </li>
 <li class='enumerate' id='x4-3004x1'><span class='cmti-10x-x-109'>If </span>\(A_1, A_2, \dots \in \Sigma \)<span class='cmti-10x-x-109'>, then </span>\[ \bigcup _{k=1}^{\infty } A_k \in \Sigma \quad \text {and} \quad \bigcap _{k=1}^{\infty } A_k \in \Sigma . \]</li></ol>
     </div>
-<!-- l. 266 --><p class='indent'>     In other words, a \(\sigma \)-algebra is a collection of subsets of \(\Omega \) which contains \(\Omega \) itself and the empty set, and is
+<!-- l. 258 --><p class='indent'>     In other words, a \(\sigma \)-algebra is a collection of subsets of \(\Omega \) which contains \(\Omega \) itself and the empty set, and is
 closed under the operations of taking complements, infinite unions, and infinite intersections.
 </p>
     <div class='newtheorem'>
-<!-- l. 271 --><p class='noindent'><span class='head'>
+<!-- l. 263 --><p class='noindent'><span class='head'>
 <a id='x4-3005r2'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.2 </span>(Borel \(\sigma \)-algebra)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>The smallest </span>\(\sigma \)<span class='cmti-10x-x-109'>-algebra containing all the open subsets of </span>\(\mathbb {R}^n\) <span class='cmti-10x-x-109'>is called
 the Borel </span>\(\sigma \)<span class='cmti-10x-x-109'>-algebra, denoted </span>\( \mathcal {B}(\mathbb {R}^n) \)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
-<!-- l. 273 --><p class='indent'>
+<!-- l. 265 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 279 --><p class='noindent'><span class='head'>
+<!-- l. 271 --><p class='noindent'><span class='head'>
 <a id='x4-3006r3'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.3 </span>(Borel sets)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Any subset in the Borel</span> \(\sigma \)<span class='cmti-10x-x-109'>-algebra </span>\( \mathcal {B}(\mathbb {R}^n) \) <span class='cmti-10x-x-109'>is called a Borel set. All Borel subsets,
 namely, </span>\( \mathcal {B}(\mathbb {R}^n) \)<span class='cmti-10x-x-109'>, comprise the smallest </span>\(\sigma \)<span class='cmti-10x-x-109'>-algebra of subsets of </span>\(\mathbb {R}^n\) <span class='cmti-10x-x-109'>containing all open sets.</span>
 </p>
     </div>
-<!-- l. 281 --><p class='indent'>     We may henceforth informally just think of \(\mathcal {B}(\mathbb {R}^n) \) as containing all the “nice, well-behaved” subsets of
+<!-- l. 273 --><p class='indent'>     We may henceforth informally just think of \(\mathcal {B}(\mathbb {R}^n) \) as containing all the “nice, well-behaved” subsets of
 \(\mathbb {R}^n\).
 </p>
     <div class='newtheorem'>
-<!-- l. 288 --><p class='noindent'><span class='head'>
+<!-- l. 280 --><p class='noindent'><span class='head'>
 <a id='x4-3007r4'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.4 </span>(Measure)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Let </span>\(\Sigma \) <span class='cmti-10x-x-109'>be a </span>\(\sigma \)<span class='cmti-10x-x-109'>-algebra of subsets of </span>\(\Omega \)<span class='cmti-10x-x-109'>. We call </span>\(\mu : \Sigma \to [0,\infty )\) <span class='cmti-10x-x-109'>a measure provided:</span>
 
@@ -224,14 +224,14 @@ namely, </span>\( \mathcal {B}(\mathbb {R}^n) \)<span class='cmti-10x-x-109'>, c
 <li class='enumerate' id='x4-3009x4'><span class='cmti-10x-x-109'>If </span>\(A_1, A_2, \ldots \in \Sigma \)<span class='cmti-10x-x-109'>, then </span>\[ \mu \left (\bigcup _{k=1}^\infty A_k\right ) \leq \sum _{k=1}^\infty \mu (A_k). \]
      </li>
 <li class='enumerate' id='x4-3010x4'><span class='cmti-10x-x-109'>If </span>\(A_1, A_2, \ldots \) <span class='cmti-10x-x-109'>are disjoint sets in </span>\(\Sigma \)<span class='cmti-10x-x-109'>, then </span>\[ \mu \left (\bigcup _{k=1}^\infty A_k\right ) = \sum _{k=1}^\infty \mu (A_k). \]</li></ol>
-<!-- l. 301 --><p class='noindent'><span class='cmti-10x-x-109'>It follows that if </span>\(A, B \in \Sigma \)<span class='cmti-10x-x-109'>, then </span>\[ A \subseteq B \text { implies } \mu (A) \leq \mu (B). \] <span class='cmti-10x-x-109'>The triple</span> \((\Omega ,\Sigma ,\mu )\) <span class='cmti-10x-x-109'>is called a measurable space. The set of (positive) measures over the space</span> \(\Omega \) <span class='cmti-10x-x-109'>will
+<!-- l. 293 --><p class='noindent'><span class='cmti-10x-x-109'>It follows that if </span>\(A, B \in \Sigma \)<span class='cmti-10x-x-109'>, then </span>\[ A \subseteq B \text { implies } \mu (A) \leq \mu (B). \] <span class='cmti-10x-x-109'>The triple</span> \((\Omega ,\Sigma ,\mu )\) <span class='cmti-10x-x-109'>is called a measurable space. The set of (positive) measures over the space</span> \(\Omega \) <span class='cmti-10x-x-109'>will
 be denoted by</span> \(\mathcal {M}_+(\Omega )\)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
-<!-- l. 306 --><p class='indent'>
+<!-- l. 298 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 309 --><p class='noindent'><span class='head'>
+<!-- l. 301 --><p class='noindent'><span class='head'>
 <a id='x4-3011r5'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.5 </span>(Probability measure)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>When</span> \(\mu \) <span class='cmti-10x-x-109'>is a measure:</span> \(\Sigma \to [0,1]\)<span class='cmti-10x-x-109'>, and satisfies all conditions required
 for a measure, with the additional condition that</span> \(\mu (\Omega ) = 1\)<span class='cmti-10x-x-109'>, then</span> \(\mu \) <span class='cmti-10x-x-109'>is referred to as a probability measure The
@@ -239,10 +239,10 @@ triple</span> \((\Omega ,\Sigma ,\mu )\) <span class='cmti-10x-x-109'>is called 
 <span class='cmti-10x-x-109'>or</span> \(\mathcal {P}(\Omega )\)<span class='cmti-10x-x-109'>. Hereafter, the two notations will be interchangeably used.</span>
 </p>
     </div>
-<!-- l. 311 --><p class='indent'>
+<!-- l. 303 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 313 --><p class='noindent'><span class='head'>
+<!-- l. 305 --><p class='noindent'><span class='head'>
 <a id='x4-3012r6'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.6 </span>(Borel measure)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>When considering the measurable space</span> \((\mathbb {R}^n, \mathcal {B}(\mathbb {R}^n),\mu )\)<span class='cmti-10x-x-109'>, the measure</span> \(\mu \) <span class='cmti-10x-x-109'>is referred
 
@@ -251,71 +251,71 @@ to as a Borel measure. .More generally, a Borel measure can be defined on</span>
 discussion of topological spaces.</span>
 </p>
     </div>
-<!-- l. 315 --><p class='indent'>
+<!-- l. 307 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 317 --><p class='noindent'><span class='head'>
+<!-- l. 309 --><p class='noindent'><span class='head'>
 <a id='x4-3013r7'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.7 </span>(Borel map)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>A map</span> \(T: X \to Y\) <span class='cmti-10x-x-109'>is Borel if the pre-image of any Borel subset</span> \(B\in \mathcal {B}(Y)\) <span class='cmti-10x-x-109'>is still Borel:</span> \(T^{-1}(B) \in \mathcal {B}(X)\)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
-<!-- l. 319 --><p class='indent'>
-</p><!-- l. 321 --><p class='indent'>    Now we are ready to introduce push-forward operator and its properties.
+<!-- l. 311 --><p class='indent'>
+</p><!-- l. 313 --><p class='indent'>    Now we are ready to introduce push-forward operator and its properties.
 </p>
     <div class='newtheorem'>
-<!-- l. 325 --><p class='noindent'><span class='head'>
+<!-- l. 317 --><p class='noindent'><span class='head'>
 <a id='x4-3014r8'></a>
 <span class='cmbx-10x-x-109'>Definition 1.1.8 </span>(Push-forward operator)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Take a Borel map </span>\(T: X \rightarrow Y\) <span class='cmti-10x-x-109'>and a probability measure </span>\(\mu \in \mathcal {P}(X)\)<span class='cmti-10x-x-109'>. We define
 the push-forward measure (or image measure) </span>\(T_{\sharp }\mu \in \mathcal {P}(Y)\) <span class='cmti-10x-x-109'>as </span>\[ (T_\sharp \mu )(B) = \mu (T^{-1}(B)) \] <span class='cmti-10x-x-109'>for any </span>\(B \in \mathcal {B}(Y)\)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
-<!-- l. 331 --><p class='indent'>
+<!-- l. 323 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 333 --><p class='noindent'><span class='head'>
+<!-- l. 325 --><p class='noindent'><span class='head'>
 <a id='x4-3015r9'></a>
 <span class='cmbx-10x-x-109'>Lemma 1.1.9.</span>  </span>\(T_\sharp \mu \) <span class='cmti-10x-x-109'>is a probability measure on </span>\(Y\)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
 
-<!-- l. 335 --><p class='indent'>
+<!-- l. 327 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 341 --><p class='noindent'><span class='head'>
+<!-- l. 333 --><p class='noindent'><span class='head'>
 <a id='x4-3016r10'></a>
 <span class='cmbx-10x-x-109'>Lemma 1.1.10.</span>  </span> <span class='cmti-10x-x-109'>Let </span>\(T: X \rightarrow Y\)<span class='cmti-10x-x-109'>, </span>\(\mu \in \mathcal {P}(X)\)<span class='cmti-10x-x-109'>, and </span>\( \nu \in \mathcal {P}(Y) \)<span class='cmti-10x-x-109'>. Then </span>\(\nu = T_\sharp \mu \) <span class='cmti-10x-x-109'>if and only if, for any Borel and bounded map </span>\(\varphi : Y \rightarrow \mathbb {R}\)<span class='cmti-10x-x-109'>, we have </span>\[ \int _Y \varphi (y) d\nu (y) = \int _Y \varphi (y) d (T_{\sharp }\mu )(y) = \int _X (\varphi \circ T)(x) d\mu (x)= \int _X \varphi (T(x)) d\mu (x). \]
 </p>
     </div>
-<!-- l. 347 --><p class='indent'>
-</p><!-- l. 352 --><p class='indent'>    An immediate consequence of the previous lemma is the following:
+<!-- l. 339 --><p class='indent'>
+</p><!-- l. 344 --><p class='indent'>    An immediate consequence of the previous lemma is the following:
 </p>
     <div class='newtheorem'>
-<!-- l. 354 --><p class='noindent'><span class='head'>
+<!-- l. 346 --><p class='noindent'><span class='head'>
 <a id='x4-3017r11'></a>
 <span class='cmbx-10x-x-109'>Corollary 1.1.11.</span>  </span> <span class='cmti-10x-x-109'>Let </span>\(T: X \rightarrow Y\)<span class='cmti-10x-x-109'>, </span>\(\mu \in \mathcal {P}(X)\)<span class='cmti-10x-x-109'>. For any function </span>\(\varphi : Y \rightarrow \mathbb {R}\) <span class='cmti-10x-x-109'>Borel and bounded, it holds that </span>\[ \int _Y \varphi d(T_\sharp \mu ) = \int _X \varphi \circ T \, d\mu . \]
 </p>
     </div>
-<!-- l. 359 --><p class='indent'>
-</p><!-- l. 361 --><p class='indent'>    The next lemma shows the relation between composition and push-forward.
+<!-- l. 351 --><p class='indent'>
+</p><!-- l. 353 --><p class='indent'>    The next lemma shows the relation between composition and push-forward.
 </p>
     <div class='newtheorem'>
-<!-- l. 366 --><p class='noindent'><span class='head'>
+<!-- l. 358 --><p class='noindent'><span class='head'>
 <a id='x4-3018r12'></a>
 <span class='cmbx-10x-x-109'>Lemma 1.1.12.</span>  </span> <span class='cmti-10x-x-109'>Let </span>\(T: X \rightarrow Y\) <span class='cmti-10x-x-109'>and </span>\(S: Y \rightarrow Z\) <span class='cmti-10x-x-109'>be measurable; then </span>\[ (S \circ T)_\sharp \mu = S_\sharp (T_\sharp \mu ). \]
 </p>
     </div>
-<!-- l. 371 --><p class='indent'>
+<!-- l. 363 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 374 --><p class='indent'>    <span class='head'>
+<!-- l. 366 --><p class='indent'>    <span class='head'>
 
 <span class='cmti-10x-x-109'>Proof.</span> </span>Thanks to Corollary <a href='#x4-3017r11'>1.1.11<!-- tex4ht:ref: corollary:pushforward  --></a>, for any \(\varphi : Z \rightarrow \mathbb {R}\) Borel and bounded, we have \[ \int _Z \varphi d(S \circ T)_\sharp \mu = \int _X \varphi \circ (S \circ T) d\mu = \int _X (\varphi \circ S) \circ T d\mu = \int _Y \varphi \circ S dT_\sharp \mu = \int _Z \varphi dS_\sharp (T_\sharp \mu ). \] The result follows from
 Lemma <a href='#x4-3016r10'>1.1.10<!-- tex4ht:ref: lemma:pushforward  --></a>.                                                                                                                □
 </p>
     </div>
 
-    <!-- l. 387 -->
-<!-- l. 387 -->
+    <!-- l. 379 -->
+<!-- l. 379 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesch1.html">Previous</a>
         <a class="next-link" href="Notesse2.html">Next</a>

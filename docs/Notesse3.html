@@ -174,21 +174,21 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 453 -->
+      <!-- l. 445 -->
     <h3 class='sectionHead' id='jacobian'><span class='titlemark'>1.3   </span> <a id='x6-50001.3'></a>A Jacobian Equation for Transport Maps</h3>
-<!-- l. 456 --><p class='noindent'>In this section, we introduce a Jacobian equation, or in the field of machine learning, people usually call it
+<!-- l. 448 --><p class='noindent'>In this section, we introduce a Jacobian equation, or in the field of machine learning, people usually call it
 change-of-variable formula. This formula is the elementary formula for many important machine learning
 model such as neural ODE, Generative adversarial networks (GANs), normalizing flow, and diffusion
 model.
-</p><!-- l. 458 --><p class='indent'>    Let \( T: \mathbb {R}^d \rightarrow \mathbb {R}^d \) be a smooth diffeomorphism with \( \det \nabla T &gt; 0 \), and assume that \( T_\sharp f (dx) = g \, dy \), where \( f \) and \( g \) are probability densities. First of
+</p><!-- l. 450 --><p class='indent'>    Let \( T: \mathbb {R}^d \rightarrow \mathbb {R}^d \) be a smooth diffeomorphism with \( \det \nabla T &gt; 0 \), and assume that \( T_\sharp f (dx) = g \, dy \), where \( f \) and \( g \) are probability densities. First of
 all, by the definition of the push-forward measure, for any bounded Borel function \( \xi : \mathbb {R}^d \rightarrow \mathbb {R} \) we have
 \[ \int _{\mathbb {R}^d} \xi (y) g(y) \, dy = \int _{\mathbb {R}^d} \xi (T(x)) f(x) \, dx. \]
-</p><!-- l. 464 --><p class='indent'>    On the other hand, using the change of variables \( y = T(x) \) we have \( dy = \det \nabla T(x) \, dx \), and therefore \[ \int _{\mathbb {R}^d} \xi (y) g(y) \, dy = \int _{\mathbb {R}^d} \xi (T(x)) g(T(x)) \det \nabla T(x) \, dx. \]
-</p><!-- l. 469 --><p class='indent'>    Comparing the two equations above, since \( \xi \) is arbitrary we deduce that \( T \) satisfies \[ f(x) = g(T(x)) \det \nabla T(x) . \]
+</p><!-- l. 456 --><p class='indent'>    On the other hand, using the change of variables \( y = T(x) \) we have \( dy = \det \nabla T(x) \, dx \), and therefore \[ \int _{\mathbb {R}^d} \xi (y) g(y) \, dy = \int _{\mathbb {R}^d} \xi (T(x)) g(T(x)) \det \nabla T(x) \, dx. \]
+</p><!-- l. 461 --><p class='indent'>    Comparing the two equations above, since \( \xi \) is arbitrary we deduce that \( T \) satisfies \[ f(x) = g(T(x)) \det \nabla T(x) . \]
 
 </p>
-    <!-- l. 513 -->
-<!-- l. 513 -->
+    <!-- l. 505 -->
+<!-- l. 505 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse2.html">Previous</a>
         <a class="next-link" href="Notesch2.html">Next</a>

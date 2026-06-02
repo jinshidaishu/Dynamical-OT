@@ -174,22 +174,22 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 3912 -->
+      <!-- l. 3902 -->
     <h3 class='sectionHead' id='proximal-gradient-descent'><span class='titlemark'>A.2   </span> <a id='x35-52000A.2'></a>Proximal Gradient Descent</h3>
-<!-- l. 3914 --><p class='noindent'>The proximal gradient descent for the problem \begin {align}  \min _x f(x) + g(x)  \end {align}
-</p><!-- l. 3918 --><p class='indent'>    reads \begin {align} \label {eqn:ProximalGradientDescent} x^{n+1} = \text {prox}_{\tau g} (x^n - \tau \nabla f(x^n)).  \end {align}
-</p><!-- l. 3922 --><p class='indent'>    We can derive the proximal gradient descent from the following point of view. The minimization is
+<!-- l. 3904 --><p class='noindent'>The proximal gradient descent for the problem \begin {align}  \min _x f(x) + g(x)  \end {align}
+</p><!-- l. 3908 --><p class='indent'>    reads \begin {align} \label {eqn:ProximalGradientDescent} x^{n+1} = \text {prox}_{\tau g} (x^n - \tau \nabla f(x^n)).  \end {align}
+</p><!-- l. 3912 --><p class='indent'>    We can derive the proximal gradient descent from the following point of view. The minimization is
 equivalent to \begin {align*}  &amp; 0 \in \nabla f(x^*) + \partial g(x^*) \\ \Leftrightarrow \ &amp; 0 \in \nabla f(x^*) + \partial g(x^*) + \frac {x^* - x^*}{\tau } \\ \Leftrightarrow \ &amp; 0 \in \tau \nabla f(x^*) -x^* + \tau \partial g(x^*) + x^* \\ \Leftrightarrow \ &amp; 0 \in \tau \nabla f(x^*) -x^* + \tau \partial g(x^*) + x^* \\ \Leftrightarrow \ &amp; (I + \tau \partial g)x^* \in (I - \tau \nabla f)x^* \\ \Leftrightarrow \ &amp; x^* \in (I + \tau \partial g)^{-1} (I - \tau \nabla f)x^* \\ \Leftrightarrow \ &amp; x^* \in \text {prox}_{\tau g} \Big ( (I - \tau \nabla f)x^* \Big )\\  \end {align*}
-</p><!-- l. 3932 --><p class='indent'>    Applying the fixed point iteration, we get the proximal gradient descent iteration (<span class='eqref-fixed' title='eqn:ProximalGradientDescent'>A.6</span>). Assuming \(g\) is
+</p><!-- l. 3922 --><p class='indent'>    Applying the fixed point iteration, we get the proximal gradient descent iteration (<span class='eqref-fixed' title='eqn:ProximalGradientDescent'>A.6</span>). Assuming \(g\) is
 smooth, then the proximal gradient descent is equivalent to the following gradient flow dynamics:
 \begin {align} \label {eqn:gradient_explicit_implicit} \frac {x^{n+1}-x^n}{\tau } = - \left (\nabla f(x^n) + \partial g(x^{n+1})\right ).  \end {align}
-</p><!-- l. 3936 --><p class='indent'>    In other words, \(f\)-update is explicit, but \(g\)-update is implicit.
-</p><!-- l. 3938 --><p class='indent'>    When \(f = 0\), the proximal gradient descent becomes proximal point method. By the iteration (<span class='eqref-fixed' title='eqn:gradient_explicit_implicit'>A.7</span>), it is
+</p><!-- l. 3926 --><p class='indent'>    In other words, \(f\)-update is explicit, but \(g\)-update is implicit.
+</p><!-- l. 3928 --><p class='indent'>    When \(f = 0\), the proximal gradient descent becomes proximal point method. By the iteration (<span class='eqref-fixed' title='eqn:gradient_explicit_implicit'>A.7</span>), it is
 equivalent to the implicit Euler scheme: \begin {align} \label {eqn:gradient_implicit} \frac {x^{n+1}-x^n}{\tau } = - \partial g(x^{n+1}).  \end {align}
 
 </p>
-    <!-- l. 3945 -->
-<!-- l. 3945 -->
+    <!-- l. 3935 -->
+<!-- l. 3935 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse23.html">Previous</a>
         <a class="next-link" href="Notesse25.html">Next</a>
