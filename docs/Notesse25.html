@@ -174,18 +174,18 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 3935 -->
+      <!-- l. 3870 -->
     <h3 class='sectionHead' id='primaldual-algorithm'><span class='titlemark'>A.3   </span> <a id='x36-53000A.3'></a>Primal-dual Algorithm</h3>
-<!-- l. 3937 --><p class='noindent'>Consider the following minimization problem \begin {align}  \min _x \ f\circ K(x) + g(x).  \end {align}
-</p><!-- l. 3941 --><p class='indent'>    We can get its primal-dual form \begin {align} \label {eqn:primal_dual} \min _x \max _y \ \langle Kx, y \rangle - f^*(y) + g(x)  \end {align}
-</p><!-- l. 3946 --><p class='indent'>    by using the convex conjugate identity \(f(Kx) = \langle Kx, y \rangle - f^*(y)\). To find the saddle point from the min-max primal-dual form
+<!-- l. 3872 --><p class='noindent'>Consider the following minimization problem \begin {align}  \min _x \ f\circ K(x) + g(x).  \end {align}
+</p><!-- l. 3876 --><p class='indent'>    We can get its primal-dual form \begin {align} \label {eqn:primal_dual} \min _x \max _y \ \langle Kx, y \rangle - f^*(y) + g(x)  \end {align}
+</p><!-- l. 3881 --><p class='indent'>    by using the convex conjugate identity \(f(Kx) = \langle Kx, y \rangle - f^*(y)\). To find the saddle point from the min-max primal-dual form
 (<span class='eqref-fixed' title='eqn:primal_dual'>A.10</span>), we use the first order conditions: \begin {align}  \begin {cases} 0 \in Kx - \partial f^*(y), \\ 0 \in K^* y + \partial g(x). \end {cases}  \end {align}
-</p><!-- l. 3953 --><p class='indent'>    Now these two first order conditions are equivalent to \begin {align}  \begin {cases} 0 \in - Kx + \partial f^*(y), \\ 0 \in K^* y + \partial g(x). \end {cases} \Leftrightarrow \begin {cases} 0 \in y - (y + \sigma Kx) + \sigma \partial f^*(y), \\ 0 \in x - (x - \tau K^* y) + \tau \partial g(x). \end {cases} \Leftrightarrow \begin {cases} y = \text {prox}_{\sigma f^*} (y + \sigma Kx), \\ x = \text {prox}_{\tau g}(x - \tau K^* y). \end {cases}  \end {align}
-</p><!-- l. 3970 --><p class='indent'>    This equivalence motivates the following primal-dual iteration: \begin {align}  \begin {cases} y^{n+1} = \text {prox}_{\sigma f^*} (y^n + \sigma K x^n), \quad \text {\ (dual\ update)} \\ \hat {x}^{n+1} = \text {prox}_{\tau g}(\hat {x}^n - \tau K^* y^{n+1}), \quad \text {\ (primal\ update)}\\ x^{n+1} = \hat {x}^{n+1} + \theta (\hat {x}^{n+1} - \hat {x}^n).\quad \text {\ (extrapolation)} \end {cases}  \end {align}
+</p><!-- l. 3888 --><p class='indent'>    Now these two first order conditions are equivalent to \begin {align}  \begin {cases} 0 \in - Kx + \partial f^*(y), \\ 0 \in K^* y + \partial g(x). \end {cases} \Leftrightarrow \begin {cases} 0 \in y - (y + \sigma Kx) + \sigma \partial f^*(y), \\ 0 \in x - (x - \tau K^* y) + \tau \partial g(x). \end {cases} \Leftrightarrow \begin {cases} y = \text {prox}_{\sigma f^*} (y + \sigma Kx), \\ x = \text {prox}_{\tau g}(x - \tau K^* y). \end {cases}  \end {align}
+</p><!-- l. 3905 --><p class='indent'>    This equivalence motivates the following primal-dual iteration: \begin {align}  \begin {cases} y^{n+1} = \text {prox}_{\sigma f^*} (y^n + \sigma K x^n), \quad \text {\ (dual\ update)} \\ \hat {x}^{n+1} = \text {prox}_{\tau g}(\hat {x}^n - \tau K^* y^{n+1}), \quad \text {\ (primal\ update)}\\ x^{n+1} = \hat {x}^{n+1} + \theta (\hat {x}^{n+1} - \hat {x}^n).\quad \text {\ (extrapolation)} \end {cases}  \end {align}
 
 </p>
-    <!-- l. 3988 -->
-<!-- l. 3988 -->
+    <!-- l. 3923 -->
+<!-- l. 3923 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse24.html">Previous</a>
         <a class="next-link" href="Notesap2.html">Next</a>

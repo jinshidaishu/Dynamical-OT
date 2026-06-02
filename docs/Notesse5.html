@@ -242,18 +242,18 @@ points than the target measure \(\beta \), \( n &lt; m \). See Figure <a href='#
                                                                                             
 
                                                                                             
-<!-- l. 662 --><p class='noindent'><img alt='xxyxxy122122
-' src='Notes0x.svg' />
-</p>
+<div class='center'>
+<!-- l. 663 --><p class='noindent'>
+</p><!-- l. 664 --><p class='noindent'><img alt='PIC' height='369' src='Figures/discreteMonge.png' width='369' /></p></div>
 <figcaption class='caption'><span class='id'>Figure 2.1: </span><span class='content'>Schematic of discrete Monge OT. Let one define an optimal transport \(T\) naturally as there
 is only one feasible transport map (Monge map). Right one does not have a compatible Monge map.</span></figcaption><!-- tex4ht:label?: x9-9002r1  -->
 
     </figure>
     <h4 class='subsectionHead' id='discrete-kantorovich'><span class='titlemark'>2.2.2   </span> <a id='x9-100002.2.2'></a>Kantorovich optimal transport for discrete measures</h4>
-<!-- l. 708 --><p class='noindent'>As seen in the previous section, discrete Monge OT may not be well-defined in the absence of feasible
+<!-- l. 679 --><p class='noindent'>As seen in the previous section, discrete Monge OT may not be well-defined in the absence of feasible
 solutions satisfying the mass conservation constraint (<span class='eqref-fixed' title='eqn:Monge_map_mass_conservation'>2.7</span>). Additionally, discrete Monge OT is a nonconvex
 problem. Both drawbacks are therefore difficult to overcome.
-</p><!-- l. 710 --><p class='indent'>    The key idea of Kantorovich is to relax the deterministic nature of transportation, namely the fact that a
+</p><!-- l. 681 --><p class='indent'>    The key idea of Kantorovich is to relax the deterministic nature of transportation, namely the fact that a
 source point \(x_i\) can only be assigned to another point or location \(y_{\sigma (i)}\), or \(T(x_i)\) only. Kantorovich proposes instead that
 the mass at any point \(x_i\) be potentially dispatched across several locations. Kantorovich moves away from the
 idea that mass transportation should be <span class='cmti-10x-x-109'>deterministic </span>to consider instead a <span class='cmti-10x-x-109'>probabilistic </span>transport, which
@@ -262,7 +262,7 @@ encoded using, in place of a permutation or a map \(T\), a coupling matrix \(\ma
 mass flowing from bin \(i\) to bin \(j\), or from the mass found at \(x_i\) toward \(y_j\) in the formalism of discrete
 measures (<span class='eqref-fixed' title='eqn:discrete_measure02'>2.5</span>). Admissible couplings admit a far simpler characterization than Monge maps,
 \begin {align}  \mathbf {U}(\mathbf {a}, \mathbf {b}) = \left \{ \mathbf {P} \in \mathbb {R}_+^{n \times m} : \mathbf {P}\mathbf {1} = \mathbf {a}, \mathbf {P}^{\text {T}}\mathbf {1} = \mathbf {b} \right \},  \end {align}
-</p><!-- l. 714 --><p class='indent'>    in which \(\mathbf {1}\) represents all-one vector whose dimension is determined by dimension consistency
+</p><!-- l. 685 --><p class='indent'>    in which \(\mathbf {1}\) represents all-one vector whose dimension is determined by dimension consistency
 of matrix multiplication in the context. In other words, the two constraints indicate that the
 row and column sums of \(\mathbf {P}\) equal \(\mathbf {a}\) and \(\mathbf {b}\), respectively. The set of matrices \( \mathbf {U}(\mathbf {a}, \mathbf {b}) \) is bounded and defined
 by \( n+m \) equality constraints, and therefore is a convex polytope (the convex hull of a finite set of
@@ -273,65 +273,66 @@ matrices).
                                                                                             
 
                                                                                             
-<!-- l. 720 --><p class='noindent'><img alt='xxyyyPPPPPP12123111222123123   ' src='Notes1x.svg' />
-</p>
+<div class='center'>
+<!-- l. 691 --><p class='noindent'>
+</p><!-- l. 692 --><p class='noindent'><img alt='PIC' height='170' src='Figures/discreteKantorovich.png' width='170' /></p></div>
 <figcaption class='caption'><span class='id'>Figure 2.2: </span><span class='content'>Schematic of the coupling matrix \(P\). \(P_{ij}\) describes the amount of mass flowing from bin \(i\) to bin
 \(j\), or from the mass found at \(x_i\) toward \(y_j\)</span></figcaption><!-- tex4ht:label?: x9-10001r2  -->
 
     </figure>
     <div class='newtheorem'>
-<!-- l. 754 --><p class='noindent'><span class='head'>
+<!-- l. 703 --><p class='noindent'><span class='head'>
 <a id='x9-10002r4'></a>
 <span class='cmbx-10x-x-109'>Definition 2.2.4 </span>(Kantorovich OT between discrete measures)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>Given discrete measures in
 (</span><span class='eqref-fixed' title='eqn:discrete_measure02'>2.5</span><span class='cmti-10x-x-109'>) and a cost function</span> \(c(x,y)\)<span class='cmti-10x-x-109'>, Kantorovich OT between discrete measures is a minimization problem</span>
 \begin {align}  \mathcal {L}_{c}(\alpha , \beta ) := \min _{\mathbf {P}\in \mathbf {U}(\mathbf {a}, \mathbf {b})} \sum _{i,j} P_{ij}c(x_i,y_j). \label {eqn:Kantorovich_discrete_01}  \end {align}
-</p><!-- l. 761 --><p class='indent'>    <span class='cmti-10x-x-109'>If a cost matrix</span> \(\mathbf {C}\) <span class='cmti-10x-x-109'>is directly given, corresponding to the cost between</span> \(\{x_i\}_{i=1}^n\) <span class='cmti-10x-x-109'>and</span> \(\{y_j\}_{j=1}^m\)<span class='cmti-10x-x-109'>, then the Kantorovich OT
+</p><!-- l. 710 --><p class='indent'>    <span class='cmti-10x-x-109'>If a cost matrix</span> \(\mathbf {C}\) <span class='cmti-10x-x-109'>is directly given, corresponding to the cost between</span> \(\{x_i\}_{i=1}^n\) <span class='cmti-10x-x-109'>and</span> \(\{y_j\}_{j=1}^m\)<span class='cmti-10x-x-109'>, then the Kantorovich OT
 between probability vectors reads </span>\begin {align}  L_{\mathbf {C}}(\mathbf {a}, \mathbf {b}) := \min _{\mathbf {P}\in \mathbf {U}(\mathbf {a}, \mathbf {b})} \langle \mathbf {P}, \mathbf {C} \rangle = \sum _{i,j} P_{ij} C_{ij}. \label {eqn:Kantorovich_discrete_02}  \end {align}
 </p>
     </div>
-<!-- l. 767 --><p class='indent'>
+<!-- l. 716 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 770 --><p class='noindent'><span class='head'>
+<!-- l. 719 --><p class='noindent'><span class='head'>
 <a id='x9-10003r5'></a>
 <span class='cmbx-10x-x-109'>Remark 2.2.5.</span>  </span><span class='cmti-10x-x-109'>Discrete Kantorovich OT problem is a linear programming with convex constraints.
 Therefore the minimizers are achieved on the boundary of the convex polytope </span>\( \mathbf {U}(\mathbf {a}, \mathbf {b}) \)<span class='cmti-10x-x-109'>, and are not necessarily
 unique. See Figure </span><a href='#schematic-of-optimal-solutions-of-linear-programming-left-optimal-solutions-are-not-unique-right-optimal-solution-is-unique'><span class='cmti-10x-x-109'>2.3</span><!-- tex4ht:ref: fig:Linear_programming  --></a> <span class='cmti-10x-x-109'>for the schematic illustration.</span>
 </p>
     </div>
-<!-- l. 772 --><p class='indent'>
-</p><!-- l. 774 --><p class='indent'>    The Kantorovich problem (<span class='eqref-fixed' title='eqn:Kantorovich_discrete_02'>2.11</span> ) is a constrained convex minimization problem, and as such, it can be
+<!-- l. 721 --><p class='indent'>
+</p><!-- l. 723 --><p class='indent'>    The Kantorovich problem (<span class='eqref-fixed' title='eqn:Kantorovich_discrete_02'>2.11</span> ) is a constrained convex minimization problem, and as such, it can be
 naturally paired with a dual problem, which is a constrained concave maximization problem.
 The following fundamental proposition explains the relationship between the primal and dual
 problems.
 </p>
     <div class='newtheorem'>
-<!-- l. 776 --><p class='noindent'><span class='head'>
+<!-- l. 725 --><p class='noindent'><span class='head'>
 <a id='x9-10004r6'></a>
 <span class='cmbx-10x-x-109'>Proposition 2.2.6 </span>(Discrete Kantorovich dual)<span class='cmbx-10x-x-109'>.</span>  </span><span class='cmti-10x-x-109'>The Kantorovich problem (</span><span class='eqref-fixed' title='eqn:Kantorovich_discrete_02'>2.11</span><span class='cmti-10x-x-109'>) admits the dual</span>
 \begin {align}  L_{\mathbf {C}}(\mathbf {a}, \mathbf {b}) = \max _{(\mathbf {f}, \mathbf {g}) \in \mathbf {R}(\mathbf {C})} \langle \mathbf {f}, \mathbf {a} \rangle + \langle \mathbf {g}, \mathbf {b} \rangle ,  \end {align}
-</p><!-- l. 781 --><p class='indent'>    <span class='cmti-10x-x-109'>where the set of feasible dual variables is </span>\begin {align}  \mathbf {R}(\mathbf {C}) := \{(\mathbf {f}, \mathbf {g}) \in \mathbb {R}^n \times \mathbb {R}^m : \forall (i, j) \in [n] \times [m], \mathbf {f} \oplus \mathbf {g} \leq \mathbf {C} \}.  \end {align}
+</p><!-- l. 730 --><p class='indent'>    <span class='cmti-10x-x-109'>where the set of feasible dual variables is </span>\begin {align}  \mathbf {R}(\mathbf {C}) := \{(\mathbf {f}, \mathbf {g}) \in \mathbb {R}^n \times \mathbb {R}^m : \forall (i, j) \in [n] \times [m], \mathbf {f} \oplus \mathbf {g} \leq \mathbf {C} \}.  \end {align}
 
-</p><!-- l. 785 --><p class='indent'>    <span class='cmti-10x-x-109'>Such dual variables are often referred to as “Kantorovich potentials”.</span>
+</p><!-- l. 734 --><p class='indent'>    <span class='cmti-10x-x-109'>Such dual variables are often referred to as “Kantorovich potentials”.</span>
 </p>
     </div>
-<!-- l. 786 --><p class='indent'>
+<!-- l. 735 --><p class='indent'>
 </p>
     <figure class='figure' id='x9-10005r3'><span id='schematic-of-optimal-solutions-of-linear-programming-left-optimal-solutions-are-not-unique-right-optimal-solution-is-unique'></span> 
 
                                                                                             
 
                                                                                             
-<!-- l. 791 --><p class='noindent'><img alt='UPUP**((aa,, b b ))
-' src='Notes2x.svg' />
-</p>
+<div class='center'>
+<!-- l. 741 --><p class='noindent'>
+</p><!-- l. 742 --><p class='noindent'><img alt='PIC' height='284' src='Figures/linearprograming.png' width='284' /></p></div>
 <figcaption class='caption'><span class='id'>Figure 2.3: </span><span class='content'>Schematic of optimal solutions of linear programming. Left: optimal solutions are not
 unique; Right: optimal solution is unique.</span></figcaption><!-- tex4ht:label?: x9-10005r3  -->
 
     </figure>
 
-    <!-- l. 818 -->
-<!-- l. 818 -->
+    <!-- l. 753 -->
+<!-- l. 753 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse4.html">Previous</a>
         <a class="next-link" href="Notesse6.html">Next</a>

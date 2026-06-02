@@ -174,86 +174,86 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 2103 -->
+      <!-- l. 2038 -->
     <h3 class='sectionHead' id='benamoubrenier'><span class='titlemark'>5.1   </span> <a id='x21-270005.1'></a>The Continuity Equation and Benamou–Brenier Formula</h3>
-<!-- l. 2105 --><p class='noindent'>Let \(\Omega \subset \mathbb {R}^d\) be a convex set (\(\Omega = \mathbb {R}^d\) is admissible). Throughout, we commit a mild abuse of notation and identify all
+<!-- l. 2040 --><p class='noindent'>Let \(\Omega \subset \mathbb {R}^d\) be a convex set (\(\Omega = \mathbb {R}^d\) is admissible). Throughout, we commit a mild abuse of notation and identify all
 probability measures with their densities: \(\text {d}\rho (\mathbf {x}) = \rho (\mathbf {x})\text {d}\mathbf {x}\). In other words, when we have two probability densities \(\rho _1\)
 and \(\rho _2\), their \(p\)-Wasserstein distance means the \(p\)-Wasserstein distance between the two measures \(\rho _1\text {d}\mathbf {x}, \rho _2\text {d}\mathbf {x}\):
 \begin {align*}  W_p(\rho _1,\rho _2): = W_p(\rho _1 \text {d}\mathbf {x}, \rho _2 \text {d}\mathbf {x}).  \end {align*}
-</p><!-- l. 2109 --><p class='indent'>    Let \(\mu \in \mathcal {P}_2(\Omega )\) be a probability measure with finite second moments, and let \(\mathbf {v} : [0, T] \times \Omega \to \mathbb {R}^d\) be a smooth bounded vector field
+</p><!-- l. 2044 --><p class='indent'>    Let \(\mu \in \mathcal {P}_2(\Omega )\) be a probability measure with finite second moments, and let \(\mathbf {v} : [0, T] \times \Omega \to \mathbb {R}^d\) be a smooth bounded vector field
 tangent to the boundary of \(\Omega \). Let \(\mathbf {X}(t, \mathbf {x})\) denote the flow of \(\mathbf {v}\), namely \begin {align} \label {eqn:dynamicalOT_velocity_flow} \begin {cases} \dot {\mathbf {X}}(t, \mathbf {x}) = \mathbf {v}(t, \mathbf {X}(t, \mathbf {x})), \\ \mathbf {X}(0, \mathbf {x}) = \mathbf {x}, \end {cases}  \end {align}
-</p><!-- l. 2116 --><p class='indent'>    and set \(\rho (t,\cdot ) = (\mathbf {X}(t))_\sharp \mu \). Note that, since \(\mathbf {v}\) is tangent to the boundary, the flow remains inside \(\Omega \), hence \(\rho (t,\cdot ) \in \mathcal {P}_2(\Omega )\).
+</p><!-- l. 2051 --><p class='indent'>    and set \(\rho (t,\cdot ) = (\mathbf {X}(t))_\sharp \mu \). Note that, since \(\mathbf {v}\) is tangent to the boundary, the flow remains inside \(\Omega \), hence \(\rho (t,\cdot ) \in \mathcal {P}_2(\Omega )\).
 </p>
     <div class='newtheorem'>
-<!-- l. 2118 --><p class='noindent'><span class='head'>
+<!-- l. 2053 --><p class='noindent'><span class='head'>
 <a id='x21-27001r1'></a>
 <span class='cmbx-10x-x-109'>Lemma 5.1.1.</span>  </span> <span class='cmti-10x-x-109'>Let</span> \(\mathbf {v}_t(\cdot ) := \mathbf {v}(t, \cdot )\) <span class='cmti-10x-x-109'>and</span> \(\rho _t(\cdot ) := \rho (t, \cdot )\) <span class='cmti-10x-x-109'>(the two notations are interchangeable hereafter). The continuity equation</span>
 \begin {align} \label {eqn:continuity} \partial _t \rho _t + \nabla \cdot (\rho _t \mathbf {v}_t) = 0  \end {align}
-</p><!-- l. 2123 --><p class='indent'>    <span class='cmti-10x-x-109'>holds in the distributional sense.</span>
+</p><!-- l. 2058 --><p class='indent'>    <span class='cmti-10x-x-109'>holds in the distributional sense.</span>
 </p>
     </div>
-<!-- l. 2124 --><p class='indent'>
+<!-- l. 2059 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 2127 --><p class='indent'>    <span class='head'>
+<!-- l. 2062 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>Let \(\psi \in C_c^\infty (\Omega )\), and consider the function \(t \mapsto \int _\Omega \rho _t(x) \psi (x) \, dx\). Then, using the definitions of \(\mathbf {X}\) and \(\rho _t\), we get \begin {align*}  \int _\Omega \partial _t \rho _t(\mathbf {x}) \psi (\mathbf {x}) \, \text {d}\mathbf {x} = &amp;\frac {\text {d}}{\text {d}t} \int _\Omega \rho _t(\mathbf {x}) \psi (\mathbf {x}) \, \text {d}\mathbf {x} = \frac {\text {d}}{\text {d}t} \int _\Omega \psi (\mathbf {X}(t,\mathbf {x})) \mu (\mathbf {x}) \, \text {d}\mathbf {x} \\ =&amp; \int _\Omega \nabla \psi (\mathbf {X}(t, \mathbf {x})) \cdot \dot {\mathbf {X}}(t, \mathbf {x}) \mu (\mathbf {x}) \, \text {d}\mathbf {x} \\ =&amp; \int _\Omega \nabla \psi (\mathbf {X}(t, \mathbf {x})) \cdot \mathbf {v}_t(\mathbf {X}(t, \mathbf {x})) \mu (\mathbf {x}) \, \text {d}\mathbf {x} \\ =&amp; \int _\Omega \nabla \psi (\mathbf {x}) \cdot \mathbf {v}_t(\mathbf {x}) \rho _t(\mathbf {x}) \, \text {d}\mathbf {x} = -\int _\Omega \psi (\mathbf {x}) \, \nabla \cdot (\rho _t \mathbf {v}_t) \, \text {d}\mathbf {x},  \end {align*}
-</p><!-- l. 2134 --><p class='indent'>    which implies the continuity equation.                                                                           □
+</p><!-- l. 2069 --><p class='indent'>    which implies the continuity equation.                                                                           □
 </p>
     </div>
     <div class='newtheorem'>
-<!-- l. 2137 --><p class='noindent'><span class='head'>
+<!-- l. 2072 --><p class='noindent'><span class='head'>
 <a id='x21-27002r2'></a>
 
 <span class='cmbx-10x-x-109'>Definition 5.1.2.</span>  </span><span class='cmti-10x-x-109'>Given a pair</span> \((\rho _t, \mathbf {v}_t)\) <span class='cmti-10x-x-109'>solving the continuity equation (</span><span class='eqref-fixed' title='eqn:continuity'>5.2</span><span class='cmti-10x-x-109'>), with</span> \(\mathbf {v}_t \cdot \mathbf {n}|_{\partial \Omega } = 0\) <span class='cmti-10x-x-109'>(namely,</span> \(\mathbf {v}_t\) <span class='cmti-10x-x-109'>is tangent to the
 boundary of</span> \(\Omega \)<span class='cmti-10x-x-109'>), the dynamical optimal transport is defined as </span>\begin {align} \label {eqn:dynamicalOT02} C_{\mathrm {BB}}(\mu ,\nu ) = \min _{(\rho ,\mathbf {v})\in \mathcal {C}_{\mathrm {BB}}}\ A[\rho _t, \mathbf {v}_t] = \int _0^1\int _{\Omega } \rho _t(\mathbf {x}) \|\mathbf {v}_t(\mathbf {x})\|^2 \ \dx \dt ,  \end {align}
-</p><!-- l. 2142 --><p class='indent'>    <span class='cmti-10x-x-109'>where we define the set of constraints as </span>\begin {align}  \mathcal {C}_{\mathrm {BB}}(\mu ,\nu ) : = \left \{ (\rho _t,\mathbf {v}_t) | \partial _t\rho _t = -\nabla \cdot (\rho _t \mathbf {v}_t),\ \rho (0,\mathbf {x})=\mu ,\ \rho (1,\mathbf {x})=\nu ,\ \mathbf {v}\cdot \mathbf {n}|_{\partial \Omega } = 0 \right \}.  \end {align}
+</p><!-- l. 2077 --><p class='indent'>    <span class='cmti-10x-x-109'>where we define the set of constraints as </span>\begin {align}  \mathcal {C}_{\mathrm {BB}}(\mu ,\nu ) : = \left \{ (\rho _t,\mathbf {v}_t) | \partial _t\rho _t = -\nabla \cdot (\rho _t \mathbf {v}_t),\ \rho (0,\mathbf {x})=\mu ,\ \rho (1,\mathbf {x})=\nu ,\ \mathbf {v}\cdot \mathbf {n}|_{\partial \Omega } = 0 \right \}.  \end {align}
 </p>
     </div>
-<!-- l. 2146 --><p class='indent'>
-</p><!-- l. 2148 --><p class='indent'>    The following remarkable formula, due to Benamou and Brenier <span class='cite'>[<a href='Notesli2.html#Xbenamou2000computational'>2</a>]</span> (hence the notation \(C_{\mathrm {BB}}\)), shows a link
+<!-- l. 2081 --><p class='indent'>
+</p><!-- l. 2083 --><p class='indent'>    The following remarkable formula, due to Benamou and Brenier <span class='cite'>[<a href='Notesli2.html#Xbenamou2000computational'>2</a>]</span> (hence the notation \(C_{\mathrm {BB}}\)), shows a link
 between the continuity equation and the \(W_2\)-distance.
 </p>
     <div class='newtheorem'>
-<!-- l. 2150 --><p class='noindent'><span class='head'>
+<!-- l. 2085 --><p class='noindent'><span class='head'>
 <a id='x21-27003r3'></a>
 <span class='cmbx-10x-x-109'>Theorem 5.1.3 </span>(Benamou–Brenier Theorem)<span class='cmbx-10x-x-109'>.</span>  </span> <span class='cmti-10x-x-109'>Given two probability measures</span> \(\mu , \nu \in \mathcal {P}_2(\Omega )\)<span class='cmti-10x-x-109'>, it holds that</span>
 \begin {align} \label {eqn:dynamicalOT} W_2^2(\mu , \nu ) = C_{\mathrm {BB}}(\mu ,\nu ).  \end {align}
 </p>
     </div>
-<!-- l. 2155 --><p class='indent'>
+<!-- l. 2090 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 2158 --><p class='indent'>    <span class='head'>
+<!-- l. 2093 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>We give only a formal proof.
-</p><!-- l. 2160 --><p class='indent'>    Let \((\rho _t, \bv _t)\) be a couple (probability measure/smooth vector field) satisfying \(\rho _0 = \mu , \rho _1 = \nu \), and \(\partial _t \rho _t + \nabla \cdot (\rho _t \bv _t) = 0\). Let \(\mathbf {X}(t, \mathbf {x})\) denote the flow of \(\mathbf {v}_t\). By
+</p><!-- l. 2095 --><p class='indent'>    Let \((\rho _t, \bv _t)\) be a couple (probability measure/smooth vector field) satisfying \(\rho _0 = \mu , \rho _1 = \nu \), and \(\partial _t \rho _t + \nabla \cdot (\rho _t \bv _t) = 0\). Let \(\mathbf {X}(t, \mathbf {x})\) denote the flow of \(\mathbf {v}_t\). By
 the uniqueness for the continuity equation, the unique solution \(\rho _t\) is the one constructed in Lemma <a href='#x21-27001r1'>5.1.1<!-- tex4ht:ref: lemma:continuity_eqn  --></a>,
 namely \(\rho _t = (\mathbf {X}(t))_\sharp \mu \). In particular, \(\mathbf {X}(1)_\sharp \mu = \nu \), which implies that \(\mathbf {X}(1,\mathbf {x})\) is a transport map from \(\mu \) to \(\nu \). Then by the definition of \(\mathbf {X}\) and
 Holder inequality, we get \begin {align}  A[\rho _t, v_t] &amp;= \int _0^1 \int _{\Omega } \|\mathbf {v}_t(\mathbf {x})\|_2^2 \rho _t(\mathbf {x}) \, \dx \dt \nonumber \\ &amp;= \int _0^1 \int _{\Omega } \|\mathbf {v}_t(\mathbf {X}(t,\mathbf {x}))\|_2^2 \ \mu (\mathbf {x}) \, \dx \dt = \int _{\Omega } \left [ \int _0^1 \|\dot {\mathbf {X}}(t,\mathbf {x})\|_2^2 \ \mu (\mathbf {x}) \, \dt \right ] \dx \\ &amp;= \int _{\Omega } \mu (\mathbf {x}) \int _0^1 \|\dot {\mathbf {X}}(t,\mathbf {x})\|_2^2 \ \dt \ \dx \geq \int _{\Omega } \mu (\mathbf {x}) \left (\int _0^1 \dot {\mathbf {X}}(t,\mathbf {x}) \, \dt \right )^2 \, \dx \nonumber \\ &amp;= \int _{\Omega } |\mathbf {X}(1,\mathbf {x}) - \mathbf {x}|^2 \mu (\mathbf {x})\, \dx \geq W^2_2(\mu , \nu ). \nonumber  \end {align}
-</p><!-- l. 2168 --><p class='indent'>    Hence, this proves that \(W^2_2(\mu , \nu )\) is always less than or equal to the infimum appearing in the statement.
-</p><!-- l. 2170 --><p class='indent'>    On the other hand, take \( \mathbf {X}(t,\mathbf {x}) = \mathbf {x} + t(\mathbf {T}(\mathbf {x}) - \mathbf {x}) \), where \( \mathbf {T} \) is the optimal Monge map from \( \mu \) to \( \nu \), set \( \rho _t := (\mathbf {X}_t)_\sharp \mu \) and let \( \mathbf {v}_t \) be such that \( \dot {\mathbf {X}} = \mathbf {v}_t \circ \mathbf {X}_t \).
+</p><!-- l. 2103 --><p class='indent'>    Hence, this proves that \(W^2_2(\mu , \nu )\) is always less than or equal to the infimum appearing in the statement.
+</p><!-- l. 2105 --><p class='indent'>    On the other hand, take \( \mathbf {X}(t,\mathbf {x}) = \mathbf {x} + t(\mathbf {T}(\mathbf {x}) - \mathbf {x}) \), where \( \mathbf {T} \) is the optimal Monge map from \( \mu \) to \( \nu \), set \( \rho _t := (\mathbf {X}_t)_\sharp \mu \) and let \( \mathbf {v}_t \) be such that \( \dot {\mathbf {X}} = \mathbf {v}_t \circ \mathbf {X}_t \).
 With this choice we have \( \dot {\mathbf {X}}(t,\mathbf {x}) = \mathbf {T}(\mathbf {x}) - \mathbf {x} = \mathbf {v}_t(\mathbf {X}(t,\mathbf {x})) \), and looking at the computations above one can easily check that all
 inequalities in (4.2) become equalities, therefore we have \[ \inf A[\rho _t, v_t] \le A[\rho _t, v_t] = W_2^2(\mu ,\nu ). \] Finally we have \[ \inf A[\rho _t, v_t] = W^2_2(\mu , \nu ). \] The equivalence is
 obtained.                                                                                                                       □
 </p>
     </div>
 
-<!-- l. 2182 --><p class='indent'>    The proof of the Benamou-Brenier theorem indeed provides an explicit relation between the optimal
+<!-- l. 2117 --><p class='indent'>    The proof of the Benamou-Brenier theorem indeed provides an explicit relation between the optimal
 Monge map \(\mathbf {T}^*(\mathbf {x})\) and the optimal \((\rho ^*, \mathbf {v}^*)\).
 </p>
     <div class='newtheorem'>
-<!-- l. 2183 --><p class='noindent'><span class='head'>
+<!-- l. 2118 --><p class='noindent'><span class='head'>
 <a id='x21-27004r4'></a>
 <span class='cmbx-10x-x-109'>Corollary 5.1.4.</span>  </span><span class='cmti-10x-x-109'>Let</span> \(\mathbf {T}^*\) <span class='cmti-10x-x-109'>be the optimal Monge map from</span> \(\mu \) <span class='cmti-10x-x-109'>to</span> \(\nu \)<span class='cmti-10x-x-109'>, then the optimal solution</span> \((\rho ^*, v^*)\) <span class='cmti-10x-x-109'>of the dynamical OT
 (</span><span class='eqref-fixed' title='eqn:dynamicalOT'>5.5</span><span class='cmti-10x-x-109'>) can be constructed as below: Take</span> \(\mathbf {X}(t,\mathbf {x}) = (1-t)\mathbf {x}+t\mathbf {T}^*(\mathbf {x})\)<span class='cmti-10x-x-109'>, then </span>\begin {align*}  \rho ^*(t,\mathbf {x})=(\mathbf {X}_t)_{\sharp }\mu , \quad \mathbf {v}^*(t,\mathbf {x}) = \dot {\mathbf {X}}\circ (\mathbf {X}_t^{-1}) = (\mathbf {T}^*-\mathrm {Id})\circ \mathbf {X}_t^{-1} = \mathbf {T}^*(\mathbf {X}_t^{-1}(\mathbf {x})) - \mathbf {X}_t^{-1}(\mathbf {x}).  \end {align*}
-</p><!-- l. 2188 --><p class='indent'>    <span class='cmti-10x-x-109'>Reversely, given the optimal solution</span> \((\rho ^*, \mathbf {v}^*)\) <span class='cmti-10x-x-109'>of the dynamical OT (</span><span class='eqref-fixed' title='eqn:dynamicalOT'>5.5</span><span class='cmti-10x-x-109'>), the optimal Monge map</span> \(\mathbf {T}^*\) <span class='cmti-10x-x-109'>can be
+</p><!-- l. 2123 --><p class='indent'>    <span class='cmti-10x-x-109'>Reversely, given the optimal solution</span> \((\rho ^*, \mathbf {v}^*)\) <span class='cmti-10x-x-109'>of the dynamical OT (</span><span class='eqref-fixed' title='eqn:dynamicalOT'>5.5</span><span class='cmti-10x-x-109'>), the optimal Monge map</span> \(\mathbf {T}^*\) <span class='cmti-10x-x-109'>can be
 constructed as follows: </span>\begin {align*}  \mathbf {T}^*(\mathbf {x}) = \mathbf {x} + \mathbf {v}^*_t(\mathbf {X}(t,\mathbf {x})) = \mathbf {x} + \mathbf {v}^*_0(\mathbf {X}(0,\mathbf {x})) = \mathbf {x} + \mathbf {v}^*(0,\mathbf {x}).  \end {align*}
 </p>
     </div>
-<!-- l. 2192 --><p class='indent'>
+<!-- l. 2127 --><p class='indent'>
 
 </p>
-    <!-- l. 2199 -->
-<!-- l. 2199 -->
+    <!-- l. 2134 -->
+<!-- l. 2134 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesch5.html">Previous</a>
         <a class="next-link" href="Notesse15.html">Next</a>

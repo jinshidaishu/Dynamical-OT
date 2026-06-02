@@ -174,35 +174,35 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 3333 -->
+      <!-- l. 3268 -->
     <h3 class='sectionHead' id='wasserstein-gradient-flow'><span class='titlemark'>8.1   </span> <a id='x30-430008.1'></a>Wasserstein Gradient Flow</h3>
-<!-- l. 3335 --><p class='noindent'>Optimal transport defines a Riemannian metric structure. Given two tangent vectors \(\frac {\partial \rho }{\partial t_1}\) and \(\frac {\partial \rho }{\partial t_2}\), the inner product
+<!-- l. 3270 --><p class='noindent'>Optimal transport defines a Riemannian metric structure. Given two tangent vectors \(\frac {\partial \rho }{\partial t_1}\) and \(\frac {\partial \rho }{\partial t_2}\), the inner product
 can be defined as: \begin {align} \label {eqn:Wmetric} \left \langle \frac {\partial \rho }{\partial t_1}, \frac {\partial \rho }{\partial t_2} \right \rangle _W = \int \rho \ \langle \nabla u_1, \nabla u_2 \rangle ,  \end {align}
-</p><!-- l. 3339 --><p class='indent'>    where \(u_1\) and \(u_2\) solve \[ -\nabla \cdot (\rho \nabla u_1) = \frac {\partial \rho }{\partial t_1}, \quad -\nabla \cdot (\rho \nabla u_2) = \frac {\partial \rho }{\partial t_2}. \] With this given Riemannian metric, one can define the Wasserstein gradient \(\text {grad}_W\) by
+</p><!-- l. 3274 --><p class='indent'>    where \(u_1\) and \(u_2\) solve \[ -\nabla \cdot (\rho \nabla u_1) = \frac {\partial \rho }{\partial t_1}, \quad -\nabla \cdot (\rho \nabla u_2) = \frac {\partial \rho }{\partial t_2}. \] With this given Riemannian metric, one can define the Wasserstein gradient \(\text {grad}_W\) by
 \begin {align} \label {eqn:Wgrad} \left \langle \text {grad}_W F(\rho ), \frac {\partial \rho }{\partial t} \right \rangle _W = \left \langle \frac {\delta F(\rho )}{\delta \rho }, \frac {\partial \rho }{\partial t} \right \rangle _{L^2},  \end {align}
-</p><!-- l. 3349 --><p class='indent'>    in which \( \frac {\delta F(\rho )}{\delta \rho }\) is the \(L^2\)-gradient of \(F(\rho )\).
+</p><!-- l. 3284 --><p class='indent'>    in which \( \frac {\delta F(\rho )}{\delta \rho }\) is the \(L^2\)-gradient of \(F(\rho )\).
 </p>
     <div class='newtheorem'>
-<!-- l. 3351 --><p class='noindent'><span class='head'>
+<!-- l. 3286 --><p class='noindent'><span class='head'>
 <a id='x30-43001r1'></a>
 <span class='cmbx-10x-x-109'>Lemma 8.1.1.</span>  </span><span class='cmti-10x-x-109'>Wasserstein gradient has an explicit expression </span>\[ \mathrm {grad}_W F(\rho ) = -\nabla \cdot \left ( \rho \nabla \frac {\delta F}{\delta \rho } \right ). \]
 </p>
     </div>
-<!-- l. 3356 --><p class='indent'>
+<!-- l. 3291 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 3358 --><p class='indent'>    <span class='head'>
+<!-- l. 3293 --><p class='indent'>    <span class='head'>
 
 <span class='cmti-10x-x-109'>Proof.</span> </span>By definitions (<span class='eqref-fixed' title='eqn:Wmetric'>8.1</span>) and (<span class='eqref-fixed' title='eqn:Wgrad'>8.2</span>), we take any tangent (test) vector \(\frac {\partial \rho }{\partial t}\) and assume \(\frac {\partial \rho }{\partial t} = -\nabla \cdot (\rho \nabla u)\), and assume \(\text {grad}_W F(\rho )\), as a
 tangent vector, satisfies \(\text {grad}_W F(\rho ) = -\nabla \cdot (\rho \nabla \phi )\). Then \begin {align*}  \left \langle \text {grad}_W F(\rho ), \frac {\partial \rho }{\partial t} \right \rangle _W &amp; = \left \langle -\nabla \cdot (\rho \nabla \phi ), -\nabla \cdot (\rho \nabla u)\right \rangle _W \\ &amp; = \left \langle \rho \nabla \phi , \nabla u \right \rangle _{L^2}.  \end {align*}
-</p><!-- l. 3364 --><p class='indent'>    On the other hand, \begin {align*}  \left \langle \frac {\delta F(\rho )}{\delta \rho }, \frac {\partial \rho }{\partial t} \right \rangle _{L^2} &amp; = \left \langle \frac {\delta F(\rho )}{\delta \rho }, -\nabla \cdot (\rho \nabla u)\right \rangle _{L^2} \\ &amp; = \left \langle \nabla \frac {\delta F(\rho )}{\delta \rho }, \rho \nabla u \right \rangle _{L^2}.  \end {align*}
-</p><!-- l. 3370 --><p class='indent'>    By the definition (<span class='eqref-fixed' title='eqn:Wgrad'>8.2</span>), we have \[ \left \langle \rho \nabla \phi , \nabla u \right \rangle _{L^2} = \left \langle \nabla \frac {\delta F(\rho )}{\delta \rho }, \rho \nabla u \right \rangle _{L^2}, \] which implies \( \phi = \frac {\delta F(\rho )}{\delta \rho } \). Inserting it back to \(\text {grad}_W F(\rho ) = -\nabla \cdot (\rho \nabla \phi )\), we have \[ \text {grad}_W F(\rho ) = -\nabla \cdot \left ( \rho \nabla \frac {\delta F}{\delta \rho } \right ). \] Finally the corresponding
+</p><!-- l. 3299 --><p class='indent'>    On the other hand, \begin {align*}  \left \langle \frac {\delta F(\rho )}{\delta \rho }, \frac {\partial \rho }{\partial t} \right \rangle _{L^2} &amp; = \left \langle \frac {\delta F(\rho )}{\delta \rho }, -\nabla \cdot (\rho \nabla u)\right \rangle _{L^2} \\ &amp; = \left \langle \nabla \frac {\delta F(\rho )}{\delta \rho }, \rho \nabla u \right \rangle _{L^2}.  \end {align*}
+</p><!-- l. 3305 --><p class='indent'>    By the definition (<span class='eqref-fixed' title='eqn:Wgrad'>8.2</span>), we have \[ \left \langle \rho \nabla \phi , \nabla u \right \rangle _{L^2} = \left \langle \nabla \frac {\delta F(\rho )}{\delta \rho }, \rho \nabla u \right \rangle _{L^2}, \] which implies \( \phi = \frac {\delta F(\rho )}{\delta \rho } \). Inserting it back to \(\text {grad}_W F(\rho ) = -\nabla \cdot (\rho \nabla \phi )\), we have \[ \text {grad}_W F(\rho ) = -\nabla \cdot \left ( \rho \nabla \frac {\delta F}{\delta \rho } \right ). \] Finally the corresponding
 Wasserstein gradient flow of \(F(\rho )\) reads \[ \frac {\partial \rho }{\partial t} = - \text {grad}_W F(\rho ) = \nabla \cdot \left ( \rho \nabla \frac {\delta F}{\delta \rho } \right ). \]                                                                                    □
 </p>
     </div>
 
-    <!-- l. 3399 -->
-<!-- l. 3399 -->
+    <!-- l. 3334 -->
+<!-- l. 3334 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesch8.html">Previous</a>
         <a class="next-link" href="Notesse21.html">Next</a>

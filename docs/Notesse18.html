@@ -174,37 +174,37 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 3033 -->
+      <!-- l. 2968 -->
     <h3 class='sectionHead' id='jko-scheme'><span class='titlemark'>5.5   </span> <a id='x25-350005.5'></a>Implicit Scheme of Wasserstein Gradient Flow: JKO Scheme</h3>
-<!-- l. 3037 --><p class='noindent'>
+<!-- l. 2972 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='jko-flow-implict-euler-scheme-in-wasserstein-metric'><span class='titlemark'>5.5.1   </span> <a id='x25-360005.5.1'></a>JKO Flow: Implict Euler Scheme in Wasserstein Metric</h4>
-<!-- l. 3039 --><p class='noindent'>The JKO scheme is the implicit Euler method in the Wasserstein metric. The key idea is that the optimality
+<!-- l. 2974 --><p class='noindent'>The JKO scheme is the implicit Euler method in the Wasserstein metric. The key idea is that the optimality
 condition of one JKO step gives a discrete velocity field, and when the time step \(\tau \to 0\), this discrete velocity
 converges to the continuous Wasserstein steepest descent velocity. The corresponding density evolution is
 then obtained from the continuity equation.
-</p><!-- l. 3048 --><p class='indent'>    Let \(F[\rho ]\) be an energy on \(\Ptwo \). One JKO step with time step \(\tau &gt;0\) is \begin {align} \label {eq:JKO} \rho ^{n+1}\in \operatorname *{argmin}_{\rho \in \Ptwo } \left \{F[\rho ] + \frac {1}{2\tau }\W ^2(\rho ,\rho ^n)\right \}.  \end {align}
-</p><!-- l. 3054 --><p class='indent'>    This is the Wasserstein analogue of the Euclidean implicit Euler minimization \[ x^{n+1}\in \operatorname *{argmin}_{x\in \R ^d} \left \{E(x)+\frac {1}{2\tau }\|x-x^n\|^2\right \}. \]
-</p><!-- l. 3060 --><p class='indent'>    In Euclidean space, the Euler–Lagrange condition is \[ 0 = \nabla E(x^{n+1}) + \frac {1}{\tau }(x^{n+1}-x^n). \] The Wasserstein version has exactly the same
+</p><!-- l. 2983 --><p class='indent'>    Let \(F[\rho ]\) be an energy on \(\Ptwo \). One JKO step with time step \(\tau &gt;0\) is \begin {align} \label {eq:JKO} \rho ^{n+1}\in \operatorname *{argmin}_{\rho \in \Ptwo } \left \{F[\rho ] + \frac {1}{2\tau }\W ^2(\rho ,\rho ^n)\right \}.  \end {align}
+</p><!-- l. 2989 --><p class='indent'>    This is the Wasserstein analogue of the Euclidean implicit Euler minimization \[ x^{n+1}\in \operatorname *{argmin}_{x\in \R ^d} \left \{E(x)+\frac {1}{2\tau }\|x-x^n\|^2\right \}. \]
+</p><!-- l. 2995 --><p class='indent'>    In Euclidean space, the Euler–Lagrange condition is \[ 0 = \nabla E(x^{n+1}) + \frac {1}{\tau }(x^{n+1}-x^n). \] The Wasserstein version has exactly the same
 structure, but now the “distance term” must be interpreted through optimal transport.
-</p><!-- l. 3069 --><p class='indent'>    Assume we are in the smooth regime where \(\rho ^{n+1}\) is absolutely continuous, the optimal transport map \(T_{\rho ^{n+1}\to \rho ^n}\)
+</p><!-- l. 3004 --><p class='indent'>    Assume we are in the smooth regime where \(\rho ^{n+1}\) is absolutely continuous, the optimal transport map \(T_{\rho ^{n+1}\to \rho ^n}\)
 exists, and the energy \(F\) has a smooth first variation \(\deldrho {F}\). Now we derive the Wasserstein gradient
 dynamics.
-</p><!-- l. 3071 --><p class='indent'>    <span class='cmbx-10x-x-109'>Step I. </span><span class='underline'><span class='cmti-10x-x-109'>Wasserstein Euler-Lagrange Equation</span></span>: The Wasserstein gradient of \(F\) is \[ \gradw F(\rho ^{n+1}) = \nabla \!\left (\deldrho {F}(\rho ^{n+1})\right ), \] and the gradient of \(\frac 12 \W ^2(\cdot ,\rho ^n)\) at \(\rho ^{n+1}\)
+</p><!-- l. 3006 --><p class='indent'>    <span class='cmbx-10x-x-109'>Step I. </span><span class='underline'><span class='cmti-10x-x-109'>Wasserstein Euler-Lagrange Equation</span></span>: The Wasserstein gradient of \(F\) is \[ \gradw F(\rho ^{n+1}) = \nabla \!\left (\deldrho {F}(\rho ^{n+1})\right ), \] and the gradient of \(\frac 12 \W ^2(\cdot ,\rho ^n)\) at \(\rho ^{n+1}\)
 is \[ \id - T_{\rho ^{n+1}\to \rho ^n}. \] Therefore the first-order optimality condition for (<a href='Notesse17.html#x24-34015r5'>5.5<!-- tex4ht:ref: eq:JKO  --></a>) becomes \begin {equation}  0 = \gradw F(\rho ^{n+1}) + \frac {1}{\tau }\bigl (\id - T_{\rho ^{n+1}\to \rho ^n}\bigr ). \label {eq:EL-W}  \end {equation}<a id='x25-36001r7'></a> Equivalently, \begin {equation}  \frac {1}{\tau }\bigl (T_{\rho ^{n+1}\to \rho ^n}-\id \bigr )=\gradw F(\rho ^{n+1}). \label {eq:discrete-velocity1}  \end {equation}<a id='x25-36002r8'></a> Using the scalar first
 variation, this can also be written as \begin {equation}  \frac {1}{\tau }\bigl (\id -T_{\rho ^{n+1}\to \rho ^n}\bigr ) = -\nabla \!\left (\deldrho {F}(\rho ^{n+1})\right ). \label {eq:discrete-velocity2}  \end {equation}<a id='x25-36003r9'></a>
-</p><!-- l. 3096 --><p class='indent'>    The quantity \begin {align} \label {eqn:forward_velocity} \bv ^{n+1} := \frac {1}{\tau }\bigl (\id -T_{\rho ^{n+1}\to \rho ^n}\bigr )  \end {align}
-</p><!-- l. 3100 --><p class='indent'>    is the discrete forward velocity. Formula (<a href='#x25-36003r9'>5.9<!-- tex4ht:ref: eq:discrete-velocity2  --></a>) says that it is exactly the negative Wasserstein gradient of
+</p><!-- l. 3031 --><p class='indent'>    The quantity \begin {align} \label {eqn:forward_velocity} \bv ^{n+1} := \frac {1}{\tau }\bigl (\id -T_{\rho ^{n+1}\to \rho ^n}\bigr )  \end {align}
+</p><!-- l. 3035 --><p class='indent'>    is the discrete forward velocity. Formula (<a href='#x25-36003r9'>5.9<!-- tex4ht:ref: eq:discrete-velocity2  --></a>) says that it is exactly the negative Wasserstein gradient of
 the energy at the new time level.
-</p><!-- l. 3103 --><p class='indent'>    <span class='cmbx-10x-x-109'>Step II. </span><span class='underline'><span class='cmti-10x-x-109'>Weak Discrete Density Evolution Equation</span></span>: Because \((T_{\rho ^{n+1}\to \rho ^n})_{\#}\rho ^{n+1}=\rho ^n\), for every smooth test function \(\psi \) we have \begin {equation}  \int _{\R ^d} \psi (y)\,\rho ^n(\dd \by ) = \int _{\R ^d} \psi \bigl (T_{\rho ^{n+1}\to \rho ^n}(x)\bigr )\,\rho ^{n+1}(\dd \bx ). \label {eq:pushforward-test}  \end {equation}<a id='x25-36004r10'></a>
+</p><!-- l. 3038 --><p class='indent'>    <span class='cmbx-10x-x-109'>Step II. </span><span class='underline'><span class='cmti-10x-x-109'>Weak Discrete Density Evolution Equation</span></span>: Because \((T_{\rho ^{n+1}\to \rho ^n})_{\#}\rho ^{n+1}=\rho ^n\), for every smooth test function \(\psi \) we have \begin {equation}  \int _{\R ^d} \psi (y)\,\rho ^n(\dd \by ) = \int _{\R ^d} \psi \bigl (T_{\rho ^{n+1}\to \rho ^n}(x)\bigr )\,\rho ^{n+1}(\dd \bx ). \label {eq:pushforward-test}  \end {equation}<a id='x25-36004r10'></a>
 Subtracting \(\int \psi \,\dd \rho ^{n+1}\) from both sides and dividing by \(\tau \) gives \begin {equation}  \frac {1}{\tau }\left (\int \psi \,\dd \rho ^{n+1}-\int \psi \,\dd \rho ^n\right ) = \frac {1}{\tau }\int \Bigl (\psi (\bx )-\psi (T_{\rho ^{n+1}\to \rho ^n}(\bx ))\Bigr )\,\rho ^{n+1}(\dd \bx ). \label {eq:weak-discrete}  \end {equation}<a id='x25-36005r11'></a>
-</p><!-- l. 3118 --><p class='indent'>    Now use a first-order Taylor expansion: \[ \psi (T(\bx )) \approx \psi (\bx )+\nabla \psi (\bx )\cdot (T(\bx )-\bx ), \] where \(T=T_{\rho ^{n+1}\to \rho ^n}\). Then the right-hand side of (<a href='#x25-36005r11'>5.11<!-- tex4ht:ref: eq:weak-discrete  --></a>) becomes \begin {equation}  -\int _{\R ^d} \nabla \psi (\bx )\cdot \frac {T(\bx )-\bx }{\tau }\,\rho ^{n+1}(\dd \bx ). \label {eq:taylor-step}  \end {equation}<a id='x25-36006r12'></a> Using (<a href='#x25-36002r8'>5.8<!-- tex4ht:ref: eq:discrete-velocity1  --></a>),
+</p><!-- l. 3053 --><p class='indent'>    Now use a first-order Taylor expansion: \[ \psi (T(\bx )) \approx \psi (\bx )+\nabla \psi (\bx )\cdot (T(\bx )-\bx ), \] where \(T=T_{\rho ^{n+1}\to \rho ^n}\). Then the right-hand side of (<a href='#x25-36005r11'>5.11<!-- tex4ht:ref: eq:weak-discrete  --></a>) becomes \begin {equation}  -\int _{\R ^d} \nabla \psi (\bx )\cdot \frac {T(\bx )-\bx }{\tau }\,\rho ^{n+1}(\dd \bx ). \label {eq:taylor-step}  \end {equation}<a id='x25-36006r12'></a> Using (<a href='#x25-36002r8'>5.8<!-- tex4ht:ref: eq:discrete-velocity1  --></a>),
 we obtain the discrete weak form \begin {align}  \frac {1}{\tau }\left (\int \psi \,\dd \rho ^{n+1}-\int \psi \,\dd \rho ^n\right ) &amp;\approx -\int _{\R ^d} \nabla \psi (\bx )\cdot \gradw F(\rho ^{n+1})(\bx )\,\rho ^{n+1}(\dd \bx ). \notag \\ &amp;= -\int _{\R ^d} \nabla \psi (x)\cdot \nabla \!\left (\deldrho {F}(\rho ^{n+1})(x)\right )\,\rho ^{n+1}(\dd \bx ). \label {eq:weak-discrete-3}  \end {align}
-</p><!-- l. 3137 --><p class='indent'>    <span class='cmbx-10x-x-109'>Step III. </span><span class='underline'><span class='cmti-10x-x-109'>Pass the Limit</span></span>: If \(\rho ^{n+1}\approx \rho (t+\tau )\) and \(\rho ^n\approx \rho (t)\), then as \(\tau \to 0\) the left-hand side of (<span class='eqref-fixed' title='eq:weak-discrete-3'>5.55</span>) converges formally to \[ \frac {\dd }{\dd t}\int _{\R ^d} \psi (x)\,\rho _t(\dd \bx ). \] Hence the
+</p><!-- l. 3072 --><p class='indent'>    <span class='cmbx-10x-x-109'>Step III. </span><span class='underline'><span class='cmti-10x-x-109'>Pass the Limit</span></span>: If \(\rho ^{n+1}\approx \rho (t+\tau )\) and \(\rho ^n\approx \rho (t)\), then as \(\tau \to 0\) the left-hand side of (<span class='eqref-fixed' title='eq:weak-discrete-3'>5.55</span>) converges formally to \[ \frac {\dd }{\dd t}\int _{\R ^d} \psi (x)\,\rho _t(\dd \bx ). \] Hence the
 limiting weak equation is \begin {equation}  \frac {\dd }{\dd t}\int _{\R ^d} \psi (\bx )\,\rho _t(\dd \bx ) = -\int _{\R ^d} \nabla \psi (\bx )\cdot \nabla \!\left (\deldrho {F}(\rho _t)\right )\,\rho _t(\dd \bx ) = \int _{\R ^d} \psi (\bx ) \nabla \cdot \left (\rho _t \nabla \!\left (\deldrho {F}(\rho _t)\right )\right )\, \dd \bx \label {eq:weak-limit}  \end {equation}<a id='x25-36007r13'></a> This is exactly the weak form of the continuity equation \begin {equation}  \partial _t\rho _t + \nabla \cdot (\rho _t \bv _t)=0, \qquad \bv _t = -\gradw F(\rho _t). \label {eq:CE-GF}  \end {equation}<a id='x25-36008r14'></a> Since \(\gradw F(\rho _t)=\nabla \bigl (\deldrho {F}(\rho _t)\bigr )\), the PDE becomes
 \begin {align}  \boxed { \partial _t\rho _t = \nabla \cdot \left (\rho _t\,\nabla \!\left (\deldrho {F}(\rho _t)\right )\right ). } \label {eq:GF-PDE}  \end {align}
 
-</p><!-- l. 3168 --><p class='indent'>    In summary, the JKO step is an implicit Euler minimization in the Wasserstein metric such
+</p><!-- l. 3103 --><p class='indent'>    In summary, the JKO step is an implicit Euler minimization in the Wasserstein metric such
 that
      </p><ol class='enumerate1'>
 <li class='enumerate' id='x25-36010x1'>Its Euler–Lagrange condition gives a discrete velocity field through the optimal transport map.
@@ -213,21 +213,21 @@ that
      the density.
      </li>
 <li class='enumerate' id='x25-36014x3'>Letting \(\tau \to 0\) yields the continuous Wasserstein gradient flow PDE (<span class='eqref-fixed' title='eq:GF-PDE'>5.58</span>).</li></ol>
-<!-- l. 3175 --><p class='indent'>    So the JKO scheme is not merely an optimization algorithm. It is the time-discretized variational form of
+<!-- l. 3110 --><p class='indent'>    So the JKO scheme is not merely an optimization algorithm. It is the time-discretized variational form of
 the PDE \[ \partial _t\rho _t = \nabla \cdot \left (\rho _t\,\nabla \!\left (\deldrho {F}(\rho _t)\right )\right ), \] which is the Wasserstein steepest descent flow of the energy \(F\).
 </p>
     <div class='newtheorem'>
-<!-- l. 3181 --><p class='noindent'><span class='head'>
+<!-- l. 3116 --><p class='noindent'><span class='head'>
 <a id='x25-36015r1'></a>
 <span class='cmbx-10x-x-109'>Summary 5.5.1 </span>(JKO scheme: a dictionary between discrete and continuous gradient flow)<span class='cmbx-10x-x-109'>.</span>  </span>\[ \begin {aligned} \text {JKO minimization} &amp;\Longrightarrow \text {discrete Euler--Lagrange condition}\\ &amp;\Longrightarrow \text {discrete velocity field}\\ &amp;\Longrightarrow \text {continuity equation}\\ &amp;\Longrightarrow \text {gradient flow PDE.} \end {aligned} \]
 <span class='cmti-10x-x-109'>In short, the optimal transport map in one JKO step encodes the discrete motion of mass, and in the
 small time-step limit this becomes the continuous Wasserstein gradient flow.</span>
 </p>
     </div>
-<!-- l. 3192 --><p class='indent'>
+<!-- l. 3127 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 3195 --><p class='noindent'><span class='head'>
+<!-- l. 3130 --><p class='noindent'><span class='head'>
 <a id='x25-36016r2'></a>
 <span class='cmbx-10x-x-109'>Remark 5.5.2.</span>  </span><span class='cmti-10x-x-109'>One point that may confuse the reader is the fact that </span>(<span class='eqref-fixed' title='eqn:forward_velocity'>5.51</span>) <span class='cmti-10x-x-109'>is the forward velocity,
 rather than backward velocity. Let</span> \(T=T_{\rho ^{n+1}\to \rho ^n}\) <span class='cmti-10x-x-109'>such that</span> \(T_{\sharp }\rho ^{n+1} = \rho ^n\)<span class='cmti-10x-x-109'>. So</span> \(T(\bx )\) <span class='cmti-10x-x-109'>is the </span><span class='cmbx-10x-x-109'>old location </span><span class='cmti-10x-x-109'>of the particle that is currently
@@ -238,51 +238,51 @@ that “the forward velocity equals minus the Wasserstein gradient”, this is p
 descent flow should do.</span>
 </p>
     </div>
-<!-- l. 3197 --><p class='indent'>
-</p><!-- l. 3204 --><p class='noindent'>
+<!-- l. 3132 --><p class='indent'>
+</p><!-- l. 3139 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='jko-scheme-in-dynamical-form'><span class='titlemark'>5.5.2   </span> <a id='x25-370005.5.2'></a>JKO Scheme in Dynamical Form</h4>
-<!-- l. 3207 --><p class='noindent'>Using the Benamou-Brenier theorem, we can convert the JKO flow (<a href='Notesse17.html#x24-34015r5'>5.5<!-- tex4ht:ref: eq:JKO  --></a>) as a dynamical form, which is called
+<!-- l. 3142 --><p class='noindent'>Using the Benamou-Brenier theorem, we can convert the JKO flow (<a href='Notesse17.html#x24-34015r5'>5.5<!-- tex4ht:ref: eq:JKO  --></a>) as a dynamical form, which is called
 dynamical JKO flow <span class='cite'>[<a href='Notesli2.html#Xcarrillo2022primal'>7</a>]</span>: \begin {equation} \label {eqn:JKO02} \begin {aligned} &amp; \min _{(\rho ,\mathbf {v})}\ \int _0^1\int _{\Omega } \rho \|\mathbf {v}\|^2 \ \dx \dt + 2\tau F[\rho (1,\cdot )], \\ \text {s.t.} \quad &amp; \partial _t\rho = -\nabla \cdot (\rho \mathbf {v}),\ \rho (0,\mathbf {x})=\rho _{\tau }^{(n)},\ \ \mathbf {v}\cdot \mathbf {n}|_{\partial \Omega } = 0. \end {aligned}  \end {equation}<a id='x25-37001r15'></a> Solving this dynamical JKO flow (<a href='#x25-37001r15'>5.15<!-- tex4ht:ref: eqn:JKO02  --></a>) and set \(\rho _{\tau }^{(n+1)}:=\rho ^{\mathrm {opt}}(1,\cdot )\) yields the update of the JKO
 scheme (<a href='Notesse17.html#x24-34015r5'>5.5<!-- tex4ht:ref: eq:JKO  --></a>).
-</p><!-- l. 3216 --><p class='indent'>    Later in the lecture notes, we will develop primal-dual based numerical methods for the dynamical OT
+</p><!-- l. 3151 --><p class='indent'>    Later in the lecture notes, we will develop primal-dual based numerical methods for the dynamical OT
 (<span class='eqref-fixed' title='eqn:dynamicalOT'>5.5</span>) and the dynamical JKO flow problem (<a href='#x25-37001r15'>5.15<!-- tex4ht:ref: eqn:JKO02  --></a>).
-</p><!-- l. 3222 --><p class='noindent'>
+</p><!-- l. 3157 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='jko-scheme-in-finite-dimensional-case'><span class='titlemark'>5.5.3   </span> <a id='x25-380005.5.3'></a>JKO Scheme in Finite Dimensional Case</h4>
-<!-- l. 3224 --><p class='noindent'>Indeed, we also have a discrete version of the JKO flow that corresponds to dynamical JKO flow. Let \(f[\mathbf {p}]\) be a
+<!-- l. 3159 --><p class='noindent'>Indeed, we also have a discrete version of the JKO flow that corresponds to dynamical JKO flow. Let \(f[\mathbf {p}]\) be a
 discretization of \(F[\rho ]\), and use entropy regularized OT (<span class='eqref-fixed' title='eqn:OT_entropic'>3.2</span>) to replace the original Wasserstein metric, then we
 have a entropy regularized discrete JKO flow: \begin {align} \label {eqn:JKO_entropy} \mathbf {p}_{\tau }^{(n+1)} = \text {prox}_{\tau f}^{W_{\epsilon }}\left (\mathbf {p}_{\tau }^{(n)}\right ): = \underset {\mathbf {p}\in \Sigma _N}{\mathrm {argmin}} \ W_{\epsilon }(\mathbf {p},\mathbf {p}_{\tau }^{(n)}) + \tau f[\mathbf {p}].  \end {align}
-</p><!-- l. 3228 --><p class='indent'>    Here \(\mathbf {C} = (d(\mathbf {x}_i,\mathbf {y}_j)^2)_{ij}\) so that \(L_{\mathbf {C}}^{\epsilon }\) is an approximation of \(W_2^2\). However, in broader applications, cost matrix \(\mathbf {C}\) can be of other
+</p><!-- l. 3163 --><p class='indent'>    Here \(\mathbf {C} = (d(\mathbf {x}_i,\mathbf {y}_j)^2)_{ij}\) so that \(L_{\mathbf {C}}^{\epsilon }\) is an approximation of \(W_2^2\). However, in broader applications, cost matrix \(\mathbf {C}\) can be of other
 forms. The update \(\mathbf {p}_{\tau }^{(n)} \to \mathbf {p}_{\tau }^{(n+1)}\) in (<span class='eqref-fixed' title='eqn:JKO_entropy'>5.60</span>) can be achieved by the following calculation:
 </p>
     <div class='newtheorem'>
-<!-- l. 3229 --><p class='noindent'><span class='head'>
+<!-- l. 3164 --><p class='noindent'><span class='head'>
 <a id='x25-38001r3'></a>
 <span class='cmbx-10x-x-109'>Lemma 5.5.3.</span>  </span><span class='cmti-10x-x-109'>The update of the discrete JKO scheme (</span><span class='eqref-fixed' title='eqn:JKO_entropy'>5.60</span><span class='cmti-10x-x-109'>) can be achieved by solving the following strictly
 convex optimization problem: </span>\begin {align} \label {eqn:discreteJKO_step1} \min _{\mathbf {P}} \ \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {P}\mathbb {1}) + \iota _{\{\mathbf {P}:\mathbf {P}^{\mathrm {T}}\mathbb {1}=\mathbf {p}_{\tau }^{(n)}\}}(\mathbf {P}),  \end {align}
-</p><!-- l. 3234 --><p class='indent'>    <span class='cmti-10x-x-109'>and then with the optimal solution</span> \(\mathbf {P}^*\) <span class='cmti-10x-x-109'>calculated, we obtain</span> \(\mathbf {p}_{\tau }^{(n+1)}\) <span class='cmti-10x-x-109'>as </span>\begin {align}  \mathbf {p}_{\tau }^{(n+1)} = \mathbf {P}^*\mathbb {1}.  \end {align}
+</p><!-- l. 3169 --><p class='indent'>    <span class='cmti-10x-x-109'>and then with the optimal solution</span> \(\mathbf {P}^*\) <span class='cmti-10x-x-109'>calculated, we obtain</span> \(\mathbf {p}_{\tau }^{(n+1)}\) <span class='cmti-10x-x-109'>as </span>\begin {align}  \mathbf {p}_{\tau }^{(n+1)} = \mathbf {P}^*\mathbb {1}.  \end {align}
 </p>
     </div>
 
-<!-- l. 3238 --><p class='indent'>
+<!-- l. 3173 --><p class='indent'>
 </p>
     <div class='proof'>
-<!-- l. 3241 --><p class='indent'>    <span class='head'>
+<!-- l. 3176 --><p class='indent'>    <span class='head'>
 <span class='cmti-10x-x-109'>Proof.</span> </span>The entropic JKO flow is indeed a bilevel minimization problem: \begin {align*}  &amp;\min _{\mathbf {p}\in \Sigma _N} W_{\epsilon }(\mathbf {p},\mathbf {p}_{\tau }^{(n)}) + \tau f[\mathbf {p}] \\ =&amp; \min _{\mathbf {p}\in \Sigma _N} \min _{\mathbf {P}\in \mathbf {U}(\mathbf {p},\mathbf {p}_{\tau }^{(n)})} \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {p}) \\ = &amp; \min _{\mathbf {P}\mathbb {1}=\mathbf {p},\ \mathbf {P}^{\text {T}}\mathbb {1}=\mathbf {p}_{\tau }^{(n)}} \min _{\mathbf {p}\in \Sigma _N} \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {p}) \\ = &amp; \min _{\mathbf {P}\mathbb {1}=\mathbf {p},\ \mathbf {P}^{\text {T}}\mathbb {1}=\mathbf {p}_{\tau }^{(n)}} \min _{\mathbf {p}\in \Sigma _N} \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {P}\mathbb {1}).  \end {align*}
-</p><!-- l. 3248 --><p class='indent'>    In the last equation, the outer minimization is over feasible \(\mathbf {P}\) whose column sum is fixed as \(\mathbf {p}_{\tau }^{(n)}\), but the row
+</p><!-- l. 3183 --><p class='indent'>    In the last equation, the outer minimization is over feasible \(\mathbf {P}\) whose column sum is fixed as \(\mathbf {p}_{\tau }^{(n)}\), but the row
 sum is a probability vector \(\mathbf {p}\) which is the feasible point for the inner optimization. Therefore, it can be
 converted into \begin {align*}  \min _{\mathbf {P}} \ \langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {P}\mathbb {1}) + \iota _{\{\mathbf {P}:\mathbf {P}^{\text {T}}\mathbb {1}=\mathbf {p}_{\tau }^{(n)}\}}(\mathbf {P}),  \end {align*}
-</p><!-- l. 3252 --><p class='indent'>    namely, for fixed column sum \(\mathbf {P}^{\text {T}}\mathbb {1} = \mathbf {p}_{\tau }^{(n)}\), we minimize the quantity \(\langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {P}\mathbb {1})\). Whoever \(\mathbf {P}\) minimizes this quantity, its row
+</p><!-- l. 3187 --><p class='indent'>    namely, for fixed column sum \(\mathbf {P}^{\text {T}}\mathbb {1} = \mathbf {p}_{\tau }^{(n)}\), we minimize the quantity \(\langle \mathbf {P}, \mathbf {C} \rangle - \epsilon H(\mathbf {P}) + \tau f(\mathbf {P}\mathbb {1})\). Whoever \(\mathbf {P}\) minimizes this quantity, its row
 sum gives the optimal \(\mathbf {p}\).                                                                                                    □
 </p>
     </div>
-<!-- l. 3255 --><p class='indent'>    Comparing (<span class='eqref-fixed' title='eqn:discreteJKO_step1'>5.61</span>) to the dynamical JKO update (<a href='#x25-37001r15'>5.15<!-- tex4ht:ref: eqn:JKO02  --></a>), one notes that they are very similar with each
+<!-- l. 3190 --><p class='indent'>    Comparing (<span class='eqref-fixed' title='eqn:discreteJKO_step1'>5.61</span>) to the dynamical JKO update (<a href='#x25-37001r15'>5.15<!-- tex4ht:ref: eqn:JKO02  --></a>), one notes that they are very similar with each
 other.
 
 </p>
-    <!-- l. 3275 -->
-<!-- l. 3275 -->
+    <!-- l. 3210 -->
+<!-- l. 3210 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse17.html">Previous</a>
         <a class="next-link" href="Notesch6.html">Next</a>
