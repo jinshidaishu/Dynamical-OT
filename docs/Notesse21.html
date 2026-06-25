@@ -6,7 +6,7 @@
   <title>Transport Hessian Metric | Dynamical Optimal Transport</title>
   <meta name="description" content="Lecture notes on dynamical optimal transport.">
   <link rel="stylesheet" href="Notes.css">
-  <link rel="stylesheet" href="assets/site-20260531.css">
+  <link rel="stylesheet" href="assets/site-20260602.css">
   <script>
     window.MathJax = {
       tex: {
@@ -174,127 +174,127 @@
   </div>
 </nav>
     <main class="site-main">
-      <!-- l. 3334 -->
+      <!-- l. 3396 -->
     <h3 class='sectionHead' id='transport-hessian-metric'><span class='titlemark'>8.2   </span> <a id='x31-440008.2'></a>Transport Hessian Metric</h3>
-<!-- l. 3336 --><p class='noindent'>In this section, we introduce a generalization of the transport metric (or Wasserstein metric). To this end,
+<!-- l. 3398 --><p class='noindent'>In this section, we introduce a generalization of the transport metric (or Wasserstein metric). To this end,
 let us introduce some convenient notations for transport metric. Let \(W_{\rho }\) be the transport metric:
 \begin {align}  W_{\rho }(\sigma _1,\sigma _2) : &amp;= \left \langle (-\Delta _{\rho })^{-1}\sigma _1, \sigma _2 \right \rangle _{L^2} = \left \langle (\sigma _1, (-\Delta _{\rho })^{-1}\sigma _2 \right \rangle _{L^2} = \left \langle (-\Delta _{\rho })^{-\frac {1}{2}}\sigma _1, (-\Delta _{\rho })^{-\frac {1}{2}}\sigma _2 \right \rangle _{L^2} \nonumber \\ &amp;=\left \langle (\Phi _1, (-\Delta _{\rho }\Phi _2) \right \rangle _{L^2} =\left \langle (-\Delta _{\rho })\Phi _1, \Phi _2) \right \rangle _{L^2} = \left \langle \nabla \Phi _1,\nabla \Phi _2 \right \rangle _{L^2_{\rho }} \nonumber \\ &amp;=\left \langle (\Phi _1, \sigma _2) \right \rangle _{L^2} =\left \langle (\sigma _1, \Phi _2) \right \rangle _{L^2},  \end {align}
-</p><!-- l. 3347 --><p class='indent'>    in which \((-\Delta _{\rho })u:= -\nabla \cdot (\rho \nabla u)\), and \(\sigma _j = (-\Delta _{\rho })\Phi _j, j=1,2\).
-</p><!-- l. 3349 --><p class='indent'>    Given an energy functional \(E(\rho )\), now we define transport Hessian metric \(W_{\rho }^{H}(\sigma _1,\sigma _2)\) by the Hessian operator \(\text {Hess}_{W} E(\rho )\) in
+</p><!-- l. 3409 --><p class='indent'>    in which \((-\Delta _{\rho })u:= -\nabla \cdot (\rho \nabla u)\), and \(\sigma _j = (-\Delta _{\rho })\Phi _j, j=1,2\).
+</p><!-- l. 3411 --><p class='indent'>    Given an energy functional \(E(\rho )\), now we define transport Hessian metric \(W_{\rho }^{H}(\sigma _1,\sigma _2)\) by the Hessian operator \(\text {Hess}_{W} E(\rho )\) in
 tangent space \(T_{\rho }M\) (or equivalently Hessian operator \(\text {Hess}_{W}^* E(\rho )\) in co-tangent space \(T_{\rho }^*M\)): \begin {align*}  W_{\rho }^{H}(\sigma _1,\sigma _2) := \text {Hess}_{W}E(\rho )(\sigma _1,\sigma _2) = \text {Hess}_{W}^*E(\rho )(\Phi _1,\Phi _2),  \end {align*}
-</p><!-- l. 3353 --><p class='indent'>    in which Hessian operator \(\text {Hess}_{W} E(\rho )\) in tangent space \(T_{\rho }M\) is defined as \begin {align*}  \text {Hess}_{W}E(\rho )(\sigma _1,\sigma _2) = \int _x\int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)\sigma _1(x)\sigma _2(y) \text {d}y\text {d}x + \int _x \frac {\delta E}{\delta \rho } \Gamma _{\rho }(\sigma _1,\sigma _2) \text {d}x,  \end {align*}
-</p><!-- l. 3357 --><p class='indent'>    and Hessian operator \(\text {Hess}_{W}^* E(\rho )\) in co-tangent space \(T_{\rho }^*M\) is defined as \begin {align*}  \text {Hess}_{W}^*E(\rho )(\Phi _1,\Phi _2) = \int _x\int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,x})\Phi _1(x) (-\Delta _{\rho ,y})\Phi _2(y) \text {d}y\text {d}x + \int _x \nabla _x^2\frac {\delta E}{\delta \rho }(\nabla \Phi _1,\nabla \Phi _2) \rho (x)\text {d}x.  \end {align*}
-</p><!-- l. 3361 --><p class='indent'>    See <span class='cite'>[<a href='Notesli2.html#XLi_JMP2021'>16</a>]</span> for detail. So the explicit formulation of \(W_{\rho }^{H}\) reads: \begin {align}  W_{\rho }^{H}(\sigma _1,\sigma _2) = \int _x\int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,x})\Phi _1(x) (-\Delta _{\rho ,y})\Phi _2(y) \text {d}y\text {d}x + \int _x \nabla _x^2\frac {\delta E}{\delta \rho }(\nabla \Phi _1,\nabla \Phi _2) \rho (x)\text {d}x.  \end {align}
-</p><!-- l. 3366 --><p class='indent'>    Note that \(\nabla _x^2\frac {\delta E}{\delta \rho }(\nabla \Phi _1,\nabla \Phi _2) : = \left (\nabla _x^2\frac {\delta E}{\delta \rho }\nabla \Phi _2\right )\cdot \nabla \Phi _1\), by integration-by-parts, we have \begin {align*}  W_{\rho }^{H}(\sigma _1,\sigma _2) &amp;= \int _x (-\Delta _{\rho ,x})\Phi _1(x) \int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y})\Phi _2(y)\text {d}y\ \text {d}x - \int _x \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta E}{\delta \rho }\nabla _x\Phi _2\right )\Phi _1\ \text {d}x\\ &amp;= \int _x \Phi _1(x) (-\Delta _{\rho ,x}) \int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y})\Phi _2(y)\text {d}y\ \text {d}x - \int _x \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta E}{\delta \rho }\nabla _x\Phi _2\right )\Phi _1\ \text {d}x\\ &amp; = \int _x \left ( \int _y H^E_{\rho }(x,y) \Phi _2(y)\text {d}y \right ) \Phi _1(x) \text {d}x,  \end {align*}
-</p><!-- l. 3372 --><p class='indent'>    in which the bilinear operator \(H^E_{\rho }(x,y)\) is given as \begin {align}  H^E_{\rho }(x,y): = (-\Delta _{\rho ,x}) \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y}) - \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta E}{\delta \rho }\nabla _x\right )\delta (x-y).  \end {align}
-</p><!-- l. 3376 --><p class='indent'>    Furthermore, we can rewrite \(W_{\rho }^H(\sigma _1,\sigma _2)\) as \begin {align}  W_{\rho }^{H}(\sigma _1,\sigma _2) &amp;= \int _x \left ( \int _y H^E_{\rho }(x,y) (-\Delta _{\rho ,y})^{-1}\sigma _2(y)\text {d}y \right ) (-\Delta _{\rho ,x})^{-1}\sigma _1(x) \text {d}x \nonumber \\ &amp; = \int _x \sigma _1(x) (-\Delta _{\rho ,x})^{-1} \left ( \int _y H^E_{\rho }(x,y) (-\Delta _{\rho ,y})^{-1}\sigma _2(y)\text {d}y \right ) \ \text {d}x \nonumber \\ &amp; \stackrel {\text {sym}}{=} \Big \langle \sigma _1(x), (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\sigma _2(y) \Big \rangle _{L^2}. \label {eqn:H_symbol}  \end {align}
-</p><!-- l. 3383 --><p class='indent'>    If \(H^E_{\rho }\) is invertible in the sense that \begin {align} \label {eqn:inverse_H} \int _y \int _z H^E_{\rho }(x,y) (H^E_{\rho })^{-1}(y,z)f(z) \ \text {d}z\text {d}y = f(x), \quad \forall f(x),  \end {align}
-</p><!-- l. 3387 --><p class='indent'>    we have the following lemma as the construction of explicit solution to certain Poisson equation.
+</p><!-- l. 3415 --><p class='indent'>    in which Hessian operator \(\text {Hess}_{W} E(\rho )\) in tangent space \(T_{\rho }M\) is defined as \begin {align*}  \text {Hess}_{W}E(\rho )(\sigma _1,\sigma _2) = \int _x\int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)\sigma _1(x)\sigma _2(y) \text {d}y\text {d}x + \int _x \frac {\delta E}{\delta \rho } \Gamma _{\rho }(\sigma _1,\sigma _2) \text {d}x,  \end {align*}
+</p><!-- l. 3419 --><p class='indent'>    and Hessian operator \(\text {Hess}_{W}^* E(\rho )\) in co-tangent space \(T_{\rho }^*M\) is defined as \begin {align*}  \text {Hess}_{W}^*E(\rho )(\Phi _1,\Phi _2) = \int _x\int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,x})\Phi _1(x) (-\Delta _{\rho ,y})\Phi _2(y) \text {d}y\text {d}x + \int _x \nabla _x^2\frac {\delta E}{\delta \rho }(\nabla \Phi _1,\nabla \Phi _2) \rho (x)\text {d}x.  \end {align*}
+</p><!-- l. 3423 --><p class='indent'>    See <span class='cite'>[<a href='Notesli2.html#XLi_JMP2021'>16</a>]</span> for detail. So the explicit formulation of \(W_{\rho }^{H}\) reads: \begin {align}  W_{\rho }^{H}(\sigma _1,\sigma _2) = \int _x\int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,x})\Phi _1(x) (-\Delta _{\rho ,y})\Phi _2(y) \text {d}y\text {d}x + \int _x \nabla _x^2\frac {\delta E}{\delta \rho }(\nabla \Phi _1,\nabla \Phi _2) \rho (x)\text {d}x.  \end {align}
+</p><!-- l. 3428 --><p class='indent'>    Note that \(\nabla _x^2\frac {\delta E}{\delta \rho }(\nabla \Phi _1,\nabla \Phi _2) : = \left (\nabla _x^2\frac {\delta E}{\delta \rho }\nabla \Phi _2\right )\cdot \nabla \Phi _1\), by integration-by-parts, we have \begin {align*}  W_{\rho }^{H}(\sigma _1,\sigma _2) &amp;= \int _x (-\Delta _{\rho ,x})\Phi _1(x) \int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y})\Phi _2(y)\text {d}y\ \text {d}x - \int _x \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta E}{\delta \rho }\nabla _x\Phi _2\right )\Phi _1\ \text {d}x\\ &amp;= \int _x \Phi _1(x) (-\Delta _{\rho ,x}) \int _y \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y})\Phi _2(y)\text {d}y\ \text {d}x - \int _x \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta E}{\delta \rho }\nabla _x\Phi _2\right )\Phi _1\ \text {d}x\\ &amp; = \int _x \left ( \int _y H^E_{\rho }(x,y) \Phi _2(y)\text {d}y \right ) \Phi _1(x) \text {d}x,  \end {align*}
+</p><!-- l. 3434 --><p class='indent'>    in which the bilinear operator \(H^E_{\rho }(x,y)\) is given as \begin {align}  H^E_{\rho }(x,y): = (-\Delta _{\rho ,x}) \frac {\delta ^2E}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y}) - \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta E}{\delta \rho }\nabla _x\right )\delta (x-y).  \end {align}
+</p><!-- l. 3438 --><p class='indent'>    Furthermore, we can rewrite \(W_{\rho }^H(\sigma _1,\sigma _2)\) as \begin {align}  W_{\rho }^{H}(\sigma _1,\sigma _2) &amp;= \int _x \left ( \int _y H^E_{\rho }(x,y) (-\Delta _{\rho ,y})^{-1}\sigma _2(y)\text {d}y \right ) (-\Delta _{\rho ,x})^{-1}\sigma _1(x) \text {d}x \nonumber \\ &amp; = \int _x \sigma _1(x) (-\Delta _{\rho ,x})^{-1} \left ( \int _y H^E_{\rho }(x,y) (-\Delta _{\rho ,y})^{-1}\sigma _2(y)\text {d}y \right ) \ \text {d}x \nonumber \\ &amp; \stackrel {\text {sym}}{=} \Big \langle \sigma _1(x), (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\sigma _2(y) \Big \rangle _{L^2}. \label {eqn:H_symbol}  \end {align}
+</p><!-- l. 3445 --><p class='indent'>    If \(H^E_{\rho }\) is invertible in the sense that \begin {align} \label {eqn:inverse_H} \int _y \int _z H^E_{\rho }(x,y) (H^E_{\rho })^{-1}(y,z)f(z) \ \text {d}z\text {d}y = f(x), \quad \forall f(x),  \end {align}
+</p><!-- l. 3449 --><p class='indent'>    we have the following lemma as the construction of explicit solution to certain Poisson equation.
 </p>
     <div class='newtheorem'>
-<!-- l. 3389 --><p class='noindent'><span class='head'>
+<!-- l. 3451 --><p class='noindent'><span class='head'>
 <a id='x31-44001r1'></a>
 <span class='cmbx-10x-x-109'>Lemma 8.2.1.</span>  </span><span class='cmti-10x-x-109'>Let</span> \(H^E_{\rho }\) <span class='cmti-10x-x-109'>be defined as in (</span><span class='eqref-fixed' title='eqn:H_symbol'>8.6</span><span class='cmti-10x-x-109'>), and its inverse as in (</span><span class='eqref-fixed' title='eqn:inverse_H'>8.7</span><span class='cmti-10x-x-109'>). Then Poisson equation</span>
 \begin {align}  H_{\rho }^E \Psi (y)\stackrel {\mathrm {def}}{=} \int _y H_{\rho }^E(x,y)\Psi (y) \text {d}y = f(x)  \end {align}
-</p><!-- l. 3394 --><p class='indent'>    <span class='cmti-10x-x-109'>has an explicit solution </span>\begin {align}  \Psi (y) = (H_{\rho }^E)^{-1}f(x) \stackrel {\mathrm {def}}{=} \int _{x} (H_{\rho }^E)^{-1}(x,y) f(x) \text {d}x.  \end {align}
+</p><!-- l. 3456 --><p class='indent'>    <span class='cmti-10x-x-109'>has an explicit solution </span>\begin {align}  \Psi (y) = (H_{\rho }^E)^{-1}f(x) \stackrel {\mathrm {def}}{=} \int _{x} (H_{\rho }^E)^{-1}(x,y) f(x) \text {d}x.  \end {align}
 </p>
     </div>
-<!-- l. 3398 --><p class='indent'>
-</p><!-- l. 3400 --><p class='indent'>    Using the above lemma, we can get the following corollary.
+<!-- l. 3460 --><p class='indent'>
+</p><!-- l. 3462 --><p class='indent'>    Using the above lemma, we can get the following corollary.
 </p>
 
     <div class='newtheorem'>
-<!-- l. 3401 --><p class='noindent'><span class='head'>
+<!-- l. 3463 --><p class='noindent'><span class='head'>
 <a id='x31-44002r2'></a>
 <span class='cmbx-10x-x-109'>Corollary 8.2.2.</span>  </span> <span class='cmti-10x-x-109'>Let </span>\[ (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1} \sigma (y) = \Psi (x), \] <span class='cmti-10x-x-109'>be the transport Hessian potential, then </span>\begin {align*}  \sigma (y) &amp;= \Big ( (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y} )^{-1} \Big )^{-1}\Psi (x) \\ &amp;= (-\Delta _{\rho ,y})\cdot (H_{\rho }^E)^{-1} \cdot (-\Delta _{\rho ,x}) \Psi (x) \\ &amp; \stackrel {\mathrm {def}}{=} (-\Delta _{\rho ,y}) \int _x (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,x})\Psi (x) \mathrm {d}x.  \end {align*}
 </p>
     </div>
-<!-- l. 3412 --><p class='indent'>
+<!-- l. 3474 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 3414 --><p class='noindent'><span class='head'>
+<!-- l. 3476 --><p class='noindent'><span class='head'>
 <a id='x31-44003r3'></a>
 <span class='cmbx-10x-x-109'>Remark 8.2.3.</span>  </span><span class='cmti-10x-x-109'>Note that when</span> \(E = \int \frac {1}{2}x^2 \rho (x) \text {d}x\)<span class='cmti-10x-x-109'>,</span> \(H_{\rho }^E\) <span class='cmti-10x-x-109'>reduces to </span>\[ H_{\rho }^E(x,y) = (-\Delta _{\rho ,x})\delta (x-y) = (-\Delta _{\rho ,y}), \] <span class='cmti-10x-x-109'>therefore, the composited operator in the above corollary
 becomes </span>\[ (-\Delta _{\rho ,x})^{-1}\sigma (x) = \Psi (x), \] <span class='cmti-10x-x-109'>which reduces to the standard Wasserstein potential.</span>
 </p>
     </div>
-<!-- l. 3424 --><p class='indent'>
+<!-- l. 3486 --><p class='indent'>
 </p>
     <div class='newtheorem'>
-<!-- l. 3426 --><p class='noindent'><span class='head'>
+<!-- l. 3488 --><p class='noindent'><span class='head'>
 <a id='x31-44004r4'></a>
 <span class='cmbx-10x-x-109'>Remark 8.2.4.</span>  </span><span class='cmti-10x-x-109'>Using the transport Hessian potential</span> \(\Psi \) <span class='cmti-10x-x-109'>defined in Corollary </span><a href='#x31-44002r2'><span class='cmti-10x-x-109'>8.2.2</span><!-- tex4ht:ref: corollary:HessianPotential  --></a><span class='cmti-10x-x-109'>, the transport Hessian
 metric</span> \(W_{\rho }^H(\sigma _1,\sigma _2)\) <span class='cmti-10x-x-109'>in (</span><span class='eqref-fixed' title='eqn:H_symbol'>8.6</span><span class='cmti-10x-x-109'>) can be rewritten as </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) &amp;= \left \langle (\sigma _1, \Psi _2) \right \rangle _{L^2} \\ &amp; = \left \langle ((-\Delta _{\rho ,x})\cdot (H_{\rho }^E)^{-1}\cdot (-\Delta _{\rho ,y})\Psi _1(y), \Psi _2(x)) \right \rangle _{L^2} \\ &amp; = \int _x \Psi _2(x) (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y)(-\Delta _{\rho ,y})\Psi _1(y) \mathrm {d}y \ \mathrm {d}x \\ &amp; = \int _x \int _y \Big ( \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) \nabla _y\Psi _1(y) \Big )\cdot \nabla _x\Psi _2(x) \rho (x)\rho (y)\ \mathrm {d}x\mathrm {d}y.  \end {align*}
-</p><!-- l. 3434 --><p class='indent'>    <span class='cmti-10x-x-109'>In other words, </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) = \int _x \int _y \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) (\nabla _y\Psi _1(y), \nabla _x\Psi _2(x) ) \rho (x)\rho (y)\ \mathrm {d}x\mathrm {d}y,  \end {align*}
-</p><!-- l. 3438 --><p class='indent'>    <span class='cmti-10x-x-109'>in which the transport hessian potential</span> \(\Psi _i\) <span class='cmti-10x-x-109'>are defined as in Corollary </span><a href='#x31-44002r2'><span class='cmti-10x-x-109'>8.2.2</span><!-- tex4ht:ref: corollary:HessianPotential  --></a><span class='cmti-10x-x-109'>, </span>\begin {align*}  \sigma _i(x) = (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,y})\Psi _i(y) \mathrm {d}y.  \end {align*}
+</p><!-- l. 3496 --><p class='indent'>    <span class='cmti-10x-x-109'>In other words, </span>\begin {align*}  W_{\rho }^H(\sigma _1,\sigma _2) = \int _x \int _y \nabla _x\nabla _y (H_{\rho }^E)^{-1}(x,y) (\nabla _y\Psi _1(y), \nabla _x\Psi _2(x) ) \rho (x)\rho (y)\ \mathrm {d}x\mathrm {d}y,  \end {align*}
+</p><!-- l. 3500 --><p class='indent'>    <span class='cmti-10x-x-109'>in which the transport hessian potential</span> \(\Psi _i\) <span class='cmti-10x-x-109'>are defined as in Corollary </span><a href='#x31-44002r2'><span class='cmti-10x-x-109'>8.2.2</span><!-- tex4ht:ref: corollary:HessianPotential  --></a><span class='cmti-10x-x-109'>, </span>\begin {align*}  \sigma _i(x) = (-\Delta _{\rho ,x}) \int _y (H_{\rho }^E)^{-1}(x,y) (-\Delta _{\rho ,y})\Psi _i(y) \mathrm {d}y.  \end {align*}
 </p>
     </div>
-<!-- l. 3442 --><p class='indent'>
-</p><!-- l. 3445 --><p class='noindent'>
+<!-- l. 3504 --><p class='indent'>
+</p><!-- l. 3507 --><p class='noindent'>
 </p>
 
     <h4 class='subsectionHead' id='transport-hessian-distance'><span class='titlemark'>8.2.1   </span> <a id='x31-450008.2.1'></a>Transport Hessian Distance</h4>
-<!-- l. 3447 --><p class='noindent'>Given the transport Hessian metric, one can define the transport Hessian distance as follows.
+<!-- l. 3509 --><p class='noindent'>Given the transport Hessian metric, one can define the transport Hessian distance as follows.
 </p>
     <div class='newtheorem'>
-<!-- l. 3448 --><p class='noindent'><span class='head'>
+<!-- l. 3510 --><p class='noindent'><span class='head'>
 <a id='x31-45001r5'></a>
 <span class='cmbx-10x-x-109'>Definition 8.2.5.</span>  </span><span class='cmti-10x-x-109'>The transport Hessian distance</span> \(\mathrm {dist}_H(\rho ^0,\rho ^1)\) <span class='cmti-10x-x-109'>is defined as </span>\begin {align}  \mathrm {dist}_H(\rho ^0,\rho ^1) = \min _{\rho } \int _0^1 W_{\rho }^H(\partial _t\rho ,\partial _t\rho )\ \mathrm {d}t = \min _{\rho } \int _0^1 \Big \langle \partial _t\rho (x), (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\partial _t\rho (y) \Big \rangle _{L^2}\ \mathrm {d}t  \end {align}
-</p><!-- l. 3454 --><p class='indent'>    <span class='cmti-10x-x-109'>over all smooth paths</span> \(\rho (t,x)\) <span class='cmti-10x-x-109'>such that</span> \(\rho (t=0,x) = \rho ^0, \rho (t=1,x) = \rho ^1\)<span class='cmti-10x-x-109'>.</span>
+</p><!-- l. 3516 --><p class='indent'>    <span class='cmti-10x-x-109'>over all smooth paths</span> \(\rho (t,x)\) <span class='cmti-10x-x-109'>such that</span> \(\rho (t=0,x) = \rho ^0, \rho (t=1,x) = \rho ^1\)<span class='cmti-10x-x-109'>.</span>
 </p>
     </div>
-<!-- l. 3455 --><p class='indent'>
-</p><!-- l. 3457 --><p class='indent'>    By the definition of the transport Hessian distance, one can have several equivalent expressions as
+<!-- l. 3517 --><p class='indent'>
+</p><!-- l. 3519 --><p class='indent'>    By the definition of the transport Hessian distance, one can have several equivalent expressions as
 follows. \begin {align}  \text {dist}_H(\rho ^0,\rho ^1) &amp;= \min _{\rho } \int _0^1 \Big \langle (-\Delta _{\rho ,x})\cdot (H_{\rho }^E)^{-1}\cdot (-\Delta _{\rho ,y})\Psi ^{\partial _t\rho }(y), \Psi ^{\partial _t\rho }(x) \Big \rangle _{L^2}\ \text {d}t \\ &amp; = \min _{\rho } \int _0^1 \Big \langle \partial _t\rho , \Psi ^{\partial _t\rho } \Big \rangle _{L^2} \ \text {d}t \\ &amp; = \min _{\rho } \int _0^1 \Big \langle (-\Delta _{\rho ,x})^{-1}\partial _t\rho (x), H_{\rho }^E\cdot (-\Delta _{\rho ,y})^{-1}\partial _t\rho (y) \Big \rangle _{L^2} \ \text {d}t .  \end {align}
-</p><!-- l. 3465 --><p class='noindent'>
+</p><!-- l. 3527 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='transport-hessian-gradient-flow'><span class='titlemark'>8.2.2   </span> <a id='x31-460008.2.2'></a>Transport Hessian Gradient Flow</h4>
-<!-- l. 3467 --><p class='noindent'>Given the transport Hessian metric \(W_{\rho }^H\) induced by \(E(\rho )\), we consider the transport Hessian gradient flow with
+<!-- l. 3529 --><p class='noindent'>Given the transport Hessian metric \(W_{\rho }^H\) induced by \(E(\rho )\), we consider the transport Hessian gradient flow with
 respect to the energy functional \(F(\rho )\): \begin {align}  \partial _t \rho = -\text {grad}_{W^H}F(\rho ).  \end {align}
-</p><!-- l. 3471 --><p class='indent'>    Here \(\text {grad}_{W^H}F(\rho )\) is defined by \begin {align} \label {eqn:def_grad_WH} W_{\rho }^H(\text {grad}_{W^H}F(\rho ),\sigma ) = \left \langle \frac {\delta F}{\delta \rho }, \sigma \right \rangle _{L^2}.  \end {align}
-</p><!-- l. 3476 --><p class='indent'>    More specifically, define \[ \text {grad}_{W^H}F(\rho ) = (-\Delta _{\rho })\Phi ^F, \quad \sigma = (-\Delta _{\rho })\Phi , \] we have \begin {align*}  W_{\rho }^H(\text {grad}_{W^H}F(\rho ),\sigma ) &amp;= \int _x \left ( \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y \right ) \Phi (x) \text {d}x \\ &amp; = \int _x \left ( (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho } \right ) \Phi \ \text {d}x.  \end {align*}
-</p><!-- l. 3485 --><p class='indent'>    Consequently, \(\Phi ^F\) is determined by the following Poisson equation \begin {align} \label {eqn:Poisson} \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }.  \end {align}
-</p><!-- l. 3489 --><p class='indent'>    Finally, the transport Hessian gradient flow reads \begin {align} \label {eqn:TransportHessianGradient} \begin {cases} \partial _t \rho = \Delta _{\rho }\Phi ^F, \\ \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }. \end {cases}  \end {align}
-</p><!-- l. 3497 --><p class='indent'>    On the other hand, one can also use transport Hessian potential defined in Corollary <a href='#x31-44002r2'>8.2.2<!-- tex4ht:ref: corollary:HessianPotential  --></a> to derive
+</p><!-- l. 3533 --><p class='indent'>    Here \(\text {grad}_{W^H}F(\rho )\) is defined by \begin {align} \label {eqn:def_grad_WH} W_{\rho }^H(\text {grad}_{W^H}F(\rho ),\sigma ) = \left \langle \frac {\delta F}{\delta \rho }, \sigma \right \rangle _{L^2}.  \end {align}
+</p><!-- l. 3538 --><p class='indent'>    More specifically, define \[ \text {grad}_{W^H}F(\rho ) = (-\Delta _{\rho })\Phi ^F, \quad \sigma = (-\Delta _{\rho })\Phi , \] we have \begin {align*}  W_{\rho }^H(\text {grad}_{W^H}F(\rho ),\sigma ) &amp;= \int _x \left ( \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y \right ) \Phi (x) \text {d}x \\ &amp; = \int _x \left ( (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho } \right ) \Phi \ \text {d}x.  \end {align*}
+</p><!-- l. 3547 --><p class='indent'>    Consequently, \(\Phi ^F\) is determined by the following Poisson equation \begin {align} \label {eqn:Poisson} \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }.  \end {align}
+</p><!-- l. 3551 --><p class='indent'>    Finally, the transport Hessian gradient flow reads \begin {align} \label {eqn:TransportHessianGradient} \begin {cases} \partial _t \rho = \Delta _{\rho }\Phi ^F, \\ \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }. \end {cases}  \end {align}
+</p><!-- l. 3559 --><p class='indent'>    On the other hand, one can also use transport Hessian potential defined in Corollary <a href='#x31-44002r2'>8.2.2<!-- tex4ht:ref: corollary:HessianPotential  --></a> to derive
 transport Hessian gradient flow. Note that \begin {align*}  W_{\rho }^H(\text {grad}_{W^H}F(\rho ),\sigma ) &amp;= \int _x \left ( \int _y H^E_{\rho }(x,y) \Phi ^F(y)\text {d}y \right ) \Phi (x) \text {d}x \\ &amp; = \int _x \left ( \int _y H^E_{\rho }(x,y) (-\Delta _{\rho ,y})^{-1}\text {grad}_{W^H}F(\rho ) \ \text {d}y \right ) (-\Delta _{\rho ,x})^{-1}\sigma \text {d}x \\ &amp; = \Big \langle \sigma (x), (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\text {grad}_{W^H}F(\rho )\Big \rangle _{L^2},  \end {align*}
-</p><!-- l. 3503 --><p class='indent'>    by the definition (<span class='eqref-fixed' title='eqn:def_grad_WH'>8.15</span>), we have \[ (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\text {grad}_{W^H}F(\rho ) = \frac {\delta F}{\delta \rho }, \] or equivalently \[ \text {grad}_{W^H}F(\rho ) = (-\Delta _{\rho ,y})\cdot (H_{\rho }^E)^{-1} \cdot (-\Delta _{\rho ,x}) \frac {\delta F}{\delta \rho }. \] In other words, \(\frac {\delta F}{\delta \rho }\) is the transport Hessian potential of \(\text {grad}_{W^H}F(\rho )\).
+</p><!-- l. 3565 --><p class='indent'>    by the definition (<span class='eqref-fixed' title='eqn:def_grad_WH'>8.15</span>), we have \[ (-\Delta _{\rho ,x})^{-1}\cdot H_{\rho }^E \cdot (-\Delta _{\rho ,y})^{-1}\text {grad}_{W^H}F(\rho ) = \frac {\delta F}{\delta \rho }, \] or equivalently \[ \text {grad}_{W^H}F(\rho ) = (-\Delta _{\rho ,y})\cdot (H_{\rho }^E)^{-1} \cdot (-\Delta _{\rho ,x}) \frac {\delta F}{\delta \rho }. \] In other words, \(\frac {\delta F}{\delta \rho }\) is the transport Hessian potential of \(\text {grad}_{W^H}F(\rho )\).
 Finally the transport Hessian gradient flow can be rewritten as \begin {align}  \partial _t\rho (x) = -\text {grad}_{W^H}F(\rho )(x) = (\Delta _{\rho ,x})\cdot (H_{\rho }^E)^{-1} \cdot (-\Delta _{\rho ,y}) \frac {\delta F}{\delta \rho }(y).  \end {align}
-</p><!-- l. 3516 --><p class='indent'>    Once again, when \(E = \int \frac {1}{2}x^2 \rho (x)\text {d}x\), the transport Hessian gradient flow reduces to the standard Wasserstein gradient
+</p><!-- l. 3578 --><p class='indent'>    Once again, when \(E = \int \frac {1}{2}x^2 \rho (x)\text {d}x\), the transport Hessian gradient flow reduces to the standard Wasserstein gradient
 flow \[ \partial _t \rho = \Delta _{\rho }\frac {\delta F}{\delta \rho }. \]
-</p><!-- l. 3522 --><p class='noindent'>
+</p><!-- l. 3584 --><p class='noindent'>
 </p>
 
     <h4 class='subsectionHead' id='transport-newton-flow'><span class='titlemark'>8.2.3   </span> <a id='x31-470008.2.3'></a>Transport Newton Flow</h4>
-<!-- l. 3524 --><p class='noindent'>When the two energy functional coincide \(E(\rho ) = F(\rho )\), the transport Hessian gradient flow is reduced to transport
+<!-- l. 3586 --><p class='noindent'>When the two energy functional coincide \(E(\rho ) = F(\rho )\), the transport Hessian gradient flow is reduced to transport
 Newton flow \begin {align} \label {eqn:TransportNewton} \begin {cases} \partial _t \rho = \Delta _{\rho }\Phi ^F, \\ \int _y H^F_{\rho }(x,y) \Phi ^F(y)\text {d}y = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }. \end {cases}  \end {align}
-</p><!-- l. 3531 --><p class='indent'>    More specifically, \begin {align} \label {eqn:TransportNewton2} \begin {cases} \partial _t \rho = \Delta _{\rho }\Phi ^F, \\ (-\Delta _{\rho ,x}) \int _y \frac {\delta ^2 F}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y})\Phi ^F(y)\text {d}y\ - \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta F}{\delta \rho }\nabla _x\Phi ^F\right ) = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }. \end {cases}  \end {align}
-</p><!-- l. 3540 --><p class='noindent'>
+</p><!-- l. 3593 --><p class='indent'>    More specifically, \begin {align} \label {eqn:TransportNewton2} \begin {cases} \partial _t \rho = \Delta _{\rho }\Phi ^F, \\ (-\Delta _{\rho ,x}) \int _y \frac {\delta ^2 F}{\delta \rho ^2}(x,y)(-\Delta _{\rho ,y})\Phi ^F(y)\text {d}y\ - \nabla _x\cdot \left (\rho \nabla _x^2\frac {\delta F}{\delta \rho }\nabla _x\Phi ^F\right ) = (-\Delta _{\rho ,x})\frac {\delta F}{\delta \rho }. \end {cases}  \end {align}
+</p><!-- l. 3602 --><p class='noindent'>
 </p>
     <h4 class='subsectionHead' id='transport-hessian-gradient-flow-vs-stein-gradient-flow'><span class='titlemark'>8.2.4   </span> <a id='x31-480008.2.4'></a>Transport Hessian Gradient Flow v.s. Stein Gradient Flow</h4>
-<!-- l. 3542 --><p class='noindent'>If \(H^E_{\rho }\) is invertible in the sense that \[ \int _y \int _z H^E_{\rho }(x,y) (H^E_{\rho })^{-1}(y,z)f(z) \ \text {d}z\text {d}y = f(x), \quad \forall f(x), \] then the solution of Poisson equation (<span class='eqref-fixed' title='eqn:Poisson'>8.16</span>) can be constructed explicitly \[ \Phi ^F(x) = \int (H^E_{\rho })^{-1} (x,y) (-\Delta _{\rho ,y}) \frac {\delta F}{\delta \rho }(y) \ \text {d}y, \]
+<!-- l. 3604 --><p class='noindent'>If \(H^E_{\rho }\) is invertible in the sense that \[ \int _y \int _z H^E_{\rho }(x,y) (H^E_{\rho })^{-1}(y,z)f(z) \ \text {d}z\text {d}y = f(x), \quad \forall f(x), \] then the solution of Poisson equation (<span class='eqref-fixed' title='eqn:Poisson'>8.16</span>) can be constructed explicitly \[ \Phi ^F(x) = \int (H^E_{\rho })^{-1} (x,y) (-\Delta _{\rho ,y}) \frac {\delta F}{\delta \rho }(y) \ \text {d}y, \]
 and the corresponding transport Hessian gradient flow (<span class='eqref-fixed' title='eqn:TransportHessianGradient'>8.17</span>) becomes \begin {align}  \partial _t\rho &amp;= \Delta _{\rho ,x}\int _y (H^E_{\rho })^{-1} (x,y) (-\Delta _{\rho ,y}) \frac {\delta F}{\delta \rho }(y) \ \text {d}y \nonumber \\ &amp; = \Delta _{\rho ,x}\int _y \nabla _y(H^E_{\rho })^{-1} (x,y) \cdot \nabla _y \frac {\delta F}{\delta \rho }(y) \ \rho (y)\text {d}y \nonumber \\ &amp; = \nabla _x\cdot \left ( \rho (x) \nabla _x \int _y \nabla _y(H^E_{\rho })^{-1} (x,y) \cdot \nabla _y \frac {\delta F}{\delta \rho }(y) \ \rho (y)\text {d}y \right ) \nonumber \\ &amp; = \nabla _x \cdot \left ( \rho (x) \int _y \rho (y) \nabla _x\nabla _y (H^E_{\rho })^{-1}(x,y) \nabla _y \frac {\delta F}{\delta \rho }(y) \ \text {d}y \right ). \label {eqn:TransportHessianGradient_Explicit}  \end {align}
-</p><!-- l. 3558 --><p class='indent'>    From the last equation, it suggests a generalization of the transport Hessian gradient flow as
+</p><!-- l. 3620 --><p class='indent'>    From the last equation, it suggests a generalization of the transport Hessian gradient flow as
 \begin {align} \label {eqn:SteinGradient} \partial _t \rho = \nabla _x \cdot \left ( \rho (x) \int _y \rho (y) K(x,y) \nabla _y \frac {\delta F}{\delta \rho }(y) \ \text {d}y \right ),  \end {align}
-</p><!-- l. 3562 --><p class='indent'>    for a kernel function \(K(x,y)\). This is called the Stein gradient flow.
-</p><!-- l. 3564 --><p class='indent'>    Meanwhile, Stein gradient flow can be derived from the following Stein metric \begin {align} \label {eqn:SteinMetric} g^S(\sigma _1,\sigma _2) = \int _x \int _y K(x,y)(\nabla _x\Phi _1(x),\nabla _y\Phi _2(y))\rho (x)\rho (y)\ \text {d}x\text {d}y,  \end {align}
-</p><!-- l. 3568 --><p class='indent'>    in which the Stein potential \(\Phi _i\) are defined by \begin {align} \label {eqn:SteinPotential} \sigma _i(x) := -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \Phi _i(y)\ \text {d}y \right ).  \end {align}
-</p><!-- l. 3572 --><p class='indent'>    To see this, we only need to derive an explicit expression of \(\text {grad}_{g^S}F(\rho )\). To this end, start the equation \[ g^S(\text {grad}_{g^S}F(\rho ), \sigma ) = \left \langle \frac {\delta F}{\delta \rho }, \sigma \right \rangle _{L^2}. \] Note that
+</p><!-- l. 3624 --><p class='indent'>    for a kernel function \(K(x,y)\). This is called the Stein gradient flow.
+</p><!-- l. 3626 --><p class='indent'>    Meanwhile, Stein gradient flow can be derived from the following Stein metric \begin {align} \label {eqn:SteinMetric} g^S(\sigma _1,\sigma _2) = \int _x \int _y K(x,y)(\nabla _x\Phi _1(x),\nabla _y\Phi _2(y))\rho (x)\rho (y)\ \text {d}x\text {d}y,  \end {align}
+</p><!-- l. 3630 --><p class='indent'>    in which the Stein potential \(\Phi _i\) are defined by \begin {align} \label {eqn:SteinPotential} \sigma _i(x) := -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \Phi _i(y)\ \text {d}y \right ).  \end {align}
+</p><!-- l. 3634 --><p class='indent'>    To see this, we only need to derive an explicit expression of \(\text {grad}_{g^S}F(\rho )\). To this end, start the equation \[ g^S(\text {grad}_{g^S}F(\rho ), \sigma ) = \left \langle \frac {\delta F}{\delta \rho }, \sigma \right \rangle _{L^2}. \] Note that
 \begin {align*}  \text {LHS} &amp;= \int _x \int _y K(x,y)(\nabla _x\Phi ^F(x),\nabla _y\Phi (y))\rho (x)\rho (y)\ \text {d}x\text {d}y; \\ \text {RHS} &amp; = \left \langle \frac {\delta F}{\delta \rho }, -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \Phi (y)\ \text {d}y \right ) \right \rangle _{L^2} \\ &amp; = \left \langle \nabla _x \frac {\delta F}{\delta \rho }, \int _y \rho (y)K(x,y) \nabla _y \Phi (y)\ \text {d}y \right \rangle _{L_{\rho }^2} \\ &amp; = \int _x \int _y K(x,y)\left (\nabla _x\frac {\delta F}{\delta \rho }, \nabla _y \Phi (y)\right ) \rho (x)\rho (y) \ \text {d}y\text {d}x.  \end {align*}
-</p><!-- l. 3583 --><p class='indent'>    So we have \(\Phi ^F(x) = \delta F/\delta \rho \), and \begin {align*}  \text {grad}_{g^S}F(\rho ) &amp;= -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \Phi ^F(y)\ \text {d}y \right ) \\ &amp;= -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \frac {\delta F}{\delta \rho } \ \text {d}y \right ).  \end {align*}
-</p><!-- l. 3588 --><p class='indent'>    Finally the gradient flow \(\partial _t\rho = -\text {grad}_{g^S}F(\rho )\) recovers the Stein gradient flow (<span class='eqref-fixed' title='eqn:SteinGradient'>8.22</span>).
+</p><!-- l. 3645 --><p class='indent'>    So we have \(\Phi ^F(x) = \delta F/\delta \rho \), and \begin {align*}  \text {grad}_{g^S}F(\rho ) &amp;= -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \Phi ^F(y)\ \text {d}y \right ) \\ &amp;= -\nabla _x\cdot \left ( \rho (x) \int _y \rho (y)K(x,y) \nabla _y \frac {\delta F}{\delta \rho } \ \text {d}y \right ).  \end {align*}
+</p><!-- l. 3650 --><p class='indent'>    Finally the gradient flow \(\partial _t\rho = -\text {grad}_{g^S}F(\rho )\) recovers the Stein gradient flow (<span class='eqref-fixed' title='eqn:SteinGradient'>8.22</span>).
 </p>
     <div class='newtheorem'>
-<!-- l. 3591 --><p class='noindent'><span class='head'>
+<!-- l. 3653 --><p class='noindent'><span class='head'>
 <a id='x31-48001r6'></a>
 <span class='cmbx-10x-x-109'>Remark 8.2.6.</span>  </span><span class='cmti-10x-x-109'>Note that when Stein kernel</span> \(K(x,y) = \nabla _x\nabla _y L(x,y)\)<span class='cmti-10x-x-109'>, the Stein potential equation (</span><span class='eqref-fixed' title='eqn:SteinPotential'>8.24</span><span class='cmti-10x-x-109'>) becomes </span>\begin {align*}  \sigma _i(x) = (-\Delta _{\rho ,x})\left ( \Big \langle L(x,y), (-\Delta _{\rho ,y})\Phi _i(y) \Big \rangle _{L^2_{y}} \right ).  \end {align*}
-</p><!-- l. 3596 --><p class='indent'>    <span class='cmti-10x-x-109'>Then Stein gradient flow can be expressed similarly as the first equation in (</span><span class='eqref-fixed' title='eqn:TransportHessianGradient_Explicit'>8.21</span><span class='cmti-10x-x-109'>): </span>\[ \partial _t\rho = \Delta _{\rho ,x}\int _y L(x,y) (-\Delta _{\rho ,y}) \frac {\delta F}{\delta \rho }(y) \ \text {d}y. \]
+</p><!-- l. 3658 --><p class='indent'>    <span class='cmti-10x-x-109'>Then Stein gradient flow can be expressed similarly as the first equation in (</span><span class='eqref-fixed' title='eqn:TransportHessianGradient_Explicit'>8.21</span><span class='cmti-10x-x-109'>): </span>\[ \partial _t\rho = \Delta _{\rho ,x}\int _y L(x,y) (-\Delta _{\rho ,y}) \frac {\delta F}{\delta \rho }(y) \ \text {d}y. \]
 </p>
     </div>
-<!-- l. 3600 --><p class='indent'>
+<!-- l. 3662 --><p class='indent'>
 
 </p>
-    <!-- l. 3606 -->
-<!-- l. 3606 -->
+    <!-- l. 3668 -->
+<!-- l. 3668 -->
       <nav class="page-nav" aria-label="Page navigation">
         <a class="prev-link" href="Notesse20.html">Previous</a>
         <a class="next-link" href="Notesse22.html">Next</a>
